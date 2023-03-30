@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { PAGES } from "../utils/types/pagesTypes";
+---
+<Layout pageTitle={PAGES.CONTACT}>
+    <!-- Page Wrap -->
+    <div class="page-wrap">
+      <!-- Navigation -->
+      <section class="navigation">
+        <div class="parallax parallax--nav-2">
+          <div class="container clearfix">
+            <div class="row">
+              <div class="col-md-12">
+                <h2>
+                  Contacto
+                </h2>
+                <ul class="breadcrumbs ul--inline ul--no-style">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <span>/</span>
+                  <li class="active">
+                    Contacto
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Navigation -->
+            <!-- Contact Info -->
+            <section class="contact-info">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6">
+                    <h4 class="p-t-30">Donde encontrarnos?</h4>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="p-t-30">
+                      <i class="fa fa-home m-r-8"></i>
+                      134 Collin St , Concordia , AR
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="p-t-30">
+                      <i class="fa fa-phone m-r-8"></i>
+                      (+24) 1344 205 699
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="p-t-30">
+                      <i class="fa fa-envelope m-r-8"></i>
+                      aluplast@aluplast.com
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End Contact Info -->
+      <!-- Contact content -->
+      <section class="contact-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="m-t-40">
+                <iframe src="https://snazzymaps.com/embed/43405" width="100%" height="368px" style="border:none;"></iframe>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-contact-wrap m-t-40">
+                <h4>Mandanos un mensaje</h4>
+                <form class="form-contact" role="form">
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                      <input type="text" name="name" required placeholder="Nombre*">
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <input type="email" name="email" required placeholder="Email*">
+                    </div>
+                    <div class="col-md-12">
+                      <textarea name="message" class="message" placeholder="Mensaje"></textarea>
+                    </div>
+                  </div>
+                  <div>
+                    <button type="submit" class="au-btn au-btn--pill au-btn--yellow au-btn--big">Enviar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Content -->
+    </div>
+    <!-- End Page Wrap -->
+</Layout>
