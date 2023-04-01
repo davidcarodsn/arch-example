@@ -1,4 +1,10 @@
-<!-- Footer -->
+---
+import FormFooter from './FormFooter';
+const { FOOTER_EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_FOOTER_KEY } = await import.meta.env;
+
+const FooterProps = { FOOTER_EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_FOOTER_KEY };
+
+---
 <footer class="footer-2">
   <div class="overlay overlay--dark">
   </div>
@@ -8,13 +14,10 @@
         <div class="col-lg-7 col-md-9 col-12">
           <h1>
             <a href="/">
-              <img alt="Logo" src="img/logo-white.png">
+              <img alt="Logo" src="img/logo-white.png" />
             </a>
           </h1>
-          <form method="post" class="form-footer">
-            <input type="text" name="name" class="form__input" placeholder="email@email.com">
-            <button type="submit" class="au-btn au-btn--yellow au-btn--white au-btn--submit">Enviar</button>
-          </form>
+          <FormFooter keys={FooterProps} client:load />
           <div class="social">
             <a href="" class="social__item social__item--circle">
               <i class="zmdi zmdi-facebook"></i>
@@ -37,16 +40,3 @@
     </div>
   </div>
 </footer>
-<!-- End Footer -->
-<!-- Copyright -->
-<section class="copyright">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        Copyright © 2017 Designer by
-        <span>Authemes</span> . All rights reserved
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Copyright -->
