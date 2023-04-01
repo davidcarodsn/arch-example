@@ -5,13 +5,19 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const FormFooter = ({ keys }) => {
   const [showCaptcha, setShowCaptcha] = useState(false);
+  const [error, setError] = useState(false);
   const [user_email, setUser_Email] = useState();
   const footerForm = useRef();
 
+  const handleEmailChange = (e) => {
+    setUser_Email(e.target.value);
+    setError(false);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (user_email.length < 1) {
-
+    if (!user_email || user_email.length < 1) {
+      return setError(true)
     }
     setShowCaptcha(true);
   }
@@ -34,11 +40,14 @@ const FormFooter = ({ keys }) => {
   }
 
   return (
-    <form ref={footerForm} onSubmit={handleSubmit} className="form-footer">
-      <input type="email" value={user_email} onChange={(e) => setUser_Email(e.target.value)} className="form__input" placeholder="email@email.com" />
-      <button type="submit" className="au-btn au-btn--yellow au-btn--white au-btn--submit">Enviar</button>
-      { showCaptcha && <ReCAPTCHA sitekey={keys.RECAPTCHA_FOOTER_KEY} onChange={sendEmail}/> }
-    </form>
+    <>
+      <form ref={footerForm} onSubmit={handleSubmit} className="form-footer">
+        <input type="email" value={user_email} onChange={handleEmailChange} className="form__input" placeholder="email@email.com" />
+        <button type="submit" className="au-btn au-btn--yellow au-btn--white au-btn--submit">Enviar</button>
+        { showCaptcha && <ReCAPTCHA sitekey={keys.RECAPTCHA_FOOTER_KEY} onChange={sendEmail}/> }
+        </form>
+      { error && <span style={{ color: 'red' }}>Por favor introduzca un email válido.</span> }
+    </>
   )
 }
 
