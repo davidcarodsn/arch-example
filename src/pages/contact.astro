@@ -1,6 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import { PAGES } from "../utils/types/pagesTypes";
+import Layout from "../layouts/Layout.astro";
+import FormContact from "../components/FormContact";
+
+const { RECAPTCHA_KEY, EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE, CONTACT_EMAILJS_TEMPLATE } = await import.meta.env;
 ---
 <Layout pageTitle={PAGES.CONTACT}>
     <!-- Page Wrap -->
@@ -70,22 +73,7 @@ import { PAGES } from "../utils/types/pagesTypes";
             <div class="col-md-6">
               <div class="form-contact-wrap m-t-40">
                 <h4>Mandanos un mensaje</h4>
-                <form class="form-contact" role="form">
-                  <div class="row">
-                    <div class="col-md-6 col-12">
-                      <input type="text" name="name" required placeholder="Nombre*">
-                    </div>
-                    <div class="col-md-6 col-12">
-                      <input type="email" name="email" required placeholder="Email*">
-                    </div>
-                    <div class="col-md-12">
-                      <textarea name="message" class="message" placeholder="Mensaje"></textarea>
-                    </div>
-                  </div>
-                  <div>
-                    <button type="submit" class="au-btn au-btn--pill au-btn--yellow au-btn--big">Enviar</button>
-                  </div>
-                </form>
+                <FormContact keys={{ RECAPTCHA_KEY, EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE, CONTACT_EMAILJS_TEMPLATE }} client:load />
               </div>
             </div>
           </div>

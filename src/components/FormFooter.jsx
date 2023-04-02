@@ -7,7 +7,6 @@ const FormFooter = ({ keys }) => {
   const [showCaptcha, setShowCaptcha] = useState(false);
   const [error, setError] = useState(false);
   const [user_email, setUser_Email] = useState();
-  const footerForm = useRef();
 
   const handleEmailChange = (e) => {
     setUser_Email(e.target.value);
@@ -29,23 +28,27 @@ const FormFooter = ({ keys }) => {
     }
 
     await emailjs.send(
-      keys.FOOTER_EMAILJS_SERVICE, 
+      keys.EMAILJS_SERVICE, 
       keys.FOOTER_EMAILJS_TEMPLATE, 
       params,
       keys.EMAILJS_PUBLIC_KEY, 
       'g-recaptcha-response'
     )
-      .then(() => alert('Mail enviado con éxito ✅'), setShowCaptcha(false))
+      .then(() => {
+        alert('Mail enviado con éxito ✅')
+        setUser_Email();
+        setShowCaptcha(false)
+      })
       .catch(() => alert('Ha ocurrido un error, intentelo mas tarde ⛔'), setShowCaptcha(false))
   }
 
   return (
     <>
-      <form ref={footerForm} onSubmit={handleSubmit} className="form-footer">
+      <form onSubmit={handleSubmit} className="form-footer">
         <input type="email" value={user_email} onChange={handleEmailChange} className="form__input" placeholder="email@email.com" />
-        <button type="submit" className="au-btn au-btn--yellow au-btn--white au-btn--submit">Enviar</button>
-        { showCaptcha && <ReCAPTCHA sitekey={keys.RECAPTCHA_FOOTER_KEY} onChange={sendEmail}/> }
-        </form>
+        <button type="submit" className="au-btn au-btn--yellow au-btn--white au-btn--submit" disabled={showCaptcha}>Enviar</button>
+        { showCaptcha && <ReCAPTCHA sitekey={keys.RECAPTCHA_KEY} onChange={sendEmail}/> }
+      </form>
       { error && <span style={{ color: 'red' }}>Por favor introduzca un email válido.</span> }
     </>
   )

@@ -1,8 +1,8 @@
 ---
 import FormFooter from './FormFooter';
-const { FOOTER_EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_FOOTER_KEY } = await import.meta.env;
 
-const FooterProps = { FOOTER_EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_FOOTER_KEY };
+const { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY } = await import.meta.env;
+const FooterProps = { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY };
 
 ---
 <footer class="footer-2">
@@ -40,3 +40,13 @@ const FooterProps = { FOOTER_EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_P
     </div>
   </div>
 </footer>
+<section class="copyright">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        Copyright © 2017 Designer by
+        <span>Authemes</span> . All rights reserved
+      </div>
+    </div>
+  </div>
+</section>
