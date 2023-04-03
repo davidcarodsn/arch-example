@@ -2,17 +2,27 @@ import React, { useState } from 'react'
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
 
+const initialValues = {
+  user_email: '',
+  user_name: '',
+  user_company: '',
+  user_phone: '',
+  message: ''
+}
+
 const FormContact = ({ keys }) => {
   const [showCaptcha, setShowCaptcha] = useState(false);
-  const [data, setData] = useState({
-    user_email: '',
-    user_name: '',
-    message: ''
-  });
+  const [data, setData] = useState(initialValues);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (data.user_email.length < 1 || data.message.length < 1 || data.user_name < 1) {
+    if (
+      data.user_email.length < 1 || 
+      data.message.length < 1 || 
+      data.user_name < 1 || 
+      data.user_company.length < 1 || 
+      data.user_phone.length < 1
+    ) {
       return alert('Todos los campos del formulario son obligatorios')
     }
     setShowCaptcha(true);
@@ -40,11 +50,7 @@ const FormContact = ({ keys }) => {
     )
       .then(() => {
         alert('Mail enviado con éxito ✅')
-        setData({
-          user_email: '',
-          user_name: '',
-          message: ''
-        })
+        setData(initialValues);
         setShowCaptcha(false)
       })
       .catch(() => alert('Ha ocurrido un error, intentelo mas tarde ⛔'), setShowCaptcha(false))
@@ -58,6 +64,12 @@ const FormContact = ({ keys }) => {
         </div>
         <div className="col-md-6 col-12">
           <input type="email" value={data.user_email} onChange={handleChangeData} name="user_email" required placeholder="Email*" />
+        </div>
+        <div className="col-md-6 col-12">
+          <input type="text" value={data.user_company} name="user_company" onChange={handleChangeData} required placeholder="Empresa*"/>
+        </div>
+        <div className="col-md-6 col-12">
+          <input type="text" value={data.user_phone} onChange={handleChangeData} name="user_phone" required placeholder="Número de teléfono*" />
         </div>
         <div className="col-md-12">
           <textarea name="message" value={data.message} onChange={handleChangeData} className="message" placeholder="Mensaje"></textarea>
