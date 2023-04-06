@@ -1,7 +1,7 @@
 ---
-import { PAGES } from "../utils/types/pagesTypes";
 import Layout from "../layouts/Layout.astro";
 import FormContact from "../components/FormContact";
+import { PAGES } from "../utils/types/pagesTypes";
 
 const { RECAPTCHA_KEY, EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE, CONTACT_EMAILJS_TEMPLATE } = await import.meta.env;
 ---
@@ -67,7 +67,8 @@ const { RECAPTCHA_KEY, EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE, CONTACT_EMAILJS_TEMP
           <div class="row">
             <div class="col-md-6">
               <div class="m-t-40">
-                <iframe src="https://snazzymaps.com/embed/43405" width="100%" height="368px" style="border:none;"></iframe>
+                <div style="min-height: 55vh" id="google-map"></div>
+                <!-- <iframe src="https://snazzymaps.com/embed/43405" width="100%" height="368px" style="border:none;"></iframe> -->
               </div>
             </div>
             <div class="col-md-6">
@@ -81,5 +82,26 @@ const { RECAPTCHA_KEY, EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE, CONTACT_EMAILJS_TEMP
       </section>
       <!-- End Contact Content -->
     </div>
+    <script is:inline src="vendor/jquery-migrate-3.0.0.min.js" type="text/javascript"></script> 
+    <script is:inline>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        const aluplast = { lat: -31.398075, lng: -58.015939 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("google-map"), {
+          zoom: 17,
+          center: aluplast,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: aluplast,
+          map: map,
+        });
+      }
+      window.initMap = initMap;
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNtr_upVbMj_77yD5xcGQkhDHpeQHybxE&callback=initMap"
+    type="text/javascript"></script>
     <!-- End Page Wrap -->
 </Layout>

@@ -6,7 +6,6 @@ import Footer from "../components/Footer.astro";
 import { PAGES } from "../utils/types/pagesTypes";
 
 const { pageTitle } = Astro.props;
-
 ---
 
 <!DOCTYPE html>
@@ -88,10 +87,5 @@ const { pageTitle } = Astro.props;
   <script is:inline type="text/javascript" src="js/revo-custom.js"></script>
   <script is:inline type="text/javascript" src="js/wow-custom.js"></script>
   <script is:inline type="text/javascript" src="js/count.js"></script>
-  { pageTitle === PAGES.CONTACT && (
-    <script is:inline src="vendor/jquery-migrate-3.0.0.min.js" type="text/javascript"></script> 
-    <script is:inline async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_vKbYnLTXzWiwjb7T5caUTnup7YkUBBU&callback=initMap"
-    type="text/javascript"></script>
-  )}
 </body>
 </html>
