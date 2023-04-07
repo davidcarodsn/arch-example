@@ -1,5 +1,5 @@
 ---
-import FormFooter from './FormFooter';
+// import FormFooter from './FormFooter';
 
 const { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY } = await import.meta.env;
 const FooterProps = { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY };
@@ -17,7 +17,7 @@ const FooterProps = { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_K
               <img alt="Logo" src="img/logo-white.png" />
             </a>
           </h1>
-          <FormFooter keys={FooterProps} client:load />
+          <!-- <FormFooter keys={FooterProps} client:load /> -->
           <div class="social">
             <a href="" class="social__item social__item--circle">
               <i class="zmdi zmdi-facebook"></i>
@@ -40,13 +40,3 @@ const FooterProps = { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_K
     </div>
   </div>
 </footer>
-<section class="copyright">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        Copyright © 2017 Designer by
-        <span>Authemes</span> . All rights reserved
-      </div>
-    </div>
-  </div>
-</section>

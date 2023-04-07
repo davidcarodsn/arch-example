@@ -2805,8 +2805,7 @@ footer .social {
 /*Why Choose*/
 
 .why-choose {
-    padding: 90px 0;
-    padding-bottom: 120px;
+    margin-top: 50px;
 }
 
 .title-3 {
@@ -2999,7 +2998,7 @@ a.sbold {
 .contact__content {
     text-transform: uppercase;
     font-size: 18px;
-    color: #333;
+    color: #cdcdcd;
     font-weight: 600;
     display: inline-block;
     margin-right: 30%;
@@ -3011,7 +3010,7 @@ a.sbold {
 
 .parallax--contact {
     padding: 45px 0;
-    background-image: url('../img/bg-contact-example.jpg');
+    background-image: url('../img/bg-contact-example_2.jpg');
 }
 
 
