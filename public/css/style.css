@@ -20,6 +20,10 @@ body {
     line-height: calc(22/13);
 }
 
+.youtube-inframe-video {
+    display: flex; align-items: center;justify-content: center; padding: 40px;
+}
+
 section {
     position: relative;
 }
@@ -6778,9 +6782,13 @@ input[type=number] {
     }
 }
 
+
 @media(max-width: 767px) {
     .slide-content-2 span.color {
         font-size: 38px;
+    }
+    .youtube-inframe-video {
+        display: none;
     }
 }
 
