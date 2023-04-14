@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import WppIcon from '../assets/img/wpp-icon.png';
 import LinkWpButton from './LinkWpButton';
+import ConcordiaImg from '../assets/img/concordia.png'
 
 const WhatsAppButtonComponent = () => {
-  const [isLinksDisplayActive, setIsLinksDisplayActive] = useState(true);
+  const [isLinksDisplayActive, setIsLinksDisplayActive] = useState(false);
 
   const phonesData = [
     {
       phone: '543446374867',
       area: 'Ventas',
       localization: 'Concordia',
-      img: 'concordia.png'
+      img: ConcordiaImg
     },
     {
       phone: '',

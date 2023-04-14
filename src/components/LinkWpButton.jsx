@@ -24,7 +24,7 @@ const LinkWpButton = ({ data }) => {
             marginRight: '30px', 
             transform: 'translateX(-2px)' 
           }} 
-          src={`/src/assets/img/${data.img}`} 
+          src={data.img} 
           alt={`${data.localization}`} 
         />
         <div 

@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PuertaSvg from "../assets/img/puerta.svg";
+import VentanaSvg from "../assets/img/ventana.svg";
+import ServicioSvg from "../assets/img/servicio.svg";
 import { PAGES } from "../utils/types/pagesTypes";
 ---
 <Layout pageTitle={PAGES.HOME}>
@@ -63,7 +66,7 @@ import { PAGES } from "../utils/types/pagesTypes";
               <div class="service-3__inner">
                 <div class="service-3-icon">
                   <div class="service-3-icon__inner">
-                    <img alt="Icon service 1" width="35px" src="/src/assets/img/puerta.svg">
+                    <img alt="Icon service 1" width="35px" src={PuertaSvg}>
                   </div>
                 </div>
 
@@ -79,7 +82,7 @@ import { PAGES } from "../utils/types/pagesTypes";
               <div class="service-3__inner">
                 <div class="service-3-icon">
                   <div class="service-3-icon__inner">
-                    <img alt="Icon service 2" width="50px" src="/src/assets/img/ventana_2.svg">
+                    <img alt="Icon service 2" width="50px" src={VentanaSvg}>
                   </div>
                 </div>
                 <h3>Ventanas</h3>
@@ -94,7 +97,7 @@ import { PAGES } from "../utils/types/pagesTypes";
               <div class="service-3__inner">
                 <div class="service-3-icon">
                   <div class="service-3-icon__inner">
-                    <img alt="Icon service 3" width="50px" src="/src/assets/img/servicio.svg">
+                    <img alt="Icon service 3" width="50px" src={ServicioSvg}>
                   </div>
                 </div>
 
