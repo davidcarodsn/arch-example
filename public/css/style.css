@@ -6341,7 +6341,7 @@ input[type=number] {
     position: fixed;
     bottom: 40px;
     left: 40px;
-    background-color: #444444;
+    background-color: white;
     flex-direction: column;
     height: 400px;
     width: 400px;
