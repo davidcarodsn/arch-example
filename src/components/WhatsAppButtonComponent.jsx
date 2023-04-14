@@ -4,7 +4,7 @@ import WppIconHead from '../assets/img/ws-head.png';
 import LinkWpButton from './LinkWpButton';
 
 const WhatsAppButtonComponent = () => {
-  const [isLinksDisplayActive, setIsLinksDisplayActive] = useState(true);
+  const [isLinksDisplayActive, setIsLinksDisplayActive] = useState(false);
 
   const phonesData = [
     {
