@@ -751,7 +751,7 @@ a.au-btn--white {
 }
 
 #btn-to-top:hover {
-    background-color: var(--grey-3);
+    background-color: var(--main-blue);
 }
 
 #btn-to-top .fa.fa-chevron-up {
@@ -1355,7 +1355,7 @@ nav.menu-mobile>ul>li a {
 
 nav.menu-mobile>ul>li a:hover {
     background-color: var(--main-color);
-    color: var(--grey-4);
+    color: var(--main-grey);
 }
 
 nav.menu-mobile>ul>li>ul {
@@ -2641,7 +2641,7 @@ footer .social {
 }
 
 .top-contact--left>span {
-    color: #969696;
+    color: var(--main-blue);
     font-size: 11px;
 }
 
@@ -2658,7 +2658,7 @@ footer .social {
 }
 
 .top-contact--right a i {
-    color: #969696;
+    color: var(--main-blue);
     font-size: 16px;
 }
 
@@ -3021,7 +3021,7 @@ a.sbold {
 .contact__content {
     text-transform: uppercase;
     font-size: 18px;
-    color: #cdcdcd;
+    color: var(--main-grey);
     font-weight: 600;
     display: inline-block;
     margin-right: 30%;
