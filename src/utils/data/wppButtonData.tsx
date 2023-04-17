@@ -5,7 +5,7 @@ const PhonesData = [
   },
   {
     phone: '543446507870',
-    area: 'Administracion Concordia',
+    area: 'Adm. Concordia',
   },
   {
     phone: '543446604155',
@@ -17,7 +17,7 @@ const PhonesData = [
   },
   {
     phone: '543446354009',
-    area: 'Ventas/administracion CdelU',
+    area: 'Ventas/adm. CdelU',
   },
   {
     phone: '543446636419',
@@ -25,7 +25,7 @@ const PhonesData = [
   },
   {
     phone: '543446385621',
-    area: 'Administracion Gualeguaychu',
+    area: 'Adm. Gualeguaychu',
   },
   {
     phone: '543446347821',
@@ -33,7 +33,7 @@ const PhonesData = [
   },
   {
     phone: '54344659841',
-    area: 'Administracion Urdinarrain',
+    area: 'Adm. Urdinarrain',
   },
 ];
 

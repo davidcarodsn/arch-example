@@ -2779,7 +2779,6 @@ footer .social {
     -moz-border-radius: 50%;
     border-radius: 50%;
     padding: 5px;
-    background-color: var(--main-color);
     position: absolute;
     top: -45px;
     left: 50%;
@@ -2791,12 +2790,34 @@ footer .social {
     transform: translateX(-50%);
 }
 
-.service-3_custom-background {
+.service-3-icon__doors {
     background-color: var(--main-blue);
 }
 
+.service-3-icon__doors 
 .service-3-icon__inner {
-    border: 2px solid #222222;
+    border: 2px solid white;
+}
+
+.service-3_custom-windows {
+    background-color: white;
+}
+
+.service-3_custom-windows
+.service-3-icon__inner {
+    border: 2px solid var(--black);
+}
+
+.service-3_custom__services {
+    background-color: var(--main-red);
+}
+
+.service-3_custom__services
+.service-3-icon__inner {
+    border: 2px solid white;
+}
+
+.service-3-icon__inner {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -2811,7 +2832,7 @@ footer .social {
 }
 
 .service-3__inner h3 {
-    color: var(--main-color);
+    color: var(--black);
     margin-bottom: 20px;
 }
 
@@ -2820,10 +2841,6 @@ footer .social {
     text-align: center;
 }
 
-.service-3_custom-color h3{
-    color: var(--main-blue);
-    margin-bottom: 20px;
-}
 
 /*Why Choose*/
 
@@ -6415,6 +6432,17 @@ input[type=number] {
     align-items: center;
 }
 
+.link-ws-button {
+    color: white;
+    height: 48px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 150px 150px 150px 150px;
+    padding: 0px 30px;
+    width: 90%;
+}
+
 /*Responsive*/
 
 @media (max-width: 1200px) {
@@ -7007,18 +7035,6 @@ input[type=number] {
         padding: 30px 20px;
     }
 
-    .slide-title-3 {
-        display: none;
-    }
-
-    .slide-title-3>span {
-        display: none;
-    }
-
-    #revolution-slider3 a.tp-caption.au-btn {
-        display: none;
-    }
-
     .pro-sorting .sort-left {
         float: none;
     }
@@ -7079,6 +7095,13 @@ input[type=number] {
     .title-detail--px-45 {
         padding: 0;
     }
+
+
+    .whatsapp-chat-container {
+        width: 100%;
+        left: 0px;
+        bottom: 70px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -7089,11 +7112,11 @@ input[type=number] {
     }
 
     .slide-title-3 {
-        font-size: 30px;
+        font-size: 23px;
     }
 
     .slide-title-3>span {
-        font-size: 30px;
+        font-size: 23px;
     }
 }
 
