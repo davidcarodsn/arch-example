@@ -10,14 +10,16 @@ const LinkWpButton = ({ data, index }) => {
         height: '48px', 
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         borderRadius: '150px 150px 150px 150px',
+        padding: '0px 30px',
         width: '90%'
       }} 
       target='_blank' 
       href={`https://api.whatsapp.com/send?phone=${data.phone}&text=`}
     >
-      <h5 style={{ color: 'white' }}>{data.area}</h5>        
+      <h5 style={{ color: 'white' }}>{data.area}</h5>
+      <i fontSize="20px" className="zmdi zmdi-arrow-right-top"></i>
     </a>
   )
 }
