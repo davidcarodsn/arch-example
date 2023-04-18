@@ -2575,20 +2575,16 @@ footer {
     margin-left: -5px;
 }
 
-.ul--footer {
-    margin-top: 45px;
+.social a {
+    font-size: 20px;
+    color: white;
 }
 
-.ul--footer li {
-    display: inline-block;
-    padding: 0 15px;
+.social a:link a:visited {
+    color: white;
 }
 
-.ul--footer li a {
-    color: #c2c2c2;
-}
-
-.ul--footer li a:hover {
+.social a:hover {
     color: var(--main-color);
 }
 
@@ -2641,7 +2637,7 @@ footer .social {
 }
 
 .top-contact--left>span {
-    color: var(--main-blue);
+    color: white;
     font-size: 11px;
 }
 
@@ -2658,7 +2654,7 @@ footer .social {
 }
 
 .top-contact--right a i {
-    color: var(--main-blue);
+    color: white;
     font-size: 16px;
 }
 
