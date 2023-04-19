@@ -2838,77 +2838,6 @@ footer .social {
 }
 
 
-/*Why Choose*/
-
-.why-choose {
-    margin-top: 50px;
-}
-
-.title-3 {
-    position: relative;
-    margin-bottom: 100px;
-}
-
-.why-choose .title-3 {
-    margin-bottom: 56px;
-}
-
-.title-3:after {
-    content: "";
-    height: 6px;
-    width: 133px;
-    position: absolute;
-    background-color: var(--main-color);
-    bottom: -35px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-
-.why-choose__inner .box-head {
-    width: 88px;
-}
-
-.why-choose__inner .box-head--border {
-    border: 3px solid #bbbbbb;
-}
-
-.why-choose__inner .box-head--border i {
-    color: var(--grey-3);
-    font-size: 36px;
-    line-height: 82px;
-}
-
-.why-choose__inner .box-body h3 {
-    margin-bottom: 7px;
-    line-height: 1;
-}
-
-.why-choose__inner .box-body p {
-    line-height: 20px;
-}
-
-.why-choose__inner .box-body--right {
-    margin-left: 88px;
-    padding-left: 30px;
-    padding-right: 0;
-}
-
-.why-choose__inner .box-body--left {
-    text-align: right;
-    margin: 0;
-    margin-right: 88px;
-    padding-right: 30px;
-    padding-left: 0;
-}
-
-.why-choose__inner .box-head--right {
-    float: right;
-}
-
 
 /*Lastest Project*/
 
@@ -6546,6 +6475,25 @@ input[type=number] {
     .blog-single {
         margin-right: 0;
     }
+
+    .why-choose 
+    .row 
+    header {
+        padding-left: 17%;    
+    }
+
+    .why-choose 
+    div {
+        margin-top: 25px;
+        height: auto;
+    }
+
+    .why-choose 
+    .row 
+    .image-container {
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 992px) {
@@ -6912,8 +6860,10 @@ input[type=number] {
     .dot-wrap .slick-dots {
         height: 15%;
     }
+    .youtube-inframe-video {
+        margin-top: 150px;
+    }
 }
-
 
 @media(max-width: 767px) {
     .slide-content-2 span.color {
@@ -7098,6 +7048,7 @@ input[type=number] {
         left: 0px;
         bottom: 70px;
     }
+
 }
 
 @media (max-width: 480px) {
