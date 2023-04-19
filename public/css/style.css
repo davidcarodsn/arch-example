@@ -6861,7 +6861,10 @@ input[type=number] {
         height: 15%;
     }
     .youtube-inframe-video {
-        margin-top: 150px;
+        margin-top: 25px;
+    }
+    .service-3 {
+        padding-bottom: 50px;
     }
 }
 
