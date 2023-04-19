@@ -33,7 +33,7 @@ website:   	http://www.themepunch.com
 	background-color:#888;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:Arial;
 	font-size:20px;
 	font-weight:700;
@@ -49,7 +49,7 @@ website:   	http://www.themepunch.com
 {
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:Arial;
 	font-size:14px;
 	font-weight:700;
@@ -64,7 +64,7 @@ website:   	http://www.themepunch.com
 {
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:Arial;
 	font-size:20px;
 	font-weight:700;
@@ -79,7 +79,7 @@ website:   	http://www.themepunch.com
 {
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:Arial;
 	font-size:40px;
 	font-weight:700;
@@ -94,7 +94,7 @@ website:   	http://www.themepunch.com
 {
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:Arial;
 	font-size:60px;
 	font-weight:700;
@@ -108,10 +108,10 @@ website:   	http://www.themepunch.com
 
 .tp-caption.very_big_white,.very_big_white
 {
-	background-color:#000;
+	background-color:var(--black);
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:Arial;
 	font-size:60px;
 	font-weight:800;
@@ -125,10 +125,10 @@ website:   	http://www.themepunch.com
 
 .tp-caption.very_big_black,.very_big_black
 {
-	background-color:#fff;
+	background-color:white;
 	border-style:none;
 	border-width:0;
-	color:#000;
+	color:var(--black);
 	font-family:Arial;
 	font-size:60px;
 	font-weight:700;
@@ -144,7 +144,7 @@ website:   	http://www.themepunch.com
 {
 	border-style:none;
 	border-width:0;
-	color:#000;
+	color:var(--black);
 	font-family:"Open Sans", sans-serif;
 	font-size:24px;
 	font-weight:800;
@@ -159,7 +159,7 @@ website:   	http://www.themepunch.com
 {
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans", sans-serif;
 	font-size:24px;
 	font-weight:800;
@@ -174,7 +174,7 @@ website:   	http://www.themepunch.com
 {
 	border-style:none;
 	border-width:0;
-	color:#000;
+	color:var(--black);
 	font-family:"Open Sans", sans-serif;
 	font-size:24px;
 	font-weight:300;
@@ -190,7 +190,7 @@ website:   	http://www.themepunch.com
 	background-color:#4e5b6c;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans", sans-serif;
 	font-size:30px;
 	font-weight:800;
@@ -207,7 +207,7 @@ website:   	http://www.themepunch.com
 	background-color:#de543e;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans", sans-serif;
 	font-size:30px;
 	font-weight:300;
@@ -240,7 +240,7 @@ website:   	http://www.themepunch.com
 
 .tp-caption.black,.black
 {
-	color:#000;
+	color:var(--black);
 	text-shadow:none;
 }
 
@@ -277,9 +277,9 @@ website:   	http://www.themepunch.com
 {
 	
 	
-	background-color:#000;
+	background-color:var(--black);
 	border-radius:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:50px;
 	font-weight:300;
@@ -295,7 +295,7 @@ website:   	http://www.themepunch.com
 	
 	background-color:#db4360;
 	border-radius:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:50px;
 	font-weight:300;
@@ -309,9 +309,9 @@ website:   	http://www.themepunch.com
 {
 	
 	
-	background-color:#fff;
+	background-color:white;
 	border-radius:0;
-	color:#000;
+	color:var(--black);
 	font-family:"Open Sans";
 	font-size:50px;
 	font-weight:300;
@@ -327,7 +327,7 @@ website:   	http://www.themepunch.com
 	
 	background-color:#67ae73;
 	border-radius:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:50px;
 	font-weight:300;
@@ -340,10 +340,10 @@ website:   	http://www.themepunch.com
 .tp-caption.excerpt,.excerpt
 {
 	background-color:rgba(0,0,0,1);
-	border-color:#fff;
+	border-color:white;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:Arial;
 	font-size:36px;
 	font-weight:700;
@@ -442,7 +442,7 @@ website:   	http://www.themepunch.com
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:20px;
 	font-weight:800;
@@ -487,7 +487,7 @@ website:   	http://www.themepunch.com
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:20px;
 	font-weight:800;
@@ -516,7 +516,7 @@ website:   	http://www.themepunch.com
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:20px;
 	font-weight:800;
@@ -542,7 +542,7 @@ website:   	http://www.themepunch.com
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:58px;
 	font-weight:800;
@@ -556,7 +556,7 @@ website:   	http://www.themepunch.com
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:30px;
 	font-weight:300;
@@ -571,7 +571,7 @@ website:   	http://www.themepunch.com
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:34px;
 	font-weight:300;
@@ -586,7 +586,7 @@ website:   	http://www.themepunch.com
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:34px;
 	font-weight:300;
@@ -602,7 +602,7 @@ website:   	http://www.themepunch.com
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:20px;
 	font-weight:800;
@@ -617,7 +617,7 @@ website:   	http://www.themepunch.com
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#000;
+	color:var(--black);
 	font-family:"Open Sans";
 	font-size:30px;
 	font-weight:300;
@@ -632,7 +632,7 @@ website:   	http://www.themepunch.com
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#000;
+	color:var(--black);
 	font-family:"Open Sans";
 	font-size:58px;
 	font-weight:800;
@@ -661,7 +661,7 @@ website:   	http://www.themepunch.com
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:17px;
 	font-weight:300;
@@ -679,11 +679,11 @@ website:   	http://www.themepunch.com
 
 .tp-caption.large_bg_black,.large_bg_black
 {
-	background-color:#000;
+	background-color:var(--black);
 	border-color:#ffd658;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Open Sans";
 	font-size:40px;
 	font-weight:800;
@@ -694,11 +694,11 @@ website:   	http://www.themepunch.com
 
 .tp-caption.mediumwhitebg,.mediumwhitebg
 {
-	background-color:#fff;
-	border-color:#000;
+	background-color:white;
+	border-color:var(--black);
 	border-style:none;
 	border-width:0;
-	color:#000;
+	color:var(--black);
 	font-family:"Open Sans";
 	font-size:30px;
 	font-weight:300;
@@ -711,7 +711,7 @@ website:   	http://www.themepunch.com
 .tp-caption.maincaption,.maincaption
 {
 	background-color:transparent;
-	border-color:#000;
+	border-color:var(--black);
 	border-style:none;
 	border-width:0;
 	color:#212a40;
@@ -726,10 +726,10 @@ website:   	http://www.themepunch.com
 .tp-caption.miami_title_60px,.miami_title_60px
 {
 	background-color:transparent;
-	border-color:#000;
+	border-color:var(--black);
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Source Sans Pro";
 	font-size:60px;
 	font-weight:700;
@@ -742,7 +742,7 @@ website:   	http://www.themepunch.com
 .tp-caption.miami_subtitle,.miami_subtitle
 {
 	background-color:transparent;
-	border-color:#000;
+	border-color:var(--black);
 	border-style:none;
 	border-width:0;
 	color:rgba(255,255,255,0.65);
@@ -757,8 +757,8 @@ website:   	http://www.themepunch.com
 
 .tp-caption.divideline30px,.divideline30px
 {
-	background:#fff;
-	background-color:#fff;
+	background:white;
+	background-color:white;
 	border-color:#222;
 	border-style:none;
 	border-width:0;
@@ -777,10 +777,10 @@ website:   	http://www.themepunch.com
 .tp-caption.miami_content_light,.miami_content_light
 {
 	background-color:transparent;
-	border-color:#000;
+	border-color:var(--black);
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Source Sans Pro";
 	font-size:22px;
 	font-weight:400;
@@ -793,10 +793,10 @@ website:   	http://www.themepunch.com
 .tp-caption.miami_title_60px_dark,.miami_title_60px_dark
 {
 	background-color:transparent;
-	border-color:#000;
+	border-color:var(--black);
 	border-style:none;
 	border-width:0;
-	color:#333;
+	color:var(--grey-3);
 	font-family:"Source Sans Pro";
 	font-size:60px;
 	font-weight:700;
@@ -809,7 +809,7 @@ website:   	http://www.themepunch.com
 .tp-caption.miami_content_dark,.miami_content_dark
 {
 	background-color:transparent;
-	border-color:#000;
+	border-color:var(--black);
 	border-style:none;
 	border-width:0;
 	color:#666;
@@ -824,7 +824,7 @@ website:   	http://www.themepunch.com
 
 .tp-caption.divideline30px_dark,.divideline30px_dark
 {
-	background-color:#333;
+	background-color:var(--grey-3);
 	border-color:#222;
 	border-style:none;
 	border-width:0;
@@ -858,7 +858,7 @@ website:   	http://www.themepunch.com
 .tp-caption.MarkerDisplay,.MarkerDisplay
 {
 	background-color:transparent;
-	border-color:#000;
+	border-color:var(--black);
 	border-radius:0 0 0 0;
 	border-style:none;
 	border-width:0;
@@ -876,7 +876,7 @@ website:   	http://www.themepunch.com
 	border-radius:0 0 0 0;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:Roboto;
 	font-size:120px;
 	font-style:normal;
@@ -893,7 +893,7 @@ website:   	http://www.themepunch.com
 	border-radius:0 0 0 0;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:"Nothing you could do";
 	font-size:30px;
 	font-style:normal;
@@ -911,7 +911,7 @@ website:   	http://www.themepunch.com
 	border-radius:0 0 0 0;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:Roboto;
 	font-size:17px;
 	font-style:normal;
@@ -929,7 +929,7 @@ website:   	http://www.themepunch.com
 	border-radius:0 0 0 0;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:Roboto;
 	font-size:20px;
 	font-style:normal;
@@ -947,7 +947,7 @@ website:   	http://www.themepunch.com
 	border-radius:0 0 0 0;
 	border-style:none;
 	border-width:0;
-	color:#fff;
+	color:white;
 	font-family:Roboto;
 	font-size:30px;
 	font-style:normal;
@@ -2516,8 +2516,8 @@ website:   	http://www.themepunch.com
 .revtp-form input[type="email"]{ 	
 	font-family: "Arial", sans-serif;
     font-size: 15px;
-    color: #000;
-    background-color: #fff;
+    color: var(--black);
+    background-color: white;
     line-height: 46px;
     padding: 0 20px;
     cursor: text;
@@ -3098,7 +3098,7 @@ website:   	http://www.themepunch.com
     padding: 0 20px;
     border: 0;
     background: #009aee;
-    color: #fff;
+    color: white;
     
     
     border-radius: 0px;
@@ -3323,8 +3323,8 @@ website:   	http://www.themepunch.com
     }
     .tp-caption.Concept-Content a,
     .tp-caption.Concept-Content a:visited {
-        color: #fff !important;
-        border-bottom: 1px solid #fff !important;
+        color: white !important;
+        border-bottom: 1px solid white !important;
         font-weight: 700 !important;
     }
     .tp-caption.Concept-Content a:hover {
@@ -3332,8 +3332,8 @@ website:   	http://www.themepunch.com
     }
     .tp-caption.Concept-Content-Dark a,
     .tp-caption.Concept-Content-Dark a:visited {
-        color: #000 !important;
-        border-bottom: 1px solid #000 !important;
+        color: var(--black) !important;
+        border-bottom: 1px solid var(--black) !important;
         font-weight: 700 !important;
     }
     .tp-caption.Concept-Content-Dark a:hover {
@@ -4352,7 +4352,7 @@ tp-caption.Team-Thumb,
     cursor: pointer
 }
 #rev_slider_429_1_wrapper .tp-loader.spinner2 {
-    background-color: #555555 !important;
+    background-color: var(--grey-5) !important;
 }
 .tp-fat {
     font-weight: 900 !important;
@@ -4537,11 +4537,11 @@ tp-caption.Team-Thumb,
 }
 .tp-caption.Twitter-Content a,
 .tp-caption.Twitter-Content a:visited {
-    color: #fff !important;
+    color: white !important;
     text-decoration: underline !important;
 }
 .tp-caption.Twitter-Content a:hover {
-    color: #fff !important;
+    color: white !important;
     text-decoration: none !important;
 }
 .soundcloudwrapper iframe {
@@ -4643,12 +4643,12 @@ tp-caption.Team-Thumb,
 #mc_embed_signup input#mce-EMAIL {
     font-family: "Lato", sans-serif;
     font-size: 15px;
-    color: #000;
-    background-color: #fff;
+    color: var(--black);
+    background-color: white;
     line-height: 46px;
     padding: 0 20px;
     cursor: text;
-    border: 1px solid #fff;
+    border: 1px solid white;
     width: 400px;
     margin-bottom: 0px;
     -webkit-transition: background-color 0.5s;
@@ -4661,7 +4661,7 @@ tp-caption.Team-Thumb,
     border-radius: 0px;
 }
 #mc_embed_signup input#mce-EMAIL[type="email"]:focus {
-    background-color: #fff;
+    background-color: white;
     border: 1px solid #666;
     border-right: 0;
 }
@@ -4676,7 +4676,7 @@ tp-caption.Team-Thumb,
     padding: 0 20px;
     border: 1px solid #009aee;
     background: #009aee;
-    color: #fff;
+    color: white;
     
     
     border-radius: 0px;
@@ -5648,14 +5648,14 @@ tp-caption.Team-Thumb,
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         
-        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#00000000', GradientType=0);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='var(--black)00000', GradientType=0);
         /* IE6-9 */
     }
     #mc_embed_signup input[type="email"] {
         font-family: "Lato", sans-serif;
         font-size: 16px;
         font-weight: 400;
-        background-color: #fff;
+        background-color: white;
         color: #888 !important;
         line-height: 46px;
         padding: 0 20px;
@@ -5695,7 +5695,7 @@ tp-caption.Team-Thumb,
         border: 0;
         background: #f04531;
         text-transform: none;
-        color: #fff;
+        color: white;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;

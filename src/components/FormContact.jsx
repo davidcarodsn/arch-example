@@ -60,18 +60,23 @@ const FormContact = ({ keys }) => {
     <form onSubmit={handleSubmit} className="form-contact" role="form">
       <div className="row">
         <div className="col-md-6 col-12">
+          <label>Nombre <span style={{ color: 'red' }}>*</span></label>
           <input type="text" value={data.user_name} name="user_name" onChange={handleChangeData} required placeholder="Nombre*"/>
         </div>
         <div className="col-md-6 col-12">
-          <input type="email" value={data.user_email} onChange={handleChangeData} name="user_email" required placeholder="Email*" />
+          <label>Email <span style={{ color: 'red' }}>*</span></label>
+          <input type="email" value={data.user_email} onChange={handleChangeData} name="user_email" required />
         </div>
         <div className="col-md-6 col-12">
+          <label>Empresa <span style={{ color: 'red' }}>*</span></label>
           <input type="text" value={data.user_company} name="user_company" onChange={handleChangeData} required placeholder="Empresa*"/>
         </div>
         <div className="col-md-6 col-12">
+          <label>Teléfono <span style={{ color: 'red' }}>*</span></label>
           <input type="text" value={data.user_phone} onChange={handleChangeData} name="user_phone" required placeholder="Número de teléfono*" />
         </div>
         <div className="col-md-12">
+          <label>Mensaje <span style={{ color: 'red' }}>*</span></label>
           <textarea name="message" value={data.message} onChange={handleChangeData} className="message" placeholder="Mensaje"></textarea>
         </div>
       </div>

@@ -1,8 +1,8 @@
 ---
-import FormFooter from './FormFooter';
+// import FormFooter from './FormFooter';
 
-const { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY } = await import.meta.env;
-const FooterProps = { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY };
+// const { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY } = await import.meta.env;
+// const FooterProps = { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY };
 
 ---
 <footer class="footer-2">
@@ -14,25 +14,22 @@ const FooterProps = { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_K
         <div class="col-lg-7 col-md-9 col-12">
           <h1>
             <a href="/">
-              <img alt="Logo" src="img/logo-white.png" />
+              <img alt="Logo" src="/img/logo.png" />
             </a>
           </h1>
-          <FormFooter keys={FooterProps} client:load />
+          <!-- <FormFooter keys={FooterProps} client:load /> -->
           <div class="social">
-            <a href="" class="social__item social__item--circle">
+            <a href="https://www.facebook.com/AluplastAberturas" target="_blank">
               <i class="zmdi zmdi-facebook"></i>
             </a>
-            <a href="" class="social__item social__item--circle">
-              <i class="zmdi zmdi-dribbble"></i>
-            </a>
-            <a href="" class="social__item social__item--circle">
-              <i class="zmdi zmdi-google"></i>
-            </a>
-            <a href="" class="social__item social__item--circle">
-              <i class="zmdi zmdi-twitter"></i>
-            </a>
-            <a href="" class="social__item social__item--circle">
+            <a href="https://www.instagram.com/aluplast.aberturas/" target="_blank">
               <i class="zmdi zmdi-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@aluplastmedia" target="_blank">
+              <i class="zmdi zmdi-youtube"></i>
+            </a>
+            <a href="https://wa.me/+5493446598417" target="_blank">
+              <i class="zmdi zmdi-whatsapp"></i>
             </a>
           </div>
         </div>
@@ -40,13 +37,3 @@ const FooterProps = { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_K
     </div>
   </div>
 </footer>
-<section class="copyright">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        Copyright © 2017 Designer by
-        <span>Authemes</span> . All rights reserved
-      </div>
-    </div>
-  </div>
-</section>

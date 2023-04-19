@@ -7,7 +7,7 @@
   margin-bottom: 20px;
 }
 .accordionjs .acc_section {
-  border: 1px solid #ccc;
+  border: 1px solid white;
   position: relative;
   z-index: 10;
   margin-top: -1px;
@@ -15,7 +15,7 @@
 }
 .accordionjs .acc_section .acc_head {
   position: relative;
-  background: #fff;
+  background: white;
   padding: 10px;
   display: block;
   cursor: pointer;
@@ -42,5 +42,5 @@
 }
 .accordionjs .acc_section.acc_active > .acc_head {
   background: #F9F9F9;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid white;
 }
