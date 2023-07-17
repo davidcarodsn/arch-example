@@ -1,0 +1,16 @@
+---
+import { ShopComponent } from "@components/catalog/ShopComponent";
+import HeaderShopComponent from "../components/catalog/HeaderShopComponent.astro";
+import PaginationShopComponent from "../components/catalog/PaginationShopComponent.astro";
+import BreadCumbComponent from "../components/common/BreadCumbComponent.astro";
+import Layout from "../layouts/Layout.astro";
+import { PAGES } from "../utils/types/pagesTypes";
+---
+
+<Layout pageTitle={PAGES.CATALOG}>
+  <!-- Page Wrap -->
+  <div class="page-wrap">
+    <BreadCumbComponent breadcumbs={PAGES.CATALOG} />
+    <ShopComponent />
+  </div>
+</Layout>

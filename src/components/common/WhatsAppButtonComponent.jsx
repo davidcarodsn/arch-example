@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import WppIcon from '../assets/img/wpp-icon.png';
-import WppIconHead from '../assets/img/ws-head.png';
+import WppIcon from '../../assets/img/wpp-icon.png';
+import WppIconHead from '../../assets/img/ws-head.png';
 import LinkWpButton from './LinkWpButton';
-import PhonesData from '../utils/data/wppButtonData';
+import PhonesData from '../../utils/data/wppButtonData';
 
 const WhatsAppButtonComponent = () => {
   const [isLinksDisplayActive, setIsLinksDisplayActive] = useState(false);

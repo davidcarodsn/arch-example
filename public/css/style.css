@@ -5155,7 +5155,7 @@ body.box {
 }
 
 .contact2__item {
-    background-image: url('../img/bg-adver.jpg');
+    background-image: url('/img/bg-adver.jpg');
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;

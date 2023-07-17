@@ -1,5 +1,6 @@
 export enum PAGES {
-  HOME = "Home",
+  HOME = "Fábrica de Aberturas de Aluminio - Aluplast",
   ABOUT_US = "Sobre Nosotros",
-  CONTACT = "Contacto"
+  CONTACT = "Contacto",
+  CATALOG = 'Catálogo',
 }
