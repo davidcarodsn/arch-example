@@ -7,7 +7,7 @@ interface ShopCardComponentProps {
 
 const ShopCardComponent:FC<ShopCardComponentProps> = ({ product, isHome = false }) => {
   return (
-    <div className="col-lg-6 col-md-6">
+    <div className="col-lg-4 col-md-6 col-12">
       <div className="pro__item">
         <div className="pro__img">
           {/* <span className="label label--small pink"> sale</span> */}
@@ -19,7 +19,7 @@ const ShopCardComponent:FC<ShopCardComponentProps> = ({ product, isHome = false 
                 className="au-btn au-btn--pill au-btn--big au-btn--yellow pro__add"
                 style={{ color: 'white'}}
               >
-                { isHome ? 'Ver en cat[alogo' : 'Consultar precio' }
+                { isHome ? 'Ver en Catálogo' : 'Ver Detalle' }
               </a>
             </div>
           </div>

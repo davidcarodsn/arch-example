@@ -1,7 +1,7 @@
 import React from "react";
 import ShopCardComponent from "./ShopCardComponent";
 import { ShopNavComponent } from "./ShopNavComponent";
-import { catalogData } from "src/utils/data/catalogData";
+import { allCatalogData } from "src/utils/data/catalogData";
 
 export const ShopComponent = () => {
   return (
@@ -16,9 +16,9 @@ export const ShopComponent = () => {
               <div className="col-lg-9 col-md-12">
                 <div className="row">
                   {
-                    catalogData.map(product => {
+                    allCatalogData.map(product => {
                       return (
-                        <ShopCardComponent product={product}/>
+                        <ShopCardComponent product={product} key={product.name}/>
                       )
                     })
                   }

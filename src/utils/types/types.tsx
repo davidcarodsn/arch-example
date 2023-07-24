@@ -1,8 +1,8 @@
 interface CatalogData { 
   name: string;
   img: string;
-  specs?: Specs 
-  type: string;
+  specs?: Specs; 
+  filters: string[];
 }
 
 interface Specs {

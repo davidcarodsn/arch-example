@@ -1,0 +1,41 @@
+button:focus {
+  outline: none;
+}
+.accordion-main-button {
+  font-size: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.accordion-main-button i {
+  font-size: 11px; 
+  margin-right: 8px; 
+  transition: all .5s ease; 
+}
+
+.accordion-sub-button {
+  background: none;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.accordion-sub-button i {
+  font-size: 10px;
+  margin-right: 8px; 
+  transition: all .5s ease; 
+}
+
+.accordion-main-body {
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 0;
+  margin-left: 23px;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.show-content {
+  max-height: 1000px;
+  transition: max-height 1s ease-in-out;
+}
