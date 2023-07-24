@@ -1,8 +1,10 @@
+import { TypeProduct, type CatalogData, ProductFathersTypes } from "../types/types";
+
 export const windowsData: CatalogData[] = [
   {
     name: 'Banderola',
     img: 'banderola',
-    filters: ['window', 'openers'],  
+    filters: [ProductFathersTypes.OPENERS_TYPES, TypeProduct.WINDOW_PRODUCT, 'banderola'],  
     specs: {
       descirption: 'De apertura superior, se proyecta verticalmente hacia adentro, admitiendo limpieza desde el interior. Se utilizan con frecuencia en oficinas, baños y cocheras.',
       maxMeasures: '1200x1800 mm',
@@ -13,7 +15,7 @@ export const windowsData: CatalogData[] = [
   {
     name: 'Corrediza',
     img: 'corrediza',
-    filters: ['window', 'openers'],  
+    filters: [ProductFathersTypes.OPENERS_TYPES, TypeProduct.WINDOW_PRODUCT, 'corrediza'],  
     specs: {
       descirption: 'Grandes dimensiones: Permiten recibir mucha luz natural y disfrutar de grandes vistas.',
       minMeasures: '1200x600 mm',
@@ -28,7 +30,7 @@ export const windowsData: CatalogData[] = [
   {
     name: 'De Abrir Practicable',
     img: 'deabrirpracticable',
-    filters: ['window', 'openers'],  
+    filters: [ProductFathersTypes.OPENERS_TYPES, TypeProduct.WINDOW_PRODUCT, 'practica'],  
     specs: {
       descirption: 'Los herrajes multipunto de cierre las convierten en aberturas con máxima aislación térmica y acústica. Son ideales para zonas con alto tránsito y ruido del exterior y para obtener un mayor ahorro en climatización.',
       minMeasures: '550x550 mm',
@@ -43,7 +45,7 @@ export const windowsData: CatalogData[] = [
   {
     name: 'Oscilobatiente',
     img: 'oscilobatiente',
-    filters: ['window', 'openers'],  
+    filters: [ProductFathersTypes.OPENERS_TYPES, TypeProduct.WINDOW_PRODUCT, 'oscilobatiente'],  
     specs: {
       descirption: 'Son ideales para el exterior porque reducen el ruido en zonas con alto tránsito y para obtener un mayor ahorro en climatización.',
       minMeasures: '550x550 mm',
@@ -59,7 +61,7 @@ export const windowsData: CatalogData[] = [
   {
     name: 'Desplazable Proyectante',
     img: 'desplazableproyectante',
-    filters: ['window', 'openers'],
+    filters: [ProductFathersTypes.OPENERS_TYPES, TypeProduct.WINDOW_PRODUCT, 'proyectante'],
     specs: {
       descirption: 'Una pareja de compases en los laterales, desplazan la hoja hacia fuera y hacia abajo simultáneamente, lo que permite una ventilación desde la base.',
       minMeasures: '550x550 mm',
@@ -70,7 +72,7 @@ export const windowsData: CatalogData[] = [
   {
     name: 'Paralela',
     img: 'paralela',
-    filters: ['window', 'openers'],  
+    filters: [ProductFathersTypes.OPENERS_TYPES, TypeProduct.WINDOW_PRODUCT, 'paralela'],  
     specs: {
       descirption: 'Combina la funcionalidad de una corrediza con la estanqueidad y hermeticidad de una abertura doble contacto.',
       minMeasures: '1500x1000 mm',
@@ -82,9 +84,9 @@ export const windowsData: CatalogData[] = [
     }
   },
   {
-    name: 'plegadiza',
+    name: 'Plegadiza',
     img: 'plegadiza',
-    filters: ['window', 'openers'],
+    filters: [ProductFathersTypes.OPENERS_TYPES, TypeProduct.WINDOW_PRODUCT,],
     specs: {
       minMeasures: '1500x1000 mm',
       maxMeasures: '5750x2600 mm',

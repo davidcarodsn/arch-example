@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import type { CatalogData } from "src/utils/types/types";
 
 interface ShopCardComponentProps {
   product: CatalogData;
@@ -11,11 +12,11 @@ const ShopCardComponent:FC<ShopCardComponentProps> = ({ product, isHome = false 
       <div className="pro__item">
         <div className="pro__img">
           {/* <span className="label label--small pink"> sale</span> */}
-          <img alt="Product 1" src={`img/products/${product.img}/${product.img}.png`} />
+          <img alt="Product 1" src={product?.img && `/img/products/${product.img}/${product.img}.png`} />
           <div className="pro-link">
             <div className="pro-info pro-info--dark pro-info--center">
               <a
-                href=""
+                href={isHome ? `/catalog` : `/products/${product.img}`}
                 className="au-btn au-btn--pill au-btn--big au-btn--yellow pro__add"
                 style={{ color: 'white'}}
               >

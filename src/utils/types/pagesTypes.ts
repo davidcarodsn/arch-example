@@ -3,4 +3,5 @@ export enum PAGES {
   ABOUT_US = "Sobre Nosotros",
   CONTACT = "Contacto",
   CATALOG = 'Catálogo',
+  PRODUCT = 'Producto'
 }

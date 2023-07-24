@@ -16,7 +16,7 @@ const AccordionChildComponent = ({ subType }: any) => {
         {
           subType.subTypes.map((item: any) => {
             return (
-              <button key={item.title} className='accordion-sub-button'>{item.title}</button>
+              <button key={item.title} style={{ fontWeight: '300' }} className='accordion-sub-button'>{item.title}</button>
             )
           })
         }
@@ -26,7 +26,7 @@ const AccordionChildComponent = ({ subType }: any) => {
   )
 }
 
-export const AccordionItem = ({ data }: any) => {
+export const AccordionItem = ({ data, setCatalogData }: any) => {
   const [ showSubTypes, setShowSubTypes ] = useState(false)
   return (
     <div>
@@ -39,7 +39,13 @@ export const AccordionItem = ({ data }: any) => {
         {data.title}
       </button>
       <div className={`accordion-main-body ${showSubTypes && 'show-content'}`} >
-        <button type='button' className='accordion-sub-button'>Mostrar todos</button>
+        <button 
+          type='button' 
+          className='accordion-sub-button'
+          onClick={() => setCatalogData(data.filter, false)}
+        >
+          Mostrar todos
+        </button>
         {
           data.types.map((item: any) => {
             return (

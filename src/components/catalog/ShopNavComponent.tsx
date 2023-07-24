@@ -1,30 +1,15 @@
 import { AccordionItem } from "@components/accordion/AccordionItem";
-import React, { FC, useState } from "react";
-
-// a) Aberturas
-
-// a.1) Puertas
-
-// a.2) Ventanas
-
-// a.4) Sistemas complementarios
-
-// b) Cerramientos
-
-// b.1) Frente integral
-
-// b.2) Courtain Wall
-
-// b.3) Divisorios de Oficina
+import React, { FC } from "react";
+import { ProductFathersTypes, TypeProduct } from "src/utils/types/types";
 
 const dataNav = [
   {
     title: "Aberturas",
-    filter: 'openers',
+    filter: ProductFathersTypes.OPENERS_TYPES,
     types: [
       {
         title: 'Ventanas',
-        filter: 'windows',
+        filter: TypeProduct.WINDOW_PRODUCT,
         subTypes: [
           {
             title: 'Cerrojo',
@@ -44,7 +29,7 @@ const dataNav = [
     types: [
       {
         title: 'Ventanas',
-        filter: 'windows',
+        filter: 'window',
         subTypes: [
           {
             title: 'Cerrojo',
@@ -64,7 +49,7 @@ const dataNav = [
     types: [
       {
         title: 'Ventanas',
-        filter: 'windows',
+        filter: 'window',
         subTypes: [
           {
             title: 'Cerrojo',
@@ -80,7 +65,11 @@ const dataNav = [
   },
 ];
 
-export const ShopNavComponent:FC = () => {
+interface ShopNavComponentProps {
+  setCatalogData: any;
+}
+
+export const ShopNavComponent:FC <ShopNavComponentProps> = ({ setCatalogData }) => {
   return (
     <div>
       <h4 className="title-sidebar">
@@ -90,7 +79,7 @@ export const ShopNavComponent:FC = () => {
         {
           dataNav.map((item)=> {
             return (
-              <AccordionItem data={item} key={item.title}/>
+              <AccordionItem data={item} setCatalogData={setCatalogData} key={item.title}/>
             )
           })
         }
