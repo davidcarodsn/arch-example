@@ -30,7 +30,7 @@ export const ShopComponent = ({ filter = undefined }) => {
   }, [filter])
 
   return (
-    <section className="pro-list-wrap" style={{ paddingTop: '10vh' }}>
+    <section className="pro-list-wrap">
       <div className="section-content section-content--w1140">
         <div className="container">
           <div className="pro-list">

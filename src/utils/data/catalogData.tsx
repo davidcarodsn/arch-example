@@ -102,7 +102,7 @@ export const doorsData: CatalogData[] = [
   {
     name: 'Puerta Frente',
     img: 'puertafrente',
-    filters: ['door', 'closers'],
+    filters: [ProductFathersTypes.OPENERS_TYPES, TypeProduct.DOOR_PRODUCT, 'puertafrente'],
     specs: {
       minMeasures: '1000x2300 mm',
       maxMeasures: '1800x2300 mm',
@@ -116,7 +116,7 @@ export const doorsData: CatalogData[] = [
   {
     name: 'Puerta Machimbre',
     img: 'puertamachimbre',
-    filters: ['door', 'closers'],
+    filters: [ProductFathersTypes.OPENERS_TYPES, TypeProduct.DOOR_PRODUCT, 'puertamachimbre'],
     specs: {
       minMeasures: '1000x2300 mm',
       maxMeasures:'1800x2300 mm',
@@ -130,7 +130,7 @@ export const doorsData: CatalogData[] = [
   {
     name: 'Puerta Vidriada',
     img: 'puertavidriada',
-    filters: ['door', 'closers'],
+    filters: [ProductFathersTypes.OPENERS_TYPES, TypeProduct.DOOR_PRODUCT, 'puertavidreada'],
     specs: {
       minMeasures: '1000x2300 mm',
       maxMeasures: '1800x2300 mm',

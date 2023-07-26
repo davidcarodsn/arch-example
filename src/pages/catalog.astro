@@ -5,12 +5,13 @@ import PaginationShopComponent from "../components/catalog/PaginationShopCompone
 import BreadCumbComponent from "../components/common/BreadCumbComponent.astro";
 import Layout from "../layouts/Layout.astro";
 import { PAGES } from "../utils/types/pagesTypes";
+import BreadCumbCatalog from "@components/catalog/BreadCumbCatalog.astro";
 ---
 
 <Layout pageTitle={PAGES.CATALOG}>
   <!-- Page Wrap -->
   <div class="page-wrap">
-    <BreadCumbComponent breadcumbs={PAGES.CATALOG} />
+    <BreadCumbCatalog />
     <ShopComponent client:load/>
   </div>
 </Layout>

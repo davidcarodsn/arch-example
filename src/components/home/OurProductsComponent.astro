@@ -1,6 +1,27 @@
 ---
 import ShopCardComponent from "@components/catalog/ShopCardComponent";
-import { allCatalogData } from "src/utils/data/catalogData";
+import { doorsData, windowsData } from "src/utils/data/catalogData";
+
+const allPanelData = [
+  windowsData[0], 
+  windowsData[1], 
+  windowsData[2], 
+  doorsData[0], 
+  doorsData[1], 
+  doorsData[2]
+].sort(() => Math.random() - 0.5 );
+
+const windowsPanelData = [
+  windowsData[0], 
+  windowsData[1], 
+  windowsData[2], 
+];
+
+const doorsPanelData = [
+  doorsData[0], 
+  doorsData[1], 
+  doorsData[2]
+];
 
 ---
 
@@ -16,15 +37,15 @@ import { allCatalogData } from "src/utils/data/catalogData";
         <!-- pro menu -->
         <div class="row pro-menu-wrap">
           <div id="pro-menu">
-            <ul class="nav nav-pills" id="myTab" role="tablist">
+            <ul class="nav nav-pills" id="myTabContent" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-expanded="true">All</a>
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-expanded="true">Ver todo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#on-sale" role="tab" aria-controls="on-sale">on sale</a>
+                <a class="nav-link" data-toggle="tab" href="#windows" role="tab" aria-controls="windows">Ventanas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#trending" role="tab" aria-controls="trending">trending</a>
+                <a class="nav-link" data-toggle="tab" href="#doors" role="tab" aria-controls="doors">Puertas</a>
               </li>
             </ul>
           </div>
@@ -32,149 +53,23 @@ import { allCatalogData } from "src/utils/data/catalogData";
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane active" id="all" role="tabpanel" aria-labelledby="home-tab">
             <div class="row">
-              {
-                allCatalogData.map(product => {
-                  return (
-                    <ShopCardComponent product={product} client:load/>
-                  )
-                })
-              }
+              { allPanelData.map(product => ( <ShopCardComponent product={product} isHome={true} /> )) }
             </div>
           </div>
           <!-- End Tab pane -->
-          <div class="tab-pane" id="on-sale" role="tabpanel">
+          <div class="tab-pane" id="windows" role="tabpanel">
             <div class="row">
-              <div class="col-lg-3 col-md-6">
-                <div class="pro__item">
-                  <div class="pro__img">
-                    <span class="label label--small pink">
-                      sale
-                    </span>
-                    <img alt="Product 1" src="/img/products/banderola/banderola.png">
-                    <div class="pro-link">
-                      <div class="pro-info pro-info--dark pro-info--center">
-                        <a href="" class="au-btn au-btn--pill au-btn--big au-btn--yellow pro__add">
-                          Add to cart
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="pro__detail">
-                    <h5>
-
-                      <a href="single-product.html">
-                        MORDEN TABLE LAMP
-                      </a>
-                    </h5>
-                    <div class="pro__price">
-                      <span class="old">
-                        $102.00
-                      </span>
-                      <span class="current">
-                        $95.00
-                      </span>
-                    </div>
-                    <div class="pro__star">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Item -->
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="pro__item">
-                  <div class="pro__img">
-                    <span class="label label--small pink">
-                      sale
-                    </span>
-                    <img alt="Product 7" src="/img/products/banderola/banderola.png">
-                    <div class="pro-link">
-                      <div class="pro-info pro-info--dark pro-info--center">
-                        <a href="" class="au-btn au-btn--pill au-btn--big au-btn--yellow pro__add">
-                          Add to cart
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="pro__detail">
-                    <h5>
-
-                      <a href="single-product.html">
-                        Table white lamp
-                      </a>
-                    </h5>
-                    <div class="pro__price">
-                      <span class="old">
-                        $102.00
-                      </span>
-                      <span class="current">
-                        $75.00
-                      </span>
-                    </div>
-                    <div class="pro__star">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Item -->
-              </div>
+              { windowsPanelData.map(product => ( <ShopCardComponent product={product} isHome={true} /> )) }
             </div>
           </div>
           <!-- End tab Pane -->
-          <div class="tab-pane" id="trending" role="tabpanel">
+          <div class="tab-pane" id="doors" role="tabpanel">
             <div class="row">
-              <div class="col-lg-3 col-md-6">
-                <div class="pro__item">
-                  <div class="pro__img">
-                    <span class="label label--small green">
-                      hot
-                    </span>
-                    <img alt="Product 4" src="/img/products/banderola/banderola.png">
-                    <div class="pro-link">
-                      <div class="pro-info pro-info--dark pro-info--center">
-                        <a href="" class="au-btn au-btn--pill au-btn--big au-btn--yellow pro__add">
-                          Add to cart
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="pro__detail">
-                    <h5>
-
-                      <a href="single-product.html">
-                        vintage vase
-                      </a>
-                    </h5>
-                    <div class="pro__price">
-                      <span class="current">
-                        $40.00
-                      </span>
-                    </div>
-                    <div class="pro__star">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Item -->
-              </div>
+              { doorsPanelData.map(product => ( <ShopCardComponent product={product} isHome={true}  /> )) }
             </div>
           </div>
           <!-- End tab Pane -->
         </div>
-        <!-- End tab content -->
-
       </div>
     </div>
   </section>

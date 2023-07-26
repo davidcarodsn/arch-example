@@ -1,0 +1,66 @@
+---
+const { productSelected } = Astro.props;
+---
+<div class="row">
+  <div class="col-lg-5 col-md-6">
+    <div class="single-product-img">
+      <img alt={`${productSelected.img}`} src={`/img/products/${productSelected.img}/${productSelected.img}.png`} />
+    </div>
+  </div>
+  <div class="col-lg-7 col-md-6">
+    <div class="single-product-detail">
+      <h2>{productSelected.name}</h2>
+      {
+        productSelected.specs?.features && (
+          <div class="row" style="margin-top: 5%;">
+            {
+              productSelected.specs.features.map((feature: string) => (
+                <div class="li-item col-12">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  {feature}
+                </div>
+              ))
+            }
+          </div>
+        )
+      }
+      <div class="single-product-tab">
+        {
+          productSelected.specs?.descirption && (
+            <ul class="nav nav-tabs" id="pro-tab" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="home-tab"
+                  data-toggle="tab"
+                  href="#description"
+                  role="tab"
+                  aria-controls="all"
+                  aria-expanded="true">Descripción</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pro-content">
+              <div
+                class="tab-pane active"
+                id="description"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+              >
+                <p class="m-b-25">{productSelected.specs?.descirption}</p>
+              </div>
+            </div>
+          )
+        }
+        <div class="single-product-form">
+          <div>
+            <button
+              type="button"
+              class="au-btn au-btn--big au-btn--pill au-btn--yellow au-btn--white"
+              >Preguntar el precio</button>
+          </div>
+        </div>
+        <!-- End Tab Content   -->
+      </div>
+    </div>
+  </div>
+</div>
