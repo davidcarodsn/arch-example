@@ -1,8 +1,11 @@
 ---
 // import FormFooter from './FormFooter';
+import { InstagramGalleryFooter } from "./InstagramGalleryFooter";
 
 // const { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY } = await import.meta.env;
 // const FooterProps = { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY };
+
+const { INSTAGRAM_TOKEN } = await import.meta.env;
 
 ---
 <!-- <footer class="footer-2">
@@ -50,33 +53,28 @@
                 </a>
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur moon el adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et doloe magna
-                aliqua.
+                Desde 1970 dedicados a la Fabricación y Comercialización de Aberturas de Aluminio. ALUPLAST!!! la mejor solución para su Casa, Comercio o Institución. Visita nuestros Showroom en Urdinarrain, Gualeguaychú, Concepción del Uruguay, Colón y Concordia
               </p>
               <h5 class="title-footer">FOLLOW US</h5>
               <div class="social-footer">
-                <a href="">
+                <a href="https://www.facebook.com/AluplastAberturas">
                   <i class="zmdi zmdi-facebook"></i>
                 </a>
-                <a href="">
-                  <i class="zmdi zmdi-twitter"></i>
+                <a href="https://www.instagram.com/aluplast.aberturas/">
+                  <i class="zmdi zmdi-instagram"></i>
                 </a>
-                <a href="">
-                  <i class="zmdi zmdi-pinterest-box"></i>
+                <a href="https://www.youtube.com/@aluplastmedia">
+                  <i class="zmdi zmdi-youtube"></i>
                 </a>
-                <a href="">
-                  <i class="zmdi zmdi-dribbble"></i>
-                </a>
-                <a href="">
-                  <i class="zmdi zmdi-google"></i>
+                <a href="https://wa.me/+5493446598417">
+                  <i class="zmdi zmdi-whatsapp"></i>
                 </a>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
               <h5 class="title-footer m-b-26">contact info</h5>
               <p class="con__item">
-                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                <i class="fa fa-home" aria-hidden="true"></i>
                 RP20, E2826, Urdinarrain, Concordia, AR
               </p>
               <p class="con__item">
@@ -92,58 +90,12 @@
                 Monday- Friday : 8am - 6pm
               </p> -->
             </div>
-            <div class="col-lg-4 col-md-6">
-              <!-- <h5 class="title-footer m-b-30">from gallery</h5>
-              <div class="gallery clearfix">
-                <div class="gallery__item">
-                  <img alt="Gallery 1" src="img/gallery-01.jpg" />
-                  <a href="" class="pro-link">
-                    <div class="overlay overlay--invisible overlay--yellow">
-                    </div>
-                  </a>
-                </div>
-                <div class="gallery__item">
-                  <img alt="Gallery 2" src="img/gallery-02.jpg" />
-                  <a href="" class="pro-link">
-                    <div class="overlay overlay--invisible overlay--yellow">
-                    </div>
-                  </a>
-                </div>
-                <div class="gallery__item">
-                  <img alt="Gallery 3" src="img/gallery-03.jpg" />
-                  <a href="" class="pro-link">
-                    <div class="overlay overlay--invisible overlay--yellow">
-                    </div>
-                  </a>
-                </div>
-                <div class="gallery__item">
-                  <img alt="Gallery 4" src="img/gallery-04.jpg" />
-                  <a href="" class="pro-link">
-                    <div class="overlay overlay--invisible overlay--yellow">
-                    </div>
-                  </a>
-                </div>
-                <div class="gallery__item">
-                  <img alt="Gallery 5" src="img/gallery-05.jpg" />
-                  <a href="" class="pro-link">
-                    <div class="overlay overlay--invisible overlay--yellow">
-                    </div>
-                  </a>
-                </div>
-                <div class="gallery__item">
-                  <img alt="Gallery 6" src="img/gallery-06.jpg" />
-                  <a href="" class="pro-link">
-                    <div class="overlay overlay--invisible overlay--yellow">
-                    </div>
-                  </a>
-                </div>
-              </div> -->
-            </div>
+            <InstagramGalleryFooter  instagramToken={INSTAGRAM_TOKEN} client:load />
           </div>
           <div class="copyright-2">
             <div>
-              Copyright © 2017 Designed by
-              <span>AuThemes</span>. All rights reserved.
+              <p><span>Aluplast</span>, Fábrica de Aberturas de Aluminio &copy; 2023 developed <a href="https://www.dsnempresas.com.ar/" target="_blank"><span>by <img src="/img/dsn.png" style="max-width: 33px;" alt="dsn"></span></a><a target="_blank"><span></span></a>
+              </p>
             </div>
           </div>
         </div>

@@ -1,11 +1,32 @@
 ---
+import { getThePlaceholderImage } from "src/utils/helpers/getPlaceholderImage";
 const { productSelected } = Astro.props;
+
+const placeholder = getThePlaceholderImage(productSelected.filters);
+
 ---
 <div class="row">
   <div class="col-lg-5 col-md-6">
     <div class="single-product-img">
-      <img alt={`${productSelected.img}`} src={`/img/products/${productSelected.img}/${productSelected.img}.png`} />
+      <img alt={`${productSelected.img}`} src={productSelected.img ? `/img/products/${productSelected.img}/${productSelected.img}.png` : placeholder } />
     </div>
+    <ul class="single-product-img-thumb ul--inline ul--no-style clearfix">
+      <li>
+        <a>
+          <img alt="Product Thumb 1" src={`/img/products/${productSelected.img}/${productSelected.img}.png`}>
+        </a>
+      </li>
+      <li>
+        <a>
+          <img alt="Product Thumb 2" src={`/img/products/${productSelected.img}/${productSelected.img}.png`}>
+        </a>
+      </li>
+      <li>
+        <a>
+          <img alt="Product Thumb 3" src={`/img/products/${productSelected.img}/${productSelected.img}.png`}>
+        </a>
+      </li>
+    </ul>
   </div>
   <div class="col-lg-7 col-md-6">
     <div class="single-product-detail">
@@ -53,10 +74,17 @@ const { productSelected } = Astro.props;
         }
         <div class="single-product-form">
           <div>
-            <button
+            <!-- <button
               type="button"
               class="au-btn au-btn--big au-btn--pill au-btn--yellow au-btn--white"
-              >Preguntar el precio</button>
+              >Preguntar el precio</button> -->
+              <a 
+              class="au-btn au-btn--big au-btn--pill au-btn--yellow au-btn--white"
+              href={`https://api.whatsapp.com/send?phone=543446374867&text=Hola, me gustaría saber mas información sobre el producto ${productSelected.title}`}
+              target="_blank" 
+              >
+                Consultar precio
+              </a>
           </div>
         </div>
         <!-- End Tab Content   -->

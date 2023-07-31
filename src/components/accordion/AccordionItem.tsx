@@ -8,6 +8,7 @@ const AccordionChildComponent = ({ subType }: any) => {
       <button 
         className='accordion-sub-button' 
         onClick={() => setShowSubTypes(!showSubTypes)}
+        style={{ color: showSubTypes ? 'red' : 'black'  }}
       >
         <i className="fa fa-chevron-right" style={{ transform: showSubTypes ? "rotate(90deg)" : 'none' }} aria-hidden="true"></i>
         {subType.title}
@@ -34,6 +35,7 @@ export const AccordionItem = ({ data, setCatalogData }: any) => {
         className="accordion-main-button"
         type='button'
         onClick={() => setShowSubTypes(!showSubTypes)}
+        style={{ color: showSubTypes ? 'red' : 'black'  }}
       >
         <i className="fa fa-chevron-right" style={{ transform: showSubTypes ? "rotate(90deg)" : 'none' }} aria-hidden="true"></i>
         {data.title}

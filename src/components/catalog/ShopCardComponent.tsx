@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { getThePlaceholderImage } from "src/utils/helpers/getPlaceholderImage";
 import type { CatalogData } from "src/utils/types/types";
 
 interface ShopCardComponentProps {
@@ -7,16 +8,19 @@ interface ShopCardComponentProps {
 }
 
 const ShopCardComponent:FC<ShopCardComponentProps> = ({ product, isHome = false }) => {
+  
+  const placeholder = getThePlaceholderImage(product.filters);
+
   return (
     <div className="col-lg-4 col-md-6 col-12">
       <div className="pro__item">
         <div className="pro__img">
           {/* <span className="label label--small pink"> sale</span> */}
-          <img alt="Product 1" src={product?.img && `/img/products/${product.img}/${product.img}.png`} />
+          <img alt="Product 1" src={product?.img ? `/img/products/${product.img}/${product.img}.png` : placeholder} />
           <div className="pro-link">
             <div className="pro-info pro-info--dark pro-info--center">
               <a
-                href={isHome ? `/catalog` : `/products/${product.img}`}
+                href={isHome ? `/catalog` : `/products/${product.name}`}
                 className="au-btn au-btn--pill au-btn--big au-btn--yellow pro__add"
                 style={{ color: 'white'}}
               >

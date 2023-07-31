@@ -6,6 +6,11 @@ button:focus {
   background: none;
   border: none;
   cursor: pointer;
+  transition: all .3s;
+}
+
+.accordion-main-button:hover {
+  transform: translateX(10px);
 }
 
 .accordion-main-button i {
@@ -20,6 +25,11 @@ button:focus {
   border: none;
   font-size: 13px;
   cursor: pointer;
+  transition: all .3s;
+}
+
+.accordion-sub-button:hover {
+  transform: translateX(10px);
 }
 
 .accordion-sub-button i {
