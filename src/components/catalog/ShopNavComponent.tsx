@@ -1,5 +1,6 @@
 import { AccordionItem } from "@components/accordion/AccordionItem";
 import React, { FC } from "react";
+import { closersData, complementarySystemData, doorsData, windowsData } from "src/utils/data/catalogData";
 import { ProductFathersTypes, TypeProduct } from "src/utils/types/types";
 
 const dataNav = [
@@ -11,57 +12,58 @@ const dataNav = [
         title: 'Ventanas',
         filter: TypeProduct.WINDOW_PRODUCT,
         subTypes: [
-          {
-            title: 'Cerrojo',
-            filter: 'slider'
-          }
+          ...windowsData.map(window => {
+            return {
+              title: window.name,
+              filter: window.img
+            }
+          })
         ]
       },
       {
         title: 'Puertas',
-        filter: 'doors',
-      }
-    ]
-  },
-  {
-    title: "Cerramientos",
-    filter: 'closeners',
-    types: [
-      {
-        title: 'Ventanas',
-        filter: 'window',
+        filter: TypeProduct.DOOR_PRODUCT,
         subTypes: [
-          {
-            title: 'Cerrojo',
-            filter: 'slider'
-          }
+          ...doorsData.map(door => {
+            return {
+              title: door.name,
+              filter: door.img
+            }
+          })
         ]
-      },
-      {
-        title: 'Puertas',
-        filter: 'doors',
       }
     ]
   },
   {
     title: "Sistemas Complementarios",
-    filter: 'addingfeatures',
+    filter: ProductFathersTypes.CS_TYPES,
     types: [
-      {
-        title: 'Ventanas',
-        filter: 'window',
-        subTypes: [
-          {
-            title: 'Cerrojo',
-            filter: 'slider'
-          }
-        ]
-      },
-      {
-        title: 'Puertas',
-        filter: 'doors',
+     ...complementarySystemData.map(wall => {
+      return {
+        title: wall.name,
+        filter: wall.img
       }
+     }) 
     ]
+  },
+  {
+    title: "Cerramientos",
+    filter: ProductFathersTypes.CLOSERS_TYPES,
+    types: [
+      ...closersData.map(wall => {
+        return {
+          title: wall.name,
+          filter: wall.img
+        }
+      })      
+    ]
+  },
+  {
+    title: "Servicios",
+    filter: ProductFathersTypes.SERVICES_TYPES,
+    // types: [
+      
+    // ]
   },
 ];
 

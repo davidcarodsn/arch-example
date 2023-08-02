@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ShopCardComponent from "./ShopCardComponent";
 import { ShopNavComponent } from "./ShopNavComponent";
 import { allCatalogData } from "src/utils/data/catalogData";
-import type { CatalogData } from "src/utils/types/types";
+import { CatalogData, CatalogFiltersTypes } from "src/utils/types/types";
 
 const initialState = [
   ...allCatalogData
@@ -11,21 +11,26 @@ const initialState = [
 export const ShopComponent = ({ filter = undefined }) => {
   const [catalogData,  setCatalogData] = useState<CatalogData[] | undefined>(initialState);
     
-  const handleFilterNav = (productType: string, isName: boolean) => {
+  const handleFilterNav = (productType: string, filterType: CatalogFiltersTypes) => {
     let newData: CatalogData[];
-    if (isName) {
+    if (filterType === CatalogFiltersTypes.SEARCH) {
       newData = allCatalogData.filter(product => product.name === productType);
-    } else {
+    }
+    if (filterType === CatalogFiltersTypes.PRODUCT_FILTER) {
       newData = allCatalogData.filter(product => product.filters.includes(productType));
     }
-
+    if (filterType === CatalogFiltersTypes.IMG) {
+      newData = allCatalogData.filter(product => product.img === productType);
+    } 
+    
+    //@ts-ignore
     setCatalogData(newData);
     return undefined;
   }
 
   useEffect(() => {
     if (filter) {
-      handleFilterNav(filter, false);
+      handleFilterNav(filter, CatalogFiltersTypes.PRODUCT_FILTER);
     }    
   }, [filter])
 

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './accordion.css';
+import { CatalogFiltersTypes } from 'src/utils/types/types';
 
-const AccordionChildComponent = ({ subType }: any) => {
+const AccordionChildComponent = ({ subType, setCatalogData }: any) => {
   const [ showSubTypes, setShowSubTypes ] = useState(false);
   return (
     <div>
@@ -10,19 +11,32 @@ const AccordionChildComponent = ({ subType }: any) => {
         onClick={() => setShowSubTypes(!showSubTypes)}
         style={{ color: showSubTypes ? 'red' : 'black'  }}
       >
-        <i className="fa fa-chevron-right" style={{ transform: showSubTypes ? "rotate(90deg)" : 'none' }} aria-hidden="true"></i>
+        { subType.subTypes &&  <i className="fa fa-chevron-right" style={{ transform: showSubTypes ? "rotate(90deg)" : 'none' }} aria-hidden="true"></i> }
         {subType.title}
       </button>
-      <div className={`accordion-main-body ${showSubTypes && 'show-content'}`} >
+      <div className={`accordion-main-body ${showSubTypes && 'show-content'}`} style={{ display: showSubTypes ? 'inline-flex' : '' }} >
+        <button
+          type='button'
+          className='accordion-sub-button'
+          onClick={() => setCatalogData(subType.filter, CatalogFiltersTypes.PRODUCT_FILTER)}
+        >
+          Mostrar todos
+        </button>
         {
           subType.subTypes.map((item: any) => {
             return (
-              <button key={item.title} style={{ fontWeight: '300' }} className='accordion-sub-button'>{item.title}</button>
+              <button 
+                key={item.title} 
+                style={{ fontWeight: '400' }} 
+                onClick={() => setCatalogData(item.filter, CatalogFiltersTypes.IMG)}
+                className='accordion-sub-button'
+              >
+                {item.title}
+              </button>
             )
           })
         }
       </div> 
-
     </div>
   )
 }
@@ -34,7 +48,7 @@ export const AccordionItem = ({ data, setCatalogData }: any) => {
       <button 
         className="accordion-main-button"
         type='button'
-        onClick={() => setShowSubTypes(!showSubTypes)}
+        onClick={() => data.types && setShowSubTypes(!showSubTypes)}
         style={{ color: showSubTypes ? 'red' : 'black'  }}
       >
         <i className="fa fa-chevron-right" style={{ transform: showSubTypes ? "rotate(90deg)" : 'none' }} aria-hidden="true"></i>
@@ -44,21 +58,21 @@ export const AccordionItem = ({ data, setCatalogData }: any) => {
         <button 
           type='button' 
           className='accordion-sub-button'
-          onClick={() => setCatalogData(data.filter, false)}
+          onClick={() => setCatalogData(data.filter, CatalogFiltersTypes.PRODUCT_FILTER)}
         >
           Mostrar todos
         </button>
         {
-          data.types.map((item: any) => {
+          data.types?.map((item: any) => {
             return (
               (item?.subTypes?.length > 0) 
-              ? (<AccordionChildComponent subType={item} key={item.title} />) 
+              ? (<AccordionChildComponent subType={item} key={item.title} setCatalogData={setCatalogData} />) 
               : (
                   <button 
                     className="accordion-sub-button" 
                     key={item.title}
+                    onClick={() => setCatalogData(item.filter, CatalogFiltersTypes.IMG)}
                   >
-                    <i className="fa fa-chevron-right" aria-hidden="true"></i>
                     {item.title}
                   </button>
                 )

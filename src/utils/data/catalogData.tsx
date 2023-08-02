@@ -144,7 +144,56 @@ export const doorsData: CatalogData[] = [
   },
 ];
 
+export const complementarySystemData: CatalogData[] = [
+  {
+    name: 'Baranda Balcon',
+    img: 'barandabalcon',
+    filters: [ProductFathersTypes.CS_TYPES, 'barandabalcon'],
+  },
+  {
+    name: 'Frente Placar',
+    img: 'frenteplacar',
+    filters: [ProductFathersTypes.CS_TYPES, 'frenteplacar'],
+  },
+  {
+    name: 'Tabiques Divisorios',
+    img: 'tabiquesdivisorios',
+    filters: [ProductFathersTypes.CS_TYPES, 'tabiquesdivisorios'],
+  },
+  {
+    name: 'Tecno Vidriado',
+    img: 'tecnovidriado',
+    filters: [ProductFathersTypes.CS_TYPES, 'tecnovidriado'],
+  },
+];
+
+export const closersData:CatalogData[] = [
+  {
+    name: 'Courtain Wall',
+    img: 'courtainwall',
+    filters: [ProductFathersTypes.CLOSERS_TYPES, 'courtainwall'],
+  },
+  {
+    name: 'Frente Integral',
+    img: 'frenteintegral',
+    filters: [ProductFathersTypes.CLOSERS_TYPES, 'frenteintegral'],
+  },
+  {
+    name: 'Frame Junta Cerrada',
+    img: 'framejuntacerrada',
+    filters: [ProductFathersTypes.CLOSERS_TYPES, 'framejuntacerrada'],
+  },
+  {
+    name: 'Parasol',
+    img: 'parasol',
+    filters: [ProductFathersTypes.CLOSERS_TYPES, 'parasol'],
+  },
+]
+
+
 export const allCatalogData:CatalogData[] = [
   ...windowsData,
-  ...doorsData
+  ...doorsData,
+  ...complementarySystemData,
+  ...closersData
 ]

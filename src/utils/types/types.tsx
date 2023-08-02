@@ -23,3 +23,9 @@ export enum TypeProduct {
   WINDOW_PRODUCT = 'WINDOW',
   DOOR_PRODUCT = 'DOOR',
 }
+
+export enum CatalogFiltersTypes {
+  SEARCH = 'BY_SEARCH',
+  PRODUCT_FILTER = 'BY_FILTER',
+  IMG = 'BY_IMG'
+}
