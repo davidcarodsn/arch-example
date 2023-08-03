@@ -13,7 +13,7 @@ const PhonesData = [
   },
   {
     phone: '543446583228',
-    area: 'Ventas Villa Elisa',
+    area: 'Adm. Colón',
   },
   {
     phone: '543446354009',
@@ -32,7 +32,7 @@ const PhonesData = [
     area: 'Ventas Urdinarrain',
   },
   {
-    phone: '54344659841',
+    phone: '543446598417',
     area: 'Adm. Urdinarrain',
   },
 ];

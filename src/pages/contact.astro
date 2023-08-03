@@ -4,6 +4,7 @@ import FormContact from "../components/contact/FormContact";
 import { PAGES } from "../utils/types/pagesTypes";
 import BreadCumbComponent from "../components/common/BreadCumbComponent.astro";
 import InfoSection from "../components/contact/InfoSection.astro";
+import { contactData } from "src/utils/data/contactData";
 
 const {
   RECAPTCHA_KEY,
@@ -17,7 +18,12 @@ const {
   <!-- Page Wrap -->
   <div class="page-wrap">
     <BreadCumbComponent breadcumbs={PAGES.CONTACT} />
-    <InfoSection />
+    <InfoSection
+      address={contactData[0].address}
+      phone={contactData[0].phone}
+      mail={contactData[0].mail}
+      title={"Donde encontrarnos?"}
+    />
     <!-- Contact content -->
     <section class="contact-content">
       <div class="container">
@@ -25,13 +31,12 @@ const {
           <div class="col-md-6">
             <div class="m-t-40">
               <!-- <div style="min-height: 60vh" id="google-map"></div> -->
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13623.194860226813!2d-58.0295596!3d-31.3921132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade9dedca803db%3A0xb117322bf10cb2fe!2sAluplast%20Concordia!5e0!3m2!1ses!2sar!4v1690494392605!5m2!1ses!2sar" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6716.896210460304!2d-58.8893424!3d-32.6741277!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95baa828f2d32b47%3A0xbe4d5bd6a4354bd!2sAluplast%20SRL!5e0!3m2!1ses!2sar!4v1691100660476!5m2!1ses!2sar"
                 style="border: 0; width: 100%; height: 65vh" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
           <div class="col-md-6">

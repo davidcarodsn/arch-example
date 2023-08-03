@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { PAGES } from "../utils/types/pagesTypes";
+import BreadCumbTextures from "@components/textures/BreadCumbTextures.astro";
+
+const data = ['', '', '', '', '', '', '', '', '', '', '', ];
+
+---
+
+<Layout pageTitle={PAGES.CATALOG}>
+  <!-- Page Wrap -->
+  <div class="page-wrap">
+    <BreadCumbTextures />
+    <section class="pro-list-wrap">
+      <div class="section-content section-content--w1140">
+        <div class="container">
+          <div class="pro-list">
+            <div class="row">
+              <div class="col-lg-5 col-md-12">
+                <div class="row">
+                  {
+                    data.map((texture, i) => {
+                      return (
+                        <div class="col-3" style="margin-top: 15px;">
+                          <button type="button">
+                            <img src="/img/textures/example.jpg"  alt="example">
+                            Example
+                          </button>
+                        </div>
+                      )
+                    })
+                  }
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="row">
+                  <img src="/img/products/banderola/banderola.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <PaginationShopComponent />  */}
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
