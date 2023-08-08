@@ -17,10 +17,16 @@ const { product } = Astro.params;
 
 const productSelected = allCatalogData.filter((obj) => obj.name === product)[0];
 
-const relatedProducts = allCatalogData
-  .filter(product => product.filters.includes( productSelected.filters[0] && productSelected.filters[1] ))
+let relatedProducts = allCatalogData
+  .filter(product => product.filters.includes(productSelected.filters[1] ))
   .filter(product => product !== productSelected)
   .sort(() => Math.random() - 0.5 );
+
+if (!relatedProducts.length) {
+  relatedProducts = allCatalogData
+  .filter(product => product.filters.includes(productSelected.filters[0] ))
+  .filter(product => product !== productSelected)
+}
 
 ---
 

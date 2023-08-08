@@ -13,19 +13,24 @@ interface Specs {
 }
 
 export enum ProductFathersTypes {
-  OPENERS_TYPES = 'OPENERS',
-  CLOSERS_TYPES = 'CLOSERS',
-  CS_TYPES = 'COMPLEMENTARY SYSTEM',
-  SERVICES_TYPES = 'SERVICES'
+  OPENERS_TYPES = 'aberturas',
+  CLOSERS_TYPES = 'cerramientos',
+  CS_TYPES = 'sistemas-complementarios',
+  SERVICES_TYPES = 'servicios'
 }
 
 export enum TypeProduct {
-  WINDOW_PRODUCT = 'WINDOW',
-  DOOR_PRODUCT = 'DOOR',
+  WINDOW_PRODUCT = 'ventanas',
+  DOOR_PRODUCT = 'puertas',
 }
 
 export enum CatalogFiltersTypes {
   SEARCH = 'BY_SEARCH',
   PRODUCT_FILTER = 'BY_FILTER',
   IMG = 'BY_IMG'
+}
+
+export interface TexturesTypes {
+  name: string;
+  img: string;
 }

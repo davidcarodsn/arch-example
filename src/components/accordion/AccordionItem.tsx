@@ -14,9 +14,10 @@ const AccordionChildComponent = ({ subType, setCatalogData }: any) => {
         { subType.subTypes &&  <i className="fa fa-chevron-right" style={{ transform: showSubTypes ? "rotate(90deg)" : 'none' }} aria-hidden="true"></i> }
         {subType.title}
       </button>
-      <div className={`accordion-main-body ${showSubTypes && 'show-content'}`} style={{ display: showSubTypes ? 'inline-flex' : '' }} >
+      <div className={`accordion-main-body ${showSubTypes && 'show-content'}`} style={{ display: showSubTypes ? 'inline-flex' : 'none' }} >
         <button
           type='button'
+          id={subType.filter}
           className='accordion-sub-button'
           onClick={() => setCatalogData(subType.filter, CatalogFiltersTypes.PRODUCT_FILTER)}
         >
@@ -27,6 +28,7 @@ const AccordionChildComponent = ({ subType, setCatalogData }: any) => {
             return (
               <button 
                 key={item.title} 
+                id={item.filter}
                 style={{ fontWeight: '400' }} 
                 onClick={() => setCatalogData(item.filter, CatalogFiltersTypes.IMG)}
                 className='accordion-sub-button'
@@ -57,6 +59,7 @@ export const AccordionItem = ({ data, setCatalogData }: any) => {
       <div className={`accordion-main-body ${showSubTypes && 'show-content'}`} >
         <button 
           type='button' 
+          id={data.filter}
           className='accordion-sub-button'
           onClick={() => setCatalogData(data.filter, CatalogFiltersTypes.PRODUCT_FILTER)}
         >
@@ -71,6 +74,7 @@ export const AccordionItem = ({ data, setCatalogData }: any) => {
                   <button 
                     className="accordion-sub-button" 
                     key={item.title}
+                    id={item.filter}
                     onClick={() => setCatalogData(item.filter, CatalogFiltersTypes.IMG)}
                   >
                     {item.title}

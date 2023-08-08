@@ -1,4 +1,4 @@
-import { TypeProduct, type CatalogData, ProductFathersTypes } from "../types/types";
+import { TypeProduct, type CatalogData, ProductFathersTypes, TexturesTypes } from "../types/types";
 
 export const windowsData: CatalogData[] = [
   {
@@ -149,21 +149,51 @@ export const complementarySystemData: CatalogData[] = [
     name: 'Baranda Balcon',
     img: 'barandabalcon',
     filters: [ProductFathersTypes.CS_TYPES, 'barandabalcon'],
+    specs: {
+      features: [
+        'Pasamanos redondos, elípticos o rectos dan variables de diseño e imagen del balcón.',
+        'Opciones de distintas presencias de vidrio-aluminio.',
+      ],
+      descirption: 'Dos líneas disponibles: <br> Baranda Clásica: pasamanos redondo o recto con gran presencia de vidrio. <br> Baranda BBA: de reciente lanzamiento, con pasamanos de diseño elíptico de agradable imagen y tacto, permite una gran presencia del vidrio dado que el mismo nace dentro del pasamanos.'
+    }
   },
   {
-    name: 'Frente Placar',
-    img: 'frenteplacar',
-    filters: [ProductFathersTypes.CS_TYPES, 'frenteplacar'],
+    name: 'Frente Placard',
+    img: 'frenteplacard',
+    filters: [ProductFathersTypes.CS_TYPES, 'frenteplacard'],
+    specs: {
+      features: [
+        'Admite Placas de Madera (Fibrofácil), Espejo y Vidrio.',
+        'Dos modelos disponibles de Tirador: normal y reforzado.',
+        'El sistema de apertura corredizo evita la necesidad de mantener despejada el área frontal del Placard para la apertura de las hojas.'
+      ]
+    }
   },
   {
     name: 'Tabiques Divisorios',
     img: 'tabiquesdivisorios',
     filters: [ProductFathersTypes.CS_TYPES, 'tabiquesdivisorios'],
+    specs: {
+      features: [
+        'Ideal para dividir oficinas',
+        'Admite Placas de Madera (Fibrofácil) y Vidrio'
+      ],
+      descirption: 'Dos modelos disponibles: <br> Línea Alcemar, con bordes redondeados y terminación de columna mediante tapa de aluminio. <br> Línea Tradicional, bordes rectos y terminación de columna mediante burlete'
+    }
   },
   {
-    name: 'Tecno Vidriado',
-    img: 'tecnovidriado',
-    filters: [ProductFathersTypes.CS_TYPES, 'tecnovidriado'],
+    name: 'Techo Vidriado',
+    img: 'techovidriado',
+    filters: [ProductFathersTypes.CS_TYPES, 'techovidriado'],
+    specs: {
+      features: [
+        'Acabado anodizado o pintado.',
+        'Admite vidrio Simple y DVH.',
+        'Libre escurrimiento en sentido de la pendiente.',
+        'Sistema compuesto por perfiles de larguero, travesaño y prensa vidrio.',
+        'Montado sobre estructura portante independiente.'
+      ],
+    }
   },
 ];
 
@@ -172,24 +202,207 @@ export const closersData:CatalogData[] = [
     name: 'Courtain Wall',
     img: 'courtainwall',
     filters: [ProductFathersTypes.CLOSERS_TYPES, 'courtainwall'],
+    specs: {
+      descirption: `
+        <strong>Estética</strong>
+        <br>
+        La línea permite generar superficies vidriadas a partir de las cuales se posible revestir la edificación. En la actualidad, es habitual su uso no solo en Edificios de gran altura, sino también en otros de menor tamaño, e incluso en viviendas.
+        <br>
+        <br>
+        <strong>Prestación</strong>
+        <br>
+        Tres alternativas de sujeción para los cristales: vidrio pegado, mediante contravidrios y vidrio contenido. 
+        <br>
+        Para la primera alternativa, hay dos opciones: pegado mediante cinta VHB o Silicona.
+        <br>
+        Admite vidrios laminados, templados y DVH.
+        <br>
+        Diversos tipos de columnas, de acuerdo a la exigencia específicas de la obra
+        <br>
+        Tijeras de Acero para la Ventana Desplazable.
+        <br>
+        <br>
+        <strong>Hermeticidad</strong>
+        <br>
+        Tres alternativas de sujeción para los cristales: vidrio pegado, mediante contravidrios y vidrio contenido. 
+        <br>
+        Para la primera alternativa, hay dos opciones: pegado mediante cinta VHB o Silicona.
+        <br>
+        Admite vidrios laminados, templados y DVH.
+        <br>
+        Diversos tipos de columnas, de acuerdo a la exigencia específicas de la obra
+        <br>
+        Tijeras de Acero para la Ventana Desplazable..
+      `
+    }
   },
   {
     name: 'Frente Integral',
     img: 'frenteintegral',
     filters: [ProductFathersTypes.CLOSERS_TYPES, 'frenteintegral'],
+    specs: {
+      descirption: `
+      <strong>Prestación</strong>
+      <br>
+      Adaptable a diversos espesores de vidrio, mediante perfil prensa con fijación mediante bulones.
+      <br>
+      Corte a 90º
+      <br>
+      Admite vidrios laminado, templados y DVH.
+      <br>
+      <br>
+      <strong>Hermeticidad</strong>
+      <br>
+      Los paños fijos generados a partir de este sistema son aptos para responder a las más altas exigencias de Hermeticidad y Estanqueidad
+      <br>
+      La colocación se realiza mediante la fijación al muro de las columnas perimetrales, a partir de las cuales se toman los divisores horizontales y verticales (formados por perfiles del mismo tipo que los perimetrales ) mediante escuadras tipo “U”.`,
+      features: [
+        'Diseñada en base a una vista frontal de 60 milímetros, con diversas profundidades de columna',
+        'Permite generar Paños Vidriados, a los que puede añadirse Ventanas Desplazable, Puertas de Rebatir y otras Tipologías.',
+        'Adaptable a diversos espesores de vidrio'
+      ]
+    }
   },
   {
     name: 'Frame Junta Cerrada',
     img: 'framejuntacerrada',
     filters: [ProductFathersTypes.CLOSERS_TYPES, 'framejuntacerrada'],
+    specs: {
+      features: [
+        'Junta de unión sellada.',
+        'Burletes de silicona.',
+        'Alta prestación ante cargas de viento.',
+        'Sistema de alta eficiencia para edificios en altura.'
+      ],
+      descirption: `
+      <strong>Estética</strong>
+      <br>
+      Diseño actual e imagen continua de vidrio (sin presencia de aluminio visto desde el exterior).
+      <br>
+      Admite, si el proyecto lo contempla, el montaje de perfiles cosméticos de aluminio en el exterior.
+      <br>
+      Vidrio pegado con silicona estructural.
+      <br>
+      Interior de líneas y bordes rectos
+      <br>
+      <br>
+      <strong>Características</strong>
+      <br>
+      Sistema modular acoplable de montaje rápido.
+      <br>
+      Armado de paneles en taller.
+      <br>
+      Sistema de fijación con regulación en 3 dimensiones.
+      `
+    }
   },
   {
     name: 'Parasol',
     img: 'parasol',
     filters: [ProductFathersTypes.CLOSERS_TYPES, 'parasol'],
+    specs: {
+      descirption: `
+        En zonas donde prevalece el clima cálido, más allá del uso de sistema con RPT, se hace necesario mejorar el coeficiente de Factor Solar (FS) de forma tal de disminuir la irradiación solar incidente que entra al local a través de elementos vidriados. ALCEMAR S.A.,en su constante compromiso con la ecología, el medio ambiente y el ahorro energético, desarrolló y desarrolla sistemas de control solar aplicables en fachadas y aberturas, tanto fijos como móviles según las necesidades de proyecto adecuados a la ubicación geográfica de la obra y la altura de emplazamiento.
+        <br>
+        <br>
+        Los dispositivos de control solar tienen como objetivo:
+        – Regular la radiación solar limitando los efectos de la radiación infrarroja y permitiendo los efectos de la radiación visible.
+        – Evitar que se generen ganancias de calor en verano.
+        –Generación controlada de ganancias de calor en invierno.
+        <br>
+        <br>
+        La combinación de Muro Cortina y una pantalla de tubos extruidos de aluminio, posicionada a cierta distancia de la estructura, actúa como protección solar.
+        <br>
+        <br>
+        <strong>Flexibilidad</strong>
+        <br>
+        El sistema permite diferentes opciones de diseño en cuanto a forma y tamaño con la combinación de una variedad de perfiles, logrando lamas que van desde 240mm a 600mm.
+        <br>
+        <br>
+        Parasol vertical móvil sección de 600mm, nos permite un buen campo visual desde el interior del edificio con una apertura de 400.
+      `
+    }
   },
 ]
 
+export const texturesData: TexturesTypes[] = [
+  {
+    name: 'White',
+    img: 'white'
+  },
+  {
+    name: 'Ivory',
+    img: 'ivory'
+  },
+  {
+    name: 'White',
+    img: 'white'
+  },
+  {
+    name: 'Pewter',
+    img: 'pewter'
+  },
+  {
+    name: 'Metallic Grey',
+    img: 'metallicgrey'
+  },
+  {
+    name: 'Natural Oak',
+    img: 'naturaloak'
+  },
+  {
+    name: 'Grey Oak',
+    img: 'greyoak'
+  },
+  {
+    name: 'Turner Oak',
+    img: 'turneroak'
+  },
+  {
+    name: 'Golden Oak',
+    img: 'goldenoak'
+  },
+  {
+    name: 'Sipo',
+    img: 'sipo'
+  },
+  {
+    name: 'Cherry',
+    img: 'cherry'
+  },
+  {
+    name: 'Lenga',
+    img: 'lenga'
+  },
+  {
+    name: 'Walnut',
+    img: 'walnut'
+  },
+  {
+    name: 'Wengue',
+    img: 'wengue'
+  },
+  {
+    name: 'Sapelli',
+    img: 'sapelli'
+  },
+  {
+    name: 'Green',
+    img: 'green'
+  },
+  {
+    name: 'Graphite Grey',
+    img: 'graphitegrey'
+  },
+  {
+    name: 'Brown Mat',
+    img: 'brownmat'
+  },
+  {
+    name: 'Jet Black',
+    img: 'jetblack'
+  },
+];
 
 export const allCatalogData:CatalogData[] = [
   ...windowsData,

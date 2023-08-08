@@ -8,7 +8,7 @@ const initialState = [
   ...allCatalogData
 ].sort(function() { return Math.random() - 0.5 });
 
-export const ShopComponent = ({ filter = undefined }) => {
+export const ShopComponent = ({ query }:any) => {
   const [catalogData,  setCatalogData] = useState<CatalogData[] | undefined>(initialState);
     
   const handleFilterNav = (productType: string, filterType: CatalogFiltersTypes) => {
@@ -29,10 +29,10 @@ export const ShopComponent = ({ filter = undefined }) => {
   }
 
   useEffect(() => {
-    if (filter) {
-      handleFilterNav(filter, CatalogFiltersTypes.PRODUCT_FILTER);
+    if (query) {
+      handleFilterNav(query, CatalogFiltersTypes.PRODUCT_FILTER);
     }    
-  }, [filter])
+  }, [])
 
   return (
     <section className="pro-list-wrap">
