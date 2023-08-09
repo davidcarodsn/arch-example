@@ -1,6 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { getThePlaceholderImage } from "src/utils/helpers/getPlaceholderImage";
-import type { CatalogData } from "src/utils/types/types";
+import { TypeProduct, type CatalogData } from "src/utils/types/types";
 
 interface ShopCardComponentProps {
   product: CatalogData;
@@ -8,42 +8,38 @@ interface ShopCardComponentProps {
 }
 
 const ShopCardComponent:FC<ShopCardComponentProps> = ({ product, isHome = false }) => {
-  
-  const placeholder = getThePlaceholderImage(product.filters);
+  const [ img, setImg ] = useState<string>();
+  const [ link, setLink ] = useState<string>();
+  const [ textButton, setTextButton ] = useState<string>();
+  const [productName, setProductName ] = useState<string>();
+
+  useEffect(() => product.img ? setImg(`/img/products/${product.img}/${product.img}.png`) : undefined, [product.img]);
+  useEffect(() => isHome ? setLink(`/catalog`) : setLink(`/products/${product.name}`), [product.name, isHome])
+  useEffect(() => isHome ? setTextButton('Ver en Catálogo') : setTextButton('Ver Detalle'), [isHome])
+  useEffect(() => product.name ? setProductName(product.name) : setProductName('Producto') , [product.name])
 
   return (
     <div className="col-lg-4 col-md-6 col-12">
       <div className="pro__item">
         <div className="pro__img">
           {/* <span className="label label--small pink"> sale</span> */}
-          <img alt="Product 1" src={product?.img ? `/img/products/${product.img}/${product.img}.png` : placeholder} />
+          <img alt="Product 1" src={img ?? `/img/products/${getThePlaceholderImage([TypeProduct.WINDOW_PRODUCT])}/${getThePlaceholderImage([TypeProduct.WINDOW_PRODUCT])}.png`} />
           <div className="pro-link">
             <div className="pro-info pro-info--dark pro-info--center">
               <a
-                href={isHome ? `/catalog` : `/products/${product.name}`}
+                href={link}
                 className="au-btn au-btn--pill au-btn--big au-btn--yellow pro__add"
                 style={{ color: 'white'}}
               >
-                { isHome ? 'Ver en Catálogo' : 'Ver Detalle' }
+                {textButton}
               </a>
             </div>
           </div>
         </div>
         <div className="pro__detail">
           <h5>
-            <a href="single-product.html" style={{ textTransform: 'none' }}>{product.name}</a>
+            <a href="single-product.html" style={{ textTransform: 'none' }}>{productName}</a>
           </h5>
-          {/* <div className="pro__price">
-            <span className="old"> $102.00</span>
-            <span className="current"> $95.00</span>
-          </div> */}
-          {/* <div className="pro__star">
-            <i className="fa fa-star" aria-hidden="true"></i>
-            <i className="fa fa-star" aria-hidden="true"></i>
-            <i className="fa fa-star" aria-hidden="true"></i>
-            <i className="fa fa-star" aria-hidden="true"></i>
-            <i className="fa fa-star-half-o" aria-hidden="true"></i>
-          </div> */}
         </div>
       </div>
     </div>

@@ -85,6 +85,14 @@ export const ShopNavComponent:FC <ShopNavComponentProps> = ({ setCatalogData }) 
             )
           })
         }
+      <a
+        href="/catalog/textures" 
+        className="accordion-main-button"
+        style={{ color:'black'  }}
+      >
+        <i className="fa fa-chevron-right" aria-hidden="true"></i>
+        Texturas
+      </a>
       </div>
     </div>
   );

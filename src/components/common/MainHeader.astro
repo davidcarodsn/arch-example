@@ -1,3 +1,8 @@
+---
+import { ProductFathersTypes } from "src/utils/types/types";
+
+---
+
 <!-- Header Stick -->
   <header class="header-stick header-stick--dark">
     <div class="container clearfix">
@@ -13,10 +18,27 @@
               Home
             </a>
           </li>
-          <li>
+          <li class="li-has-sub">
             <a href="/catalog">
               Productos
             </a>
+            <ul class="sub-menu ul--no-style">
+              <li>
+                <a href={`/catalog/${ProductFathersTypes.OPENERS_TYPES}`}>
+                  Aberturas
+                </a>
+              </li>
+              <li>
+                <a href={`/catalog/${ProductFathersTypes.CLOSERS_TYPES}`}>
+                  Cerramientos
+                </a>
+              </li>
+              <li>
+                <a href={`/catalog/${ProductFathersTypes.CS_TYPES}`}>
+                  Sistemas Complementarios
+                </a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="/contact">
@@ -47,10 +69,27 @@
               Home
             </a>
           </li>
-          <li>
+          <li class="li-has-sub">
             <a href="/catalog">
               Productos
             </a>
+            <ul class="sub-menu ul--no-style">
+              <li>
+                <a href={`/catalog/${ProductFathersTypes.OPENERS_TYPES}`}>
+                  Aberturas
+                </a>
+              </li>
+              <li>
+                <a href={`/catalog/${ProductFathersTypes.CLOSERS_TYPES}`}>
+                  Cerramientos
+                </a>
+              </li>
+              <li>
+                <a href={`/catalog/${ProductFathersTypes.CS_TYPES}`}>
+                  Sistemas Complementarios
+                </a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="/contact">
@@ -106,10 +145,27 @@
                 Home
               </a>
             </li>
-            <li>
+            <li class="li-has-sub">
               <a href="/catalog">
                 Productos
               </a>
+              <ul class="sub-menu ul--no-style">
+                <li>
+                  <a href={`/catalog/${ProductFathersTypes.OPENERS_TYPES}`}>
+                    Aberturas
+                  </a>
+                </li>
+                <li>
+                  <a href={`/catalog/${ProductFathersTypes.CLOSERS_TYPES}`}>
+                    Cerramientos
+                  </a>
+                </li>
+                <li>
+                  <a href={`/catalog/${ProductFathersTypes.CS_TYPES}`}>
+                    Sistemas Complementarios
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="/contact">

@@ -1,7 +1,8 @@
 ---
 // import FormFooter from './FormFooter';
 import { footerDirectionsData } from "src/utils/data/contactData";
-import { InstagramGalleryFooter } from "./InstagramGalleryFooter";
+import { InstagramGalleryFooter } from "./footer/InstagramGalleryFooter";
+import { InstagramVideoFooter } from "./footer/InstagramVideoFooter";
 
 // const { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY } = await import.meta.env;
 // const FooterProps = { EMAILJS_SERVICE, FOOTER_EMAILJS_TEMPLATE, EMAILJS_PUBLIC_KEY, RECAPTCHA_KEY };
@@ -9,39 +10,6 @@ import { InstagramGalleryFooter } from "./InstagramGalleryFooter";
 const { INSTAGRAM_TOKEN } = await import.meta.env;
 
 ---
-<!-- <footer class="footer-2">
-  <div class="overlay overlay--dark">
-  </div>
-  <div class="parallax parallax--footer">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-7 col-md-9 col-12">
-          <h1>
-            <a href="/">
-              <img alt="Logo" src="/img/logo.png" />
-            </a>
-          </h1>
-          <FormFooter keys={FooterProps} client:load />
-          <div class="social">
-            <a href="https://www.facebook.com/AluplastAberturas" target="_blank">
-              <i class="zmdi zmdi-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/aluplast.aberturas/" target="_blank">
-              <i class="zmdi zmdi-instagram"></i>
-            </a>
-            <a href="https://www.youtube.com/@aluplastmedia" target="_blank">
-              <i class="zmdi zmdi-youtube"></i>
-            </a>
-            <a href="https://wa.me/+5493446598417" target="_blank">
-              <i class="zmdi zmdi-whatsapp"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer> -->
-
     <!-- Footer -->
     <footer class="footer-3">
       <div class="section-content section-content--w1140">
@@ -54,8 +22,10 @@ const { INSTAGRAM_TOKEN } = await import.meta.env;
                 </a>
               </h2>
               <p>
-                Desde 1970 dedicados a la Fabricación y Comercialización de Aberturas de Aluminio. ALUPLAST!!! la mejor solución para su Casa, Comercio o Institución. Visita nuestros Showroom en Urdinarrain, Gualeguaychú, Concepción del Uruguay, Colón y Concordia
+                Desde 1970 dedicados a la Fabricación y Comercialización de Aberturas de Aluminio. 
               </p>
+              <h5 class="title-footer m-b-26">Último reel</h5>
+              <InstagramVideoFooter instagramToken={INSTAGRAM_TOKEN} client:load />
             </div>
             <div class="col-lg-4 col-md-6">
               <h5 class="title-footer m-b-26">Información de contacto</h5>

@@ -7,3 +7,11 @@
   border: none;
   cursor: pointer;
 }
+
+.textures-button-container button:focus-visible {
+  outline: none;
+}
+
+.textures-button-container button:focus {
+  outline: none;
+}

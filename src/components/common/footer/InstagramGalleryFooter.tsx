@@ -1,16 +1,5 @@
 import React, { useEffect, useState } from "react";
-
-const URL = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,permalink,thumbnail_url&access_token=`;
-
-async function getData(token: string) {
-  try {
-    const dataFetched = await fetch(URL+token)
-    return (await dataFetched.json()).data;
-  } catch (error) {
-    console.log(error);
-    return false;
-  }
-}
+import { getInstagramImages } from "src/services/instagram-services";
 
 interface InstagramObject {
   id: string;
@@ -22,22 +11,18 @@ export const InstagramGalleryFooter = ({ instagramToken }: any) => {
   const [ imagesData, setImagesData ] = useState<InstagramObject[]>();
 
   useEffect(() => {
-    getData(instagramToken)
-      .then((response) => {
-        const filteredPhotos = response.filter(
-          (photo:any) => photo.media_type === 'IMAGE' || photo.media_type === "CAROUSEL_ALBUM" 
-        );
-
-        setImagesData(filteredPhotos)
-      })
+    getInstagramImages(instagramToken)
+      .then((response) => setImagesData(response))
       .catch((err) => console.log(err))
   }, [])
+  
   return (
     <div className="col-lg-4 col-md-6">
       <h5 className="title-footer m-b-30">Nuestros últimos posts</h5>
       <div className="gallery clearfix">
         {
-          imagesData && imagesData.length > 0 && (
+          imagesData 
+          ? (
             imagesData.map((img, i) => {
               if (i < 6) {
                 return (
@@ -50,6 +35,9 @@ export const InstagramGalleryFooter = ({ instagramToken }: any) => {
                 )
               }
             })
+          )
+          : (
+            <span style={{ marginTop: '30px' }} className='page-loader__spin'></span>   
           )
         }
       </div>
