@@ -1,0 +1,27 @@
+---
+import { BlogComponent } from "@components/blog/BlogComponent";
+import Layout from "@layouts/Layout.astro";
+
+const { FACEBOOK_TOKEN, FACEBOOK_PAGE_ID } = await import.meta.env;
+---
+
+<Layout pageTitle={"Blog"}>
+  <section class="breadcrumbs-wrap" style="margin-top: 13vh;">
+    <div class="section-content section-content--w1140">
+      <div class="container clearfix">
+        <div class="breadcrumbs-inner">
+          <ul class="breadcrumbs1 ul--inline ul--no-style">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <span class="span-active">/</span>
+            <li>
+              <a href="/blog">Noticias</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <BlogComponent keys={{ FACEBOOK_TOKEN, FACEBOOK_PAGE_ID }} client:load />
+</Layout>

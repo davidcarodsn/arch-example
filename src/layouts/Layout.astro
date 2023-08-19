@@ -39,7 +39,7 @@ const { pageTitle } = Astro.props;
   <link rel="stylesheet" type="text/css" href="/css/font.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
-<body class={ pageTitle === PAGES.HOME || pageTitle === PAGES.CONTACT ? '' : 'box' }>
+<body class={ pageTitle === PAGES.HOME || pageTitle === PAGES.CONTACT || "Blog" ? '' : 'box' }>
   <!-- Page Loader -->
   <Loader />
   <!-- Header -->

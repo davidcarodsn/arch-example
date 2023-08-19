@@ -86,7 +86,7 @@ export const ShopNavComponent:FC <ShopNavComponentProps> = ({ setCatalogData }) 
           })
         }
       <a
-        href="/catalog/textures" 
+        href="/catalog/texturas" 
         className="accordion-main-button"
         style={{ color:'black'  }}
       >
