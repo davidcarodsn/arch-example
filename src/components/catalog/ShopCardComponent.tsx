@@ -1,5 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 import { getThePlaceholderImage } from "src/utils/helpers/getPlaceholderImage";
+import { PAGES_PATH } from "src/utils/types/pagesTypes";
 import { TypeProduct, type CatalogData } from "src/utils/types/types";
 
 interface ShopCardComponentProps {
@@ -14,7 +15,7 @@ const ShopCardComponent:FC<ShopCardComponentProps> = ({ product, isHome = false 
   const [productName, setProductName ] = useState<string>();
 
   useEffect(() => product.img ? setImg(`/img/products/${product.img}/${product.img}.png`) : undefined, [product.img]);
-  useEffect(() => isHome ? setLink(`/catalog`) : setLink(`/products/${product.name}`), [product.name, isHome])
+  useEffect(() => isHome ? setLink(`/${PAGES_PATH.CATALOG_PATH}`) : setLink(`/${PAGES_PATH.PRODUCT_PATH}/${product.name}`), [product.name, isHome])
   useEffect(() => isHome ? setTextButton('Ver en Catálogo') : setTextButton('Ver Detalle'), [isHome])
   useEffect(() => product.name ? setProductName(product.name) : setProductName('Producto') , [product.name])
 
@@ -22,7 +23,6 @@ const ShopCardComponent:FC<ShopCardComponentProps> = ({ product, isHome = false 
     <div className="col-lg-4 col-md-6 col-12">
       <div className="pro__item">
         <div className="pro__img">
-          {/* <span className="label label--small pink"> sale</span> */}
           <img alt="Product 1" src={img ?? `/img/products/${getThePlaceholderImage([TypeProduct.WINDOW_PRODUCT])}/${getThePlaceholderImage([TypeProduct.WINDOW_PRODUCT])}.png`} />
           <div className="pro-link">
             <div className="pro-info pro-info--dark pro-info--center">

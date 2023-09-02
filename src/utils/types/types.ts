@@ -2,11 +2,15 @@ export interface CatalogData {
   name: string;
   img?: string;
   specs?: Specs; 
+  description: string;
   filters: string[];
 }
 
 interface Specs {
-  descirption?: string;
+  description?: {
+    title: string;
+    text: string;
+  }[];
   minMeasures?: string;
   maxMeasures?: string;
   features?: string[];

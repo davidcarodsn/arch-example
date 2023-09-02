@@ -15,7 +15,7 @@ const dataNav = [
           ...windowsData.map(window => {
             return {
               title: window.name,
-              filter: window.img
+              filter: window.filters[2]
             }
           })
         ]
@@ -27,7 +27,7 @@ const dataNav = [
           ...doorsData.map(door => {
             return {
               title: door.name,
-              filter: door.img
+              filter: door.filters[2]
             }
           })
         ]
@@ -41,7 +41,7 @@ const dataNav = [
      ...complementarySystemData.map(wall => {
       return {
         title: wall.name,
-        filter: wall.img
+        filter: wall.filters[2]
       }
      }) 
     ]
@@ -53,7 +53,7 @@ const dataNav = [
       ...closersData.map(wall => {
         return {
           title: wall.name,
-          filter: wall.img
+          filter: wall.filters[2]
         }
       })      
     ]

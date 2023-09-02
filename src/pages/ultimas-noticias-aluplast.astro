@@ -1,11 +1,12 @@
 ---
 import { BlogComponent } from "@components/blog/BlogComponent";
 import Layout from "@layouts/Layout.astro";
+import { PAGES } from "src/utils/types/pagesTypes";
 
 const { FACEBOOK_TOKEN, FACEBOOK_PAGE_ID } = await import.meta.env;
 ---
 
-<Layout pageTitle={"Blog"}>
+<Layout pageTitle={PAGES.LAST_NEWS}>
   <section class="breadcrumbs-wrap" style="margin-top: 13vh;">
     <div class="section-content section-content--w1140">
       <div class="container clearfix">

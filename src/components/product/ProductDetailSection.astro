@@ -31,6 +31,32 @@ const placeholder = getThePlaceholderImage(productSelected.filters);
   <div class="col-lg-7 col-md-6">
     <div class="single-product-detail">
       <h2>{productSelected.name}</h2>
+      <div class="pro__star">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+      <p>{productSelected.description}</p>
+      <div class="row no-gutters m-t-20">
+        {
+          productSelected.specs?.features && (
+            <>
+            {
+              productSelected.specs.features.map((feature: string) => (
+                    <div class="col-md-6">
+                      <div class="li-item">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        {feature}
+                      </div>
+                    </div>
+                  ))
+                }
+              </>
+            )
+          }
+      </div>
       <div class="single-product-tab">
         <!-- {
           productSelected.specs?.descirption && ( -->
@@ -53,23 +79,17 @@ const placeholder = getThePlaceholderImage(productSelected.filters);
                 role="tabpanel"
                 aria-labelledby="home-tab"
               >
-                <p set:html={productSelected.specs?.descirption}></p>
-                <br>
-                <p>
-                  {
-                    productSelected.specs?.features && (
+                <p set:html={productSelected.specs?.descirption}>
+                  { productSelected.specs?.description?.map((spec: any)=> {
+                    return (
                       <>
-                        {
-                          productSelected.specs.features.map((feature: string) => (
-                            <div class="li-item col-12">
-                              <i class="fa fa-check-circle" aria-hidden="true"></i>
-                              {feature}
-                            </div>
-                          ))
-                        }
+                        <strong>{spec.title}:</strong> {spec.text} 
+                        <br />
+                        <span style={{ color: '#999' }}>_________________________________________________</span>
+                        <br />
                       </>
                     )
-                  }
+                  }) }
                 </p>
               </div>
             </div>

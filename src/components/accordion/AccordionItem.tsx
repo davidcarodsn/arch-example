@@ -30,7 +30,7 @@ const AccordionChildComponent = ({ subType, setCatalogData }: any) => {
                 key={item.title} 
                 id={item.filter}
                 style={{ fontWeight: '400' }} 
-                onClick={() => setCatalogData(item.filter, CatalogFiltersTypes.IMG)}
+                onClick={() => setCatalogData(item.filter, CatalogFiltersTypes.PRODUCT_FILTER)}
                 className='accordion-sub-button'
               >
                 {item.title}
@@ -75,7 +75,7 @@ export const AccordionItem = ({ data, setCatalogData }: any) => {
                     className="accordion-sub-button" 
                     key={item.title}
                     id={item.filter}
-                    onClick={() => setCatalogData(item.filter, CatalogFiltersTypes.IMG)}
+                    onClick={() => setCatalogData(item.filter, CatalogFiltersTypes.PRODUCT_FILTER)}
                   >
                     {item.title}
                   </button>

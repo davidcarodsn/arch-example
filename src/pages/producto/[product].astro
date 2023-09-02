@@ -35,7 +35,7 @@ if (!relatedProducts.length) {
 <div class="page-wrap">
   <BreadCumbCatalog product={productSelected.name} />
   <!-- Single Product -->
-  <section class="single-product" style="margin-top: 10%;">
+  <section class="single-product" style="margin-top: 3%;">
     <div class="section-content section-content--w1140">
       <div class="container">
         <ProductDetailSection productSelected={productSelected} />
@@ -46,7 +46,7 @@ if (!relatedProducts.length) {
         </div>
         <div class="row">
           {
-            relatedProducts.map((product, i) =>  ( (i < 3) && <ShopCardComponent product={product} /> ))
+            relatedProducts.map((product, i) =>  ( (i < 3) && <ShopCardComponent product={product} client:load/> ))
           }
         </div>
       </div>

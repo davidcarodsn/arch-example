@@ -4,5 +4,15 @@ export enum PAGES {
   CONTACT = "Contacto",
   CATALOG = 'Catálogo',
   PRODUCT = 'Producto',
-  TEXTURES = 'Texturas'
+  TEXTURES = 'Texturas',
+  LAST_NEWS = 'Nuestras ultimas noticias'
+}
+
+export enum PAGES_PATH {
+  HOME_PATH = '/',
+  ABOUT_US_PATH = 'sobre-aluplast-aberturas-y-cerramientos-de-aluminio-y-pvc',
+  CONTACT_PATH = 'contacto-aluplast-entre-rios-argentina',
+  CATALOG_PATH = 'productos-de-aluminio-y-pvc-entre-rios',
+  PRODUCT_PATH = 'producto',
+  NEWS_PATH = 'ultimas-noticias-aluplast'
 }
