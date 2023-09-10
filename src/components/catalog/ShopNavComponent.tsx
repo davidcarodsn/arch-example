@@ -41,19 +41,19 @@ const dataNav = [
      ...complementarySystemData.map(wall => {
       return {
         title: wall.name,
-        filter: wall.filters[2]
+        filter: wall.filters[1]
       }
      }) 
     ]
   },
   {
-    title: "Cerramientos",
+    title: "Fachadas",
     filter: ProductFathersTypes.CLOSERS_TYPES,
     types: [
       ...closersData.map(wall => {
         return {
           title: wall.name,
-          filter: wall.filters[2]
+          filter: wall.filters[1]
         }
       })      
     ]
