@@ -1375,6 +1375,11 @@ nav.menu-mobile>ul>li>ul {
 
 .slide-title {
     color: white;
+            font-size: 50px;
+            text-shadow: -1px 1px 0 #3f3f3f,
+                          1px 1px 0 #3f3f3f,
+                         1px -1px 0 #3f3f3f,
+                        -1px -1px 0 #3f3f3f;
     text-transform: uppercase;
     text-align: center;
 }
@@ -2686,7 +2691,12 @@ footer .social {
 }
 
 .slide-title>span {
-    color: var(--main-red);
+    color: var(--main-blue);
+            font-size: 50px;
+            text-shadow: -1px 1px 0 #efefef,
+                          1px 1px 0 #efefef,
+                         1px -1px 0 #efefef,
+                        -1px -1px 0 #efefef;
 }
 
 .slide-title-3>span {

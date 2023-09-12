@@ -5,7 +5,8 @@ export enum PAGES {
   CATALOG = 'Catálogo',
   PRODUCT = 'Producto',
   TEXTURES = 'Texturas',
-  LAST_NEWS = 'Nuestras ultimas noticias'
+  LAST_NEWS = 'Nuestras ultimas noticias',
+  SOME_PROJECTS = 'Algunos Trabajos'
 }
 
 export enum PAGES_PATH {
@@ -14,5 +15,6 @@ export enum PAGES_PATH {
   CONTACT_PATH = 'contacto-aluplast-entre-rios-argentina',
   CATALOG_PATH = 'productos-de-aluminio-y-pvc-entre-rios',
   PRODUCT_PATH = 'producto',
-  NEWS_PATH = 'ultimas-noticias-aluplast'
+  NEWS_PATH = 'ultimas-noticias-aluplast',
+  SOME_PROJECTS = 'algunos-trabajos-aluplast'
 }

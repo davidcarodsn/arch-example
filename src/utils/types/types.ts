@@ -81,3 +81,11 @@ export interface Keys {
   FACEBOOK_TOKEN: string;
   FACEBOOK_PAGE_ID: string;
 }
+
+export interface ProjectDetail {
+  img: string[];
+  title: string;
+  description: string;
+  client: string;
+  project_date: string;
+}
