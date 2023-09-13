@@ -633,56 +633,56 @@ export const doorsData: CatalogData[] = [
 ];
 
 export const complementarySystemData: CatalogData[] = [
-  {
-    name: 'Baranda Balcon',
-  img: 'barandabalcon',
-    filters: [ProductFathersTypes.CS_TYPES, 'barandabalcon'],
-    specs: {
-      features: [
-        'Pasamanos redondos, elípticos o rectos dan variables de diseño e imagen del balcón.',
-        'Opciones de distintas presencias de vidrio-aluminio.',
-      ],
-      description: 'Dos líneas disponibles: <br> Baranda Clásica: pasamanos redondo o recto con gran presencia de vidrio. <br> Baranda BBA: de reciente lanzamiento, con pasamanos de diseño elíptico de agradable imagen y tacto, permite una gran presencia del vidrio dado que el mismo nace dentro del pasamanos.'
-    }
-  },
-  {
-    name: 'Frente Placard',
-  img: 'frenteplacard',
-    filters: [ProductFathersTypes.CS_TYPES, 'frenteplacard'],
-    specs: {
-      features: [
-        'Admite Placas de Madera (Fibrofácil), Espejo y Vidrio.',
-        'Dos modelos disponibles de Tirador: normal y reforzado.',
-        'El sistema de apertura corredizo evita la necesidad de mantener despejada el área frontal del Placard para la apertura de las hojas.'
-      ]
-    }
-  },
-  {
-    name: 'Tabiques Divisorios',
-  img: 'tabiquesdivisorios',
-    filters: [ProductFathersTypes.CS_TYPES, 'tabiquesdivisorios'],
-    specs: {
-      features: [
-        'Ideal para dividir oficinas',
-        'Admite Placas de Madera (Fibrofácil) y Vidrio'
-      ],
-      description: 'Dos modelos disponibles: <br> Línea Alcemar, con bordes redondeados y terminación de columna mediante tapa de aluminio. <br> Línea Tradicional, bordes rectos y terminación de columna mediante burlete'
-    }
-  },
-  {
-    name: 'Techo Vidriado',
-  img: 'techovidriado',
-    filters: [ProductFathersTypes.CS_TYPES, 'techovidriado'],
-    specs: {
-      features: [
-        'Acabado anodizado o pintado.',
-        'Admite vidrio Simple y DVH.',
-        'Libre escurrimiento en sentido de la pendiente.',
-        'Sistema compuesto por perfiles de larguero, travesaño y prensa vidrio.',
-        'Montado sobre estructura portante independiente.'
-      ],
-    }
-  },
+  // {
+  //   name: 'Baranda Balcon',
+  // img: 'barandabalcon',
+  //   filters: [ProductFathersTypes.CS_TYPES, 'barandabalcon'],
+  //   specs: {
+  //     features: [
+  //       'Pasamanos redondos, elípticos o rectos dan variables de diseño e imagen del balcón.',
+  //       'Opciones de distintas presencias de vidrio-aluminio.',
+  //     ],
+  //     description: 'Dos líneas disponibles: <br> Baranda Clásica: pasamanos redondo o recto con gran presencia de vidrio. <br> Baranda BBA: de reciente lanzamiento, con pasamanos de diseño elíptico de agradable imagen y tacto, permite una gran presencia del vidrio dado que el mismo nace dentro del pasamanos.'
+  //   }
+  // },
+  // {
+  //   name: 'Frente Placard',
+  // img: 'frenteplacard',
+  //   filters: [ProductFathersTypes.CS_TYPES, 'frenteplacard'],
+  //   specs: {
+  //     features: [
+  //       'Admite Placas de Madera (Fibrofácil), Espejo y Vidrio.',
+  //       'Dos modelos disponibles de Tirador: normal y reforzado.',
+  //       'El sistema de apertura corredizo evita la necesidad de mantener despejada el área frontal del Placard para la apertura de las hojas.'
+  //     ]
+  //   }
+  // },
+  // {
+  //   name: 'Tabiques Divisorios',
+  // img: 'tabiquesdivisorios',
+  //   filters: [ProductFathersTypes.CS_TYPES, 'tabiquesdivisorios'],
+  //   specs: {
+  //     features: [
+  //       'Ideal para dividir oficinas',
+  //       'Admite Placas de Madera (Fibrofácil) y Vidrio'
+  //     ],
+  //     description: 'Dos modelos disponibles: <br> Línea Alcemar, con bordes redondeados y terminación de columna mediante tapa de aluminio. <br> Línea Tradicional, bordes rectos y terminación de columna mediante burlete'
+  //   }
+  // },
+  // {
+  //   name: 'Techo Vidriado',
+  // img: 'techovidriado',
+  //   filters: [ProductFathersTypes.CS_TYPES, 'techovidriado'],
+  //   specs: {
+  //     features: [
+  //       'Acabado anodizado o pintado.',
+  //       'Admite vidrio Simple y DVH.',
+  //       'Libre escurrimiento en sentido de la pendiente.',
+  //       'Sistema compuesto por perfiles de larguero, travesaño y prensa vidrio.',
+  //       'Montado sobre estructura portante independiente.'
+  //     ],
+  //   }
+  // },
 ];
 
 export const closersData: CatalogData[] = [

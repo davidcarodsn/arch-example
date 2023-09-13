@@ -1,6 +1,7 @@
 import { AccordionItem } from "@components/accordion/AccordionItem";
 import React, { FC } from "react";
 import { closersData, complementarySystemData, doorsData, windowsData } from "src/utils/data/catalogData";
+import { PAGES_PATH } from "src/utils/types/pagesTypes";
 import { ProductFathersTypes, TypeProduct } from "src/utils/types/types";
 
 const dataNav = [
@@ -58,13 +59,13 @@ const dataNav = [
       })      
     ]
   },
-  {
-    title: "Servicios",
-    filter: ProductFathersTypes.SERVICES_TYPES,
-    // types: [
+  // {
+  //   title: "Servicios",
+  //   filter: ProductFathersTypes.SERVICES_TYPES,
+  //   // types: [
       
-    // ]
-  },
+  //   // ]
+  // },
 ];
 
 interface ShopNavComponentProps {
@@ -86,7 +87,7 @@ export const ShopNavComponent:FC <ShopNavComponentProps> = ({ setCatalogData }) 
           })
         }
       <a
-        href="/catalog/texturas" 
+        href={`/${PAGES_PATH.CATALOG_PATH}/${PAGES_PATH.TEXTURES}`} 
         className="accordion-main-button"
         style={{ color:'black'  }}
       >

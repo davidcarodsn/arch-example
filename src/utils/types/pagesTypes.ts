@@ -16,5 +16,6 @@ export enum PAGES_PATH {
   CATALOG_PATH = 'productos-de-aluminio-y-pvc-entre-rios',
   PRODUCT_PATH = 'producto',
   NEWS_PATH = 'ultimas-noticias-aluplast',
-  SOME_PROJECTS = 'algunos-trabajos-aluplast'
+  SOME_PROJECTS = 'algunos-trabajos-aluplast',
+  TEXTURES = 'texturas',
 }
