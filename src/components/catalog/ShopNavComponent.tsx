@@ -1,11 +1,7 @@
 import { AccordionItem } from "@components/accordion/AccordionItem";
 import React, { FC } from "react";
-<<<<<<< HEAD
 import { closersData, complementarySystemData, controlSolar, doorsData, garageDoorsData, resalesData, windowsData, windowsFatherData } from "src/utils/data/catalogData";
-=======
-import { closersData, complementarySystemData, doorsData, windowsData } from "src/utils/data/catalogData";
 import { PAGES_PATH } from "src/utils/types/pagesTypes";
->>>>>>> 91c0d23efda2490de17e7aff7e1cdf51a48d13b1
 import { ProductFathersTypes, TypeProduct } from "src/utils/types/types";
 
 const dataNav = [
@@ -111,12 +107,12 @@ const dataNav = [
       })      
     ]
   },
-  {
-    title: "Servicios",
-    filter: ProductFathersTypes.SERVICES_TYPES,
-    // types: [
+  // {
+  //   title: "Servicios",
+  //   filter: ProductFathersTypes.SERVICES_TYPES,
+  //   types: [
       
-  //   // ]
+  //   ]
   // },
 ];
 
