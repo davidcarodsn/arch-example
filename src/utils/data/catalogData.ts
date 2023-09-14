@@ -1285,7 +1285,7 @@ export const controlSolar: CatalogData[] = [
     },
   },
   {
-    name: "Celosias C/Tablilla fija",
+    name: "Celosias Con Tablilla fija",
     filters: [ProductFathersTypes.SOLAR_CONTROL, "celosiastablillafija"],
     description:
       "Estas celosías con tablilla fija son ideales para aquellos que buscan un equilibrio entre privacidad y entrada de luz. Su diseño de tablillas fijas puede ser ciega o caladas lo cual permite un flujo controlado de aire y claridad natural mientras proporciona una barrera visual. Perfectas para espacios donde no se tiene lugar para taparrollos o se tienen mochetas amplias. se busca un toque de privacidad  y seguridad con un toque de ventilación e iluminación.",
@@ -1337,7 +1337,7 @@ export const controlSolar: CatalogData[] = [
     },
   },
   {
-    name: "Celosias C/Tablilla Regulable",
+    name: "Celosias Con Tablilla Regulable",
     filters: [ProductFathersTypes.SOLAR_CONTROL, "celosiastablillaregulable"],
     description:
       "Las celosías con tablilla regulable ofrecen un mayor control sobre la entrada de luz y ventilación aún con las hojas en modo cerrado. Puedes ajustar las tablillas para modular la cantidad de luz y aire según tus preferencias. Esta tipología es especialmente adecuada para áreas donde se requiere flexibilidad en la regulación del ambiente interior sin perder seguridad.",
