@@ -633,54 +633,338 @@ export const doorsData: CatalogData[] = [
 ];
 
 export const complementarySystemData: CatalogData[] = [
+  // {
+  //   name: "Frente Placard",
+  //   img: "frenteplacard",
+  //   filters: [ProductFathersTypes.CS_TYPES, "frenteplacard"],
+  //   specs: {
+  //     features: [
+  //       "Admite Placas de Madera (Fibrofácil), Espejo y Vidrio.",
+  //       "Dos modelos disponibles de Tirador: normal y reforzado.",
+  //       "El sistema de apertura corredizo evita la necesidad de mantener despejada el área frontal del Placard para la apertura de las hojas.",
+  //     ],
+  //   },
+  // },
+  // {
+  //   name: "Tabiques Divisorios",
+  //   img: "tabiquesdivisorios",
+  //   filters: [ProductFathersTypes.CS_TYPES, "tabiquesdivisorios"],
+  //   specs: {
+  //     features: [
+  //       "Ideal para dividir oficinas",
+  //       "Admite Placas de Madera (Fibrofácil) y Vidrio",
+  //     ],
+  //     description:
+  //       "Dos modelos disponibles: <br> Línea Alcemar, con bordes redondeados y terminación de columna mediante tapa de aluminio. <br> Línea Tradicional, bordes rectos y terminación de columna mediante burlete",
+  //   },
+  // },
+  // {
+  //   name: "Techo Vidriado",
+  //   img: "techovidriado",
+  //   filters: [ProductFathersTypes.CS_TYPES, "techovidriado"],
+  //   specs: {
+  //     features: [
+  //       "Acabado anodizado o pintado.",
+  //       "Admite vidrio Simple y DVH.",
+  //       "Libre escurrimiento en sentido de la pendiente.",
+  //       "Sistema compuesto por perfiles de larguero, travesaño y prensa vidrio.",
+  //       "Montado sobre estructura portante independiente.",
+  //     ],
+  //   },
+  // },
   {
-    name: 'Baranda Balcon',
-  img: 'barandabalcon',
-    filters: [ProductFathersTypes.CS_TYPES, 'barandabalcon'],
+    name: 'Cerramiento de Oficinas',
+    filters: [ProductFathersTypes.CS_TYPES, "cerramientooficinas"],
+    description: 'Usos:',
     specs: {
-      features: [
-        'Pasamanos redondos, elípticos o rectos dan variables de diseño e imagen del balcón.',
-        'Opciones de distintas presencias de vidrio-aluminio.',
+      description: [
+        {
+          title: 'Tipo de Producto',
+          text: 'Cerramientos de Oficinas de Aluplast.'
+        },
+        {
+          title: '  Composición',
+          text: 'Perfiles de aluminio, vidrio policarbonato compacto, MDF.'
+        },
+        {
+          title: '  Conexión entre Módulos',
+          text: 'Montaje modular que permite la creación de espacios flexibles.'
+        },
+        {
+          title: '  Eficiencia en el Montaje',
+          text: 'Montaje rápido y sencillo sin afectar la operación de la oficina.'
+        },
+        {
+          title: '  Estética Elegante',
+          text: 'Diseño moderno y profesional que mejora la imagen corporativa.'
+        },
+        {
+          title: '  Flexibilidad de Diseño',
+          text: 'Varias opciones de distribución y acabados disponibles.'
+        },
+        {
+          title: '  Control de Calidad',
+          text: 'Rigurosos controles de calidad garantizan un producto duradero.'
+        },
+        {
+          title: '  Aplicaciones Versátiles',
+          text: 'Se adapta a oficinas, salas de reuniones, y espacios de trabajo colaborativo.'
+        },
+        {
+          title: '  Practicidad',
+          text: 'Mejora la privacidad y reduce el ruido en entornos de trabajo.'
+        }
       ],
-      description: 'Dos líneas disponibles: <br> Baranda Clásica: pasamanos redondo o recto con gran presencia de vidrio. <br> Baranda BBA: de reciente lanzamiento, con pasamanos de diseño elíptico de agradable imagen y tacto, permite una gran presencia del vidrio dado que el mismo nace dentro del pasamanos.'
-    }
-  },
-  {
-    name: 'Frente Placard',
-  img: 'frenteplacard',
-    filters: [ProductFathersTypes.CS_TYPES, 'frenteplacard'],
-    specs: {
       features: [
-        'Admite Placas de Madera (Fibrofácil), Espejo y Vidrio.',
-        'Dos modelos disponibles de Tirador: normal y reforzado.',
-        'El sistema de apertura corredizo evita la necesidad de mantener despejada el área frontal del Placard para la apertura de las hojas.'
+        'Dividen áreas de trabajo y proporcionan privacidad para reuniones',
+        'Optimizan el uso del espacio y brindan privacidad a los usuarios',
+        'Separan espacios para presentaciones y discusiones',
+        'Facilitan la creación de áreas de trabajo flexibles'
       ]
     }
   },
   {
-    name: 'Tabiques Divisorios',
-  img: 'tabiquesdivisorios',
-    filters: [ProductFathersTypes.CS_TYPES, 'tabiquesdivisorios'],
+    name: 'Divisorio Sanitarios',
+    filters: [ProductFathersTypes.CS_TYPES, "divisoriosanitario"],
+    description: 'Usos:',
     specs: {
-      features: [
-        'Ideal para dividir oficinas',
-        'Admite Placas de Madera (Fibrofácil) y Vidrio'
+      description: [
+        {
+          title: 'Tipo de Producto',
+          text: 'Divisorios de Sanitarios de Aluplast.'
+        },
+        {
+          title: '  Composición',
+          text: 'Perfiles de aluminio y paneles de alta resistencia.'
+        },
+        {
+          title: '  Conexión entre Módulos',
+          text: 'Sistema de ensamblaje sólido y seguro.'
+        },
+        {
+          title: '  Eficiencia en el Montaje',
+          text: 'Instalación rápida sin interrupción del servicio.'
+        },
+        {
+          title: '  Estética Elegante',
+          text: 'Diseño limpio y moderno que mejora la higiene y estética del baño.'
+        },
+        {
+          title: '  Flexibilidad de Diseño',
+          text: 'Opciones de color y acabados para adaptarse a la decoración.'
+        },
+        {
+          title: '  Control de Calidad',
+          text: 'Resistente y duradero, diseñado para un uso constante.'
+        },
+        {
+          title: '  Aplicaciones Versátiles',
+          text: 'Adecuados para baños públicos, comercios y espacios corporativos.'
+        },
+        {
+          title: '  Practicidad',
+          text: 'Facilitan la organización y el mantenimiento del área sanitaria.'
+        }
       ],
-      description: 'Dos modelos disponibles: <br> Línea Alcemar, con bordes redondeados y terminación de columna mediante tapa de aluminio. <br> Línea Tradicional, bordes rectos y terminación de columna mediante burlete'
+      features: [
+        'Proporcionan privacidad y separación en entornos de alto tráfico.',
+        'Resisten la humedad y el uso intensivo.',
+        'Mejoran la comodidad y la experiencia de los visitantes.',
+        'Son duraderos y resistentes al desgaste.',
+      ]
+    }
+  },
+  {
+    name: 'Baranda Balcón',
+    filters: [ProductFathersTypes.CS_TYPES, "barandabalcon"],
+    description: 'Usos:',
+    specs: {
+      description: [
+        {
+          title: 'Tipo de Producto',
+          text: 'Barandas de Balcón de Aluplast.'
+        },
+        { title: 'Composición', text: 'Perfiles de aluminio y cristal.' },
+        {
+          title: '  Conexión entre Módulos',
+          text: 'Diseño estructural sólido y seguro.'
+        },
+        {
+          title: '  Eficiencia en el Montaje',
+          text: 'Instalación rápida y segura.'
+        },
+        {
+          title: '  Estética Elegante',
+          text: 'Diseño transparente y moderno que mejora las vistas y la estética exterior.'
+        },
+        {
+          title: '  Flexibilidad de Diseño',
+          text: 'Posibilidad de diferentes estilos y alturas.'
+        },
+        {
+          title: '  Control de Calidad',
+          text: 'Resistentes a la intemperie y duraderas.'
+        },
+        {
+          title: '  Aplicaciones Versátiles',
+          text: 'Ideales para balcones residenciales, comerciales y hotelería.'
+        },
+        {
+          title: '  Practicidad',
+          text: 'Proporcionan seguridad sin obstruir las vistas.'
+        }
+      ],
+      features: [
+        'Proporcionan seguridad sin obstruir las vistas panorámicas.',
+        'Agregan un toque elegante a las áreas de terraza y piscina.',
+        'Garantizan la seguridad de los residentes.',
+        'Crean espacios al aire libre acogedores.',
+      ]
+    }
+  },
+  {
+    name: 'Mampara de Baño',
+    filters: [ProductFathersTypes.CS_TYPES, "mamparadebaño"],
+    description: 'Usos:',
+    specs: {
+      description: [
+        { title: 'Tipo de Producto', text: 'Mamparas de Baño de Aluplast.' },
+        {
+          title: '  Composición',
+          text: 'Perfiles de aluminio y vidrio templado.'
+        },
+        {
+          title: '  Conexión entre Módulos',
+          text: 'Sistema de bisagras y cierres precisos.'
+        },
+        {
+          title: '  Eficiencia en el Montaje',
+          text: 'Fácil instalación sin grandes obras.'
+        },
+        {
+          title: '  Estética Elegante',
+          text: 'Mejora la apariencia y funcionalidad del baño.'
+        },
+        {
+          title: '  Flexibilidad de Diseño',
+          text: 'Opciones de acabado y configuración de puertas.'
+        },
+        {
+          title: '  Control de Calidad',
+          text: 'Duraderas y resistentes a la humedad.'
+        },
+        {
+          title: '  Aplicaciones Versátiles',
+          text: 'Adecuadas para baños residenciales y comerciales.'
+        },
+        {
+          title: '  Practicidad',
+          text: 'Facilitan la limpieza y organización del espacio.'
+        }
+      ],
+      features: [
+        'Optimizan el espacio y evitan salpicaduras de agua.',
+        'Brindan un aspecto elegante y fácil limpieza.',
+        'Mantienen la higiene y la seguridad en áreas de ducha.',
+        'Agregan un toque de lujo a los baños de relajación',
+      ]
     }
   },
   {
     name: 'Techo Vidriado',
-  img: 'techovidriado',
-    filters: [ProductFathersTypes.CS_TYPES, 'techovidriado'],
+    filters: [ProductFathersTypes.CS_TYPES, "techovidriado"],
+    description: 'Usos:',
     specs: {
+      description: [
+        { title: 'Tipo de Producto', text: 'Techos Vidriados de Aluplast.' },
+        {
+          title: '  Composición',
+          text: 'Perfiles de aluminio y vidrio laminado.'
+        },
+        {
+          title: '  Conexión entre Módulos',
+          text: 'Sistema de ensamblaje seguro y hermético.'
+        },
+        {
+          title: '  Eficiencia en el Montaje',
+          text: 'Montaje rápido y sin complicaciones.'
+        },
+        {
+          title: '  Estética Elegante',
+          text: 'Proporciona una sensación de amplitud y conexión con el exterior.'
+        },
+        {
+          title: '  Flexibilidad de Diseño',
+          text: 'Configuraciones personalizables según las necesidades.'
+        },
+        {
+          title: '  Control de Calidad',
+          text: 'Resistentes a las inclemencias del tiempo y duraderos.'
+        },
+        {
+          title: '  Aplicaciones Versátiles',
+          text: 'Ideal para terrazas, patios y áreas de descanso.'
+        },
+        {
+          title: '  Practicidad',
+          text: 'Ofrece protección contra los elementos y permite el paso de la luz natural.'
+        }
+      ]
+      ,
       features: [
-        'Acabado anodizado o pintado.',
-        'Admite vidrio Simple y DVH.',
-        'Libre escurrimiento en sentido de la pendiente.',
-        'Sistema compuesto por perfiles de larguero, travesaño y prensa vidrio.',
-        'Montado sobre estructura portante independiente.'
+        'Creen ambientes luminosos y agradables en salas de estar y terrazas.',
+        'Ofrecen áreas al aire libre protegidas de las inclemencias del tiempo.',
+        'Agregan un toque de elegancia a áreas de piscina y jardines.',
+        'Maximizan la entrada de luz en áreas de pasillos y patios.',
+      ]
+    }
+  },
+  {
+    name: 'Mosquiteros',
+    filters: [ProductFathersTypes.CS_TYPES, ""],
+    description: 'Usos:',
+    specs: {
+      description: [
+        { title: 'Tipo de Producto', text: 'Mosquiteros de Aluplast.' },
+        {
+          title: '  Composición',
+          text: 'Perfiles de aluminio y malla de acero o tela.'
+        },
+        {
+          title: '  Conexión entre Módulos',
+          text: 'Diseño ensamblado para una protección eficaz.'
+        },
+        {
+          title: '  Eficiencia en el Montaje',
+          text: 'Montaje rápido y sin complicaciones.'
+        },
+        {
+          title: '  Estética Elegante',
+          text: 'Proporciona una barrera invisible contra insectos.'
+        },
+        {
+          title: '  Flexibilidad de Diseño',
+          text: 'Varias opciones de color y malla.'
+        },
+        {
+          title: '  Control de Calidad',
+          text: 'Duraderos y resistentes a la intemperie.'
+        },
+        {
+          title: '  Aplicaciones Versátiles',
+          text: 'Adecuados para ventanas y puertas, brindando protección contra insectos.'
+        },
+        {
+          title: '  Practicidad',
+          text: 'Mantiene el hogar libre de insectos sin comprometer la circulación de aire.'
+        }
       ],
+      features: [
+        'Protegen dormitorios y áreas de estar de mosquitos y otros insectos.',
+        'Mantienen áreas de comedor al aire libre libres de plagas.',
+        'Proporcionan comodidad y tranquilidad a los huéspedes.',
+        'Garantizan una experiencia.',
+      ]
     }
   },
 ];
@@ -901,17 +1185,685 @@ export const closersData: CatalogData[] = [
   },
 ];
 
-// export const controlSolar: CatalogData[] = [
-//   {
-//     name: 'Parasol',
-// img: 'parasol',
-//     filters: [ProductFathersTypes.CLOSERS_TYPES, 'parasol'],
-//     specs: {
-//       description:[],
+export const controlSolar: CatalogData[] = [
+  {
+    name: "Cortina de Enrollar",
+    filters: [ProductFathersTypes.SOLAR_CONTROL, "cortinadeenrollar"],
+    description:
+      "Las cortinas de enrollar son una elección popular para quienes buscan un diseño clásico y funcionalidad práctica. Fabricadas con lama de aluminio tubular, con pequeños calados que permiten regular ventilación y claridad. Estas cortinas se enrollan suavemente mediante sistema de reductor a manivela o bien se automatizan a tecla y/o control remoto.",
+    specs: {
+      description: [
+        {
+          title: "Tipo de Producto",
+          text: "Cortina de Enrollar de Aluplast.",
+        },
+        { title: "Composición", text: "Lamas de aluminio tubular." },
+        {
+          title: "Conexión entre Módulos",
+          text: "Sistema de reductor a manivela o automatización con tecla/control remoto.",
+        },
+        {
+          title: "Eficiencia en el Montaje",
+          text: "Fácil instalación y configuración.",
+        },
+        {
+          title: "Estética Elegante",
+          text: "Diseño clásico que se adapta a diversos entornos.",
+        },
+        {
+          title: "Flexibilidad de Diseño",
+          text: "Variedad de colores y tamaños disponibles.",
+        },
+        {
+          title: "Control de Calidad",
+          text: "Rigurosos estándares de calidad garantizan un producto confiable.",
+        },
+        {
+          title: "Aplicaciones Versátiles",
+          text: "Adecuado para uso en hogares, comercios y más.",
+        },
+        {
+          title: "Practicidad",
+          text: "Facilita el control de luz y ventilación.",
+        },
+      ],
+      features: [
+        "Diseño Clásico y Funcional",
+        "Regulación de Ventilación",
+        "Control Remoto Opcional",
+        "Versatilidad de Aplicación",
+      ],
+    },
+  },
+  {
+    name: "Persiana regulable",
+    filters: [ProductFathersTypes.SOLAR_CONTROL, "persianaregulable"],
+    description:
+      "La persiana regulable es una solución versátil que permite un control total sobre la cantidad de luz y ventilación sin perder seguridad. Se puede regular la inclinación de las lamas tubulares de aluminio de la persiana según cada necesidad, lo que la convierte en una opción perfecta para habitaciones donde deseas un control solar preciso del ambiente y la privacidad. Se accionan mediante sistema de reductor a manivela o bien se automatizan a tecla y/o control remoto.",
+    specs: {
+      description: [
+        {
+          title: "Tipo de Producto",
+          text: "Persiana Regulable de Aluplast.",
+        },
+        { title: "  Composición", text: "Lamas tubulares de aluminio." },
+        {
+          title: "  Conexión entre Módulos",
+          text: "Sistema de reductor a manivela o automatización con tecla/control remoto.",
+        },
+        {
+          title: "  Eficiencia en el Montaje",
+          text: "Instalación sencilla y ajuste preciso.",
+        },
+        {
+          title: "  Estética Elegante",
+          text: "Proporciona un aspecto moderno y funcional.",
+        },
+        {
+          title: "  Flexibilidad de Diseño",
+          text: "Se adapta a la cantidad de luz y privacidad deseada.",
+        },
+        {
+          title: "  Control de Calidad",
+          text: "Altos estándares de calidad para un rendimiento óptimo.",
+        },
+        {
+          title: "  Aplicaciones Versátiles",
+          text: "Ideal para habitaciones que requieren control solar y privacidad.",
+        },
+        {
+          title: "  Practicidad",
+          text: "Facilita la regulación del ambiente interior.",
+        },
+      ],
+      features: [
+        "Diseño versátil y clásico.",
+        "Excelente aislamiento térmico.",
+        "Ahorro de espacio.",
+        "Vistas panorámicas.",
+      ],
+    },
+  },
+  {
+    name: "Celosias C/Tablilla fija",
+    filters: [ProductFathersTypes.SOLAR_CONTROL, "celosiastablillafija"],
+    description:
+      "Estas celosías con tablilla fija son ideales para aquellos que buscan un equilibrio entre privacidad y entrada de luz. Su diseño de tablillas fijas puede ser ciega o caladas lo cual permite un flujo controlado de aire y claridad natural mientras proporciona una barrera visual. Perfectas para espacios donde no se tiene lugar para taparrollos o se tienen mochetas amplias. se busca un toque de privacidad  y seguridad con un toque de ventilación e iluminación.",
+    specs: {
+      description: [
+        {
+          title: "Tipo de Producto",
+          text: "Celosías con Tablilla Fija de Aluplast.",
+        },
+        {
+          title: "  Composición",
+          text: "Diseño con tablillas fijas, disponibles en versiones ciegas o caladas.",
+        },
+        {
+          title: "  Conexión entre Módulos",
+          text: "Tablillas dispuestas para un flujo controlado de aire y luz.",
+        },
+        {
+          title: "  Eficiencia en el Montaje",
+          text: "Fácil instalación en espacios reducidos.",
+        },
+        {
+          title: "  Estética Elegante",
+          text: "Brinda un toque de privacidad con un diseño atractivo.",
+        },
+        {
+          title: "  Flexibilidad de Diseño",
+          text: "Opciones de tablillas para diferentes preferencias estéticas.",
+        },
+        {
+          title: "  Control de Calidad",
+          text: "Rigurosos controles aseguran la calidad del producto.",
+        },
+        {
+          title: "  Aplicaciones Versátiles",
+          text: "Ideal donde se requiere privacidad con ventilación e iluminación.",
+        },
+        {
+          title: "  Practicidad",
+          text: "Solución práctica para espacios compactos.",
+        },
+      ],
+      features: [
+        "Control preciso de luz y privacidad.",
+        "Eficiente en aislamiento térmico.",
+        "Aprovecha la luz natural.",
+        "Estilo moderno.",
+      ],
+    },
+  },
+  {
+    name: "Celosias C/Tablilla Regulable",
+    filters: [ProductFathersTypes.SOLAR_CONTROL, "celosiastablillaregulable"],
+    description:
+      "Las celosías con tablilla regulable ofrecen un mayor control sobre la entrada de luz y ventilación aún con las hojas en modo cerrado. Puedes ajustar las tablillas para modular la cantidad de luz y aire según tus preferencias. Esta tipología es especialmente adecuada para áreas donde se requiere flexibilidad en la regulación del ambiente interior sin perder seguridad.",
+    specs: {
+      description: [
+        {
+          title: 'Tipo de Producto',
+          text: 'Celosías con Tablilla Regulable de Aluplast.'
+        },
+        {
+          title: 'Composición',
+          text: 'Tablillas regulables para controlar la entrada de luz y ventilación.'
+        },
+        {
+          title: '  Conexión entre Módulos',
+          text: 'Ajuste de tablillas para un control preciso del ambiente.'
+        },
+        {
+          title: '  Eficiencia en el Montaje',
+          text: 'Instalación sencilla y versátil.'
+        },
+        {
+          title: '  Estética Elegante',
+          text: 'Agrega un toque sofisticado a la fachada o espacio.'
+        },
+        {
+          title: '  Flexibilidad de Diseño',
+          text: 'Adecuada para áreas que requieren regulación de luz y privacidad.'
+        },
+        {
+          title: '  Control de Calidad',
+          text: 'Proceso de fabricación controlado para un rendimiento óptimo.'
+        },
+        {
+          title: '  Aplicaciones Versátiles',
+          text: 'Perfecta para espacios donde se necesita flexibilidad en la regulación del ambiente interior.'
+        },
+        {
+          title: '  Practicidad',
+          text: 'Solución versátil para controlar la entrada de luz y ventilación.'
+        }
+      ]
+      ,
+      features: [
+        "Entrada de luz controlada.",
+        "Privacidad y estética.",
+        "Versatilidad arquitectónica.",
+        "Instalación sencilla.",
+      ],
+    },
+  },
+  {
+    name: "Cortavistas",
+    filters: [ProductFathersTypes.SOLAR_CONTROL, "cortavistas"],
+    description:
+      "Las aberturas tipo corta vistas son diseñadas para crear un ambiente más íntimo y protegido. Ideales para balcones y patios , estas aberturas brindan privacidad mientras permiten una entrada controlada de luz y aire. Se pueden realizar con una gran variedad en tamaño y color de perfiles tubos de aluminio, los cuales se pueden colocar vertical u horizontalmente fijado a una estructura soporte.",
+    specs: {
+      description: [
+        { title: 'Tipo de Producto', text: 'Cortavistas de Aluminio.' },
+        {
+          title: '  Composición',
+          text: 'Fabricado con perfiles tubulares de aluminio de alta calidad.'
+        },
+        {
+          title: '  Conexión entre Módulos',
+          text: 'Diseñado con un sistema de fijación sólido para una instalación segura.'
+        },
+        {
+          title: '  Eficiencia en el Montaje',
+          text: 'Montaje rápido y sin complicaciones.'
+        },
+        {
+          title: '  Estética Elegante',
+          text: 'Crea un ambiente íntimo y protegido sin sacrificar la estética.'
+        },
+        {
+          title: '  Flexibilidad de Diseño',
+          text: 'Puede colocarse de manera vertical u horizontal según las preferencias del cliente.'
+        },
+        {
+          title: '  Control de Calidad',
+          text: 'Fabricado con materiales resistentes a la intemperie y bajo estrictos estándares de calidad.'
+        },
+        {
+          title: '  Aplicaciones Versátiles',
+          text: 'Ideal para balcones y patios, brindando privacidad y control de la entrada de luz y aire.'
+        },
+        {
+          title: '  Practicidad',
+          text: 'Agrega un toque de privacidad y seguridad a espacios exteriores mientras permite una ventilación controlada.'
+        }
+      ],
+      features: [
+        "Intimidad y protección.",
+        "Control de luz y aire.",
+        "Versatilidad de diseño.",
+        "Instalación vertical u horizontal.",
+      ],
+    },
+  },
+  {
+    name: "Parasol",
+    img: 'parasol',
+    filters: [ProductFathersTypes.SOLAR_CONTROL, "parasol"],
+    description:
+      "Los parasoles son ideales para áreas exteriores que requieren protección contra la luz solar directa. Estas aberturas ofrecen sombra y confort sin comprometer la estética de la obra y proporcionan seguridad a las ventanas. Perfectos para instituciones, fachadas y contra fachadas. Pueden ser de lamas tubulares o laminares. Fijos o móviles.",
+    specs: {
+      description: [
+        {
+          title: 'Tipo de Producto',
+          text: 'Parasol de Aluminio de Aluplast.'
+        },
+        {
+          title: '  Composición',
+          text: 'Fabricado con perfiles de aluminio de alta calidad y lamas tubulares o laminares, según la preferencia del cliente.'
+        },
+        {
+          title: '  Conexión entre Módulos',
+          text: 'Diseñado con un sistema modular que permite un montaje sólido y estable.'
+        },
+        {
+          title: '  Eficiencia en el Montaje',
+          text: 'Montaje sencillo y rápido.'
+        },
+        {
+          title: '  Estética Elegante',
+          text: 'Proporciona sombra y confort sin comprometer la estética de la obra.'
+        },
+        {
+          title: '  Flexibilidad de Diseño',
+          text: 'Se adapta a diferentes tamaños y formas de espacios exteriores.'
+        },
+        {
+          title: '  Control de Calidad',
+          text: 'Fabricado bajo estrictos estándares de calidad para garantizar durabilidad y resistencia.'
+        },
+        {
+          title: '  Aplicaciones Versátiles',
+          text: 'Ideal para áreas exteriores que requieren protección solar, como instituciones, fachadas y contrafachadas.'
+        },
+        {
+          title: '  Practicidad',
+          text: 'Ofrece soluciones de sombra con lamas tubulares o laminares fijas o móviles, según las necesidades del cliente'
+        }
+      ],
+      features: [
+        "Protección solar efectiva.",
+        "Mayor comodidad en exteriores.",
+        "Estética arquitectónica conservada.",
+        "Configuraciones adaptables.",
+      ],
+    },
+  },
+];
 
-//     },
-//   },
-// ]
+export const windowsFatherData:CatalogData[] = [
+  {
+    name: 'Vidrio Templado',
+    filters: [ProductFathersTypes.WINDOWS, 'vidriotemplado'],
+    description: 'Los vidrios templados son una elección ideal para la seguridad y la resistencia en aplicaciones arquitectónicas. Producidos mediante un proceso de calentamiento y enfriamiento controlado, estos vidrios ofrecen una mayor resistencia a los impactos en comparación con los vidrios estándar. Son altamente versátiles y se utilizan en puertas, ventanas, barandas y divisorios, proporcionando una mayor seguridad y durabilidad.',
+    specs: {
+      description: [
+        {
+          title: 'Puertas y Ventanas',
+          text: 'Proporcionan seguridad y resistencia a impactos accidentales.'
+        },
+        {
+          title: '  Barandas y Barandales',
+          text: 'Añaden un toque estético y cumplen con los estándares de seguridad.'
+        },
+        {
+          title: '  Divisiones de Espacios',
+          text: 'Se utilizan en particiones interiores para crear áreas separadas.'
+        },
+        {
+          title: '  Fachadas',
+          text: 'Ofrecen protección contra condiciones climáticas extremas.'
+        }
+      ],
+      // features: [
+      //   'Proporcionan seguridad y resistencia a impactos accidentales.',
+      //   'Añaden un toque estético y cumplen con los estándares de seguridad.',
+      //   'Se utilizan en particiones interiores para crear áreas separadas.',
+      //   'Ofrecen protección contra condiciones climáticas extremas.',
+      // ]
+    }
+  },
+  {
+    name: 'Vidrio Laminado',
+    filters: [ProductFathersTypes.WINDOWS, 'vidriolaminado'],
+    description: 'Los vidrios laminados están compuestos por dos o más capas de vidrio unidas por una capa de película de polivinilo (PVB) que actúa como una barrera protectora. Este diseño mejora la seguridad al mantener el vidrio unido en caso de rotura, lo que reduce el riesgo de lesiones. Los vidrios laminados son ideales para aplicaciones que requieren tanto seguridad como estética, como ventanas y fachadas de edificios.',
+    specs: {
+      description: [
+        {
+          title: 'Ventanas de Seguridad',
+          text: 'Ofrecen protección contra intrusos y reducen el ruido exterior.'
+        },
+        {
+          title: '  Fachadas',
+          text: 'Mejoran la seguridad y la estética de los edificios.'
+        },
+        {
+          title: '  Barandas de Balcón',
+          text: 'Combina seguridad y diseño en espacios exteriores.'
+        },
+        {
+          title: '  Vidrieras de Tiendas',
+          text: 'Proporcionan seguridad y estética en entornos comerciales.'
+        }
+      ],
+      // features: [
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      // ]
+    }
+      
+  },
+  {
+    name: 'Temporales DVH (Doble Vidriado Hermético)',
+    filters: [ProductFathersTypes.WINDOWS, 'temporalesdvh'],
+    description: 'Los termopaneles, también conocidos como vidrios dobles herméticos (DVH), están diseñados para mejorar el aislamiento térmico y acústico de los espacios. Están compuestos por dos o más vidrios separados por una cámara de aire deshidratado. Esto ayuda a mantener una temperatura interior confortable y reduce la transmisión de sonido, lo que los convierte en una elección ideal para aplicaciones residenciales y comerciales.',
+    specs: {
+      description: [
+        {
+          title: 'Ventanas y Puertas',
+          text: 'Mejoran la eficiencia energética y el confort en hogares y edificios.'
+        },
+        {
+          title: '  Fachadas de Edificios',
+          text: 'Contribuyen al ahorro de energía y a un ambiente más silencioso.'
+        },
+        {
+          title: '  Oficinas y Espacios Comerciales',
+          text: 'Proporcionan una temperatura y sonoridad óptimas.'
+        },
+        {
+          title: '  Estudios de Grabación',
+          text: 'Minimizan la entrada de ruido exterior.'
+        }
+      ],
+      // features: [
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      // ]
+    }
+  },
+  {
+    name: 'Vidrios Especiales',
+    filters: [ProductFathersTypes.WINDOWS, 'vidriosespeciales'],
+    description: 'Los vidrios especiales son productos únicos diseñados para aplicaciones específicas. Estos vidrios pueden incluir propiedades como la resistencia a impactos, la protección UV, la autolimpieza o la opacidad controlable. Se utilizan en proyectos donde se requieren características personalizadas para satisfacer necesidades específicas.',
+    specs: {
+      description: [
+        {
+          title: 'Museos y Galerías',
+          text: 'Protegen las obras de arte de la luz solar y el daño UV.'
+        },
+        {
+          title: '  Espacios de Alta Seguridad',
+          text: 'Ofrecen resistencia a impactos y protección contra robos.'
+        },
+        {
+          title: '  Hospitales y Laboratorios',
+          text: 'Mantienen la higiene y la seguridad.'
+        },
+        {
+          title: '  Edificios segmento ABC1 e Inteligentes',
+          text: 'Controlan la opacidad y la privacidad en tiempo real.'
+        }
+      ],
+      // features: [
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      // ]
+    }
+  },
+  {
+    name: 'Vidrios Decorativos "VIIO"',
+    filters: [ProductFathersTypes.WINDOWS, 'vidriosdecorativos'],
+    description: 'Los vidrios decorativos "VIIO" son una elección innovadora para proyectos de diseño interior y arquitectura. Estos vidrios personalizables ofrecen una amplia gama de opciones de diseño, desde patrones geométricos hasta impresiones personalizadas. Combinan la estética con la funcionalidad, permitiendo la creación de espacios únicos y elegantes.',
+    specs: {
+      description: [
+        {
+          title: 'Diseño de Interiores',
+          text: 'Mejoran la estética de espacios residenciales y comerciales.'
+        },
+        {
+          title: '  Hoteles y Restaurantes',
+          text: 'Agregan un toque de lujo y originalidad al diseño interior.'
+        },
+        {
+          title: '  Espacios Públicos',
+          text: 'Proporcionan una identidad visual única en áreas de alto tráfico.'
+        },
+        {
+          title: '  Proyectos de Arte',
+          text: 'Permiten la creación de instalaciones artísticas y visuales.'
+        }
+      ],
+      // features: [
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      // ]
+    }
+  },
+] 
+
+export const garageDoorsData: CatalogData[] = [
+  {
+    name: 'Porton Corredizo Riel Curvo',
+    filters: [ProductFathersTypes.GARAGE_DOORS, 'corredizorielcurvo'],
+    description: '-',
+    specs: {
+      description: [],
+      features: [
+        'Un portón curvo que mejora la estética de la propiedad.',
+        'Se desliza suavemente sin ocupar espacio adicional.',
+        'Montaje rápido y eficiente.',
+        'Construido para soportar las condiciones climáticas más exigentes.',
+      ]
+    }
+  },
+  {
+    name: 'Porton Corredizo Riel Lineal',
+    filters: [ProductFathersTypes.GARAGE_DOORS, 'corredizorielineal'],
+    description: '-',
+    specs: {
+      description: [
+        {
+          title: 'Industrias',
+          text: 'Controla el acceso de vehículos de carga y personal.'
+        },
+        {
+          title: '  Centros Logísticos',
+          text: 'Facilita la entrada y salida de camiones y mercancías.'
+        },
+        {
+          title: '  Estacionamientos',
+          text: 'Optimiza la gestión de entrada y salida de vehículos.'
+        },
+        {
+          title: '  Residencias de Lujo',
+          text: 'Añade seguridad y estilo a la entrada principal.'
+        }
+      ],
+      features: [
+        'Se desliza a lo largo de un riel lineal, aprovechando al máximo el espacio disponible.',
+        'Proporciona un alto nivel de seguridad para la propiedad.',
+        'Disponible en diferentes estilos y acabados.',
+        'Construcción robusta para una larga vida útil.',
+      ]
+    }
+  },
+  {
+    name: 'Porton Enrollable',
+    filters: [ProductFathersTypes.GARAGE_DOORS, 'portonenrollable'],
+    description: '-',
+    specs: {
+      description: [
+        {
+          title: 'Comercios',
+          text: 'Asegura la protección de locales y tiendas en horario no comercial.'
+        },
+        {
+          title: '  Estacionamientos Subterráneos',
+          text: 'Ahorra espacio y controla el acceso.'
+        },
+        {
+          title: '  Residencias',
+          text: 'Proporciona seguridad y facilidad de acceso peatonal.'
+        },
+        {
+          title: '  Almacenes',
+          text: 'Optimiza la seguridad y la logística de carga y descarga.'
+        }
+      ],
+      features: [
+        'Se enrolla de manera compacta para maximizar el espacio disponible.',
+        'Ofrece una barrera resistente contra intrusiones.',
+        'Mejora la estética de la propiedad con un diseño contemporáneo.',
+        'Se abre y cierra de manera suave y sencilla.',
+      ]
+    }
+  },
+  {
+    name: 'Porton Elevadizo',
+    filters: [ProductFathersTypes.GARAGE_DOORS, 'portonelevadizo'],
+    description: '-',
+    specs: {
+      description: [
+        {
+          title: 'Residencias de Lujo',
+          text: 'Añade un toque de elegancia y seguridad a la entrada principal.'
+        },
+        {
+          title: '  Empresas',
+          text: 'Controla el acceso vehicular en instalaciones comerciales e industriales.'
+        },
+        {
+          title: '  Instituciones',
+          text: 'Proporciona una primera impresión de seguridad y confianza.'
+        },
+        {
+          title: '  Parques Empresariales',
+          text: 'Gestiona el acceso de vehículos de forma eficiente.'
+        }
+      ],
+      features: [
+        'Adecuado para espacios grandes y pequeños.',
+        'Apertura y cierre sin ruido.',
+        'Se adapta a diferentes estilos arquitectónicos.',
+        'Construcción resistente para una mayor seguridad.',
+      ]
+    }
+  },
+]
+
+export const resalesData: CatalogData[] = [
+  {
+    name: 'Puertas Placas Interiores',
+    filters: [ProductFathersTypes.RESALES, 'puertasplacasinteriores'],
+    description: '-',
+    specs: {
+      description: [
+        {
+          title: 'Versatilidad Interior',
+          text: 'Solución versátil para separar espacios interiores con amplia gama de productos.'
+        },
+        {
+          title: '  Diseños Elegantes',
+          text: 'Mejora la estética y la funcionalidad de los ambientes con la calidez de la madera.'
+        },
+        {
+          title: '  Amplia Gama de Estilos',
+          text: 'Disponibles en varios diseños y acabados.'
+        },
+        {
+          title: '  Fácil Instalación',
+          text: 'Montaje sencillo para renovar la apariencia de interiores.'
+        }
+      ],
+    }
+  },
+  {
+    name: 'Mamparas y puertas de vidrio',
+    filters: [ProductFathersTypes.RESALES, 'mamparasypuertasdevidrio'],
+    description: '-',
+    specs: {
+      description: [
+        {
+          title: 'Luminosidad y Transparencia',
+          text: 'Aportan luz natural y un aspecto moderno a los espacios.'
+        },
+        {
+          title: '  Personalización',
+          text: 'Diversas opciones de vidrio y marcos para adaptarse a la decoración.'
+        },
+        {
+          title: '  Funcionalidad',
+          text: 'Separan ambientes sin obstruir visualmente, manteniendo la sensación de amplitud.'
+        },
+        {
+          title: '  Calidad Garantizada',
+          text: 'Productos de vidrio resistentes y seguros.'
+        }
+      ],
+    }
+  },
+  {
+    name: 'Cortinas Interiores',
+    filters: [ProductFathersTypes.RESALES, 'cortinasinteriores'],
+    description: '-',
+    specs: {
+      description: [
+        {
+          title: 'Control de Luz',
+          text: 'Regulan la entrada de luz según las preferencias.'
+        },
+        {
+          title: '  Estilo y Decoración',
+          text: 'Complementan la decoración de interiores.'
+        },
+        {
+          title: '  Diseños Variados',
+          text: 'Disponibles en una amplia gama de estilos, telas y colores.'
+        },
+        {
+          title: '  Privacidad',
+          text: 'Proporcionan privacidad sin comprometer la estética.'
+        }
+      ],
+    }
+  },
+  {
+    name: 'Aberturas de PVC',
+    filters: [ProductFathersTypes.RESALES, 'aberturasdepvc'],
+    description: '-',
+    specs: {
+      description: [
+        {
+          title: 'Eficiencia Energética',
+          text: 'Contribuyen al aislamiento térmico y acústico del hogar.'
+        },
+        {
+          title: '  Durabilidad',
+          text: 'Construcción resistente y duradera para un rendimiento a largo plazo.'
+        },
+        {
+          title: '  Estética y Personalización',
+          text: 'Variedad de acabados y estilos para adaptarse a la arquitectura.'
+        },
+        {
+          title: '  Bajo Mantenimiento',
+          text: 'Requieren poco mantenimiento y conservan su apariencia original.'
+        }
+      ],
+    }
+  },
+];
 
 export const texturesData: TexturesTypes[] = [
   {
@@ -997,4 +1949,7 @@ export const allCatalogData: CatalogData[] = [
   ...doorsData,
   ...complementarySystemData,
   ...closersData,
+  ...controlSolar,
+  ...windowsFatherData,
+  ...garageDoorsData
 ];

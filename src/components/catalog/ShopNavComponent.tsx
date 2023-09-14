@@ -1,6 +1,6 @@
 import { AccordionItem } from "@components/accordion/AccordionItem";
 import React, { FC } from "react";
-import { closersData, complementarySystemData, doorsData, windowsData } from "src/utils/data/catalogData";
+import { closersData, complementarySystemData, controlSolar, doorsData, garageDoorsData, resalesData, windowsData, windowsFatherData } from "src/utils/data/catalogData";
 import { ProductFathersTypes, TypeProduct } from "src/utils/types/types";
 
 const dataNav = [
@@ -54,6 +54,54 @@ const dataNav = [
         return {
           title: wall.name,
           filter: wall.filters[1]
+        }
+      })      
+    ]
+  },
+  {
+    title: "Control solar",
+    filter: ProductFathersTypes.SOLAR_CONTROL,
+    types: [
+      ...controlSolar.map(solar_control => {
+        return {
+          title: solar_control.name,
+          filter: solar_control.filters[1]
+        }
+      })      
+    ]
+  },
+  {
+    title: "Vidrios",
+    filter: ProductFathersTypes.SOLAR_CONTROL,
+    types: [
+      ...windowsFatherData.map(window => {
+        return {
+          title: window.name,
+          filter: window.filters[1]
+        }
+      })      
+    ]
+  },
+  {
+    title: "Portones Garage",
+    filter: ProductFathersTypes.GARAGE_DOORS,
+    types: [
+      ...garageDoorsData.map(window => {
+        return {
+          title: window.name,
+          filter: window.filters[1]
+        }
+      })      
+    ]
+  },
+  {
+    title: "Reventas",
+    filter: ProductFathersTypes.RESALES,
+    types: [
+      ...resalesData.map(resales => {
+        return {
+          title: resales.name,
+          filter: resales.filters[1]
         }
       })      
     ]

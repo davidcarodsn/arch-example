@@ -2,7 +2,7 @@ export interface CatalogData {
   name: string;
   img?: string;
   specs?: Specs; 
-  description: string;
+  description?: string;
   filters: string[];
 }
 
@@ -20,7 +20,11 @@ export enum ProductFathersTypes {
   OPENERS_TYPES = 'aberturas',
   CLOSERS_TYPES = 'cerramientos',
   CS_TYPES = 'sistemas-complementarios',
-  SERVICES_TYPES = 'servicios'
+  SERVICES_TYPES = 'servicios',
+  SOLAR_CONTROL = 'control-solar',
+  WINDOWS = 'vidrios',
+  GARAGE_DOORS = 'puertas-garage',
+  RESALES = 'reventas'
 }
 
 export enum TypeProduct {
