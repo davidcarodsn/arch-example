@@ -117,7 +117,7 @@ export const windowsData: CatalogData[] = [
     },
   },
   {
-    name: "Rebatible",
+    name: "Rebatir",
     // img: 'deabrirpracticable',
     filters: [
       ProductFathersTypes.OPENERS_TYPES,
@@ -1285,7 +1285,7 @@ export const controlSolar: CatalogData[] = [
     },
   },
   {
-    name: "Celosias Con Tablilla fija",
+    name: "Celosias con Tablilla fija",
     filters: [ProductFathersTypes.SOLAR_CONTROL, "celosiastablillafija"],
     description:
       "Estas celosías con tablilla fija son ideales para aquellos que buscan un equilibrio entre privacidad y entrada de luz. Su diseño de tablillas fijas puede ser ciega o caladas lo cual permite un flujo controlado de aire y claridad natural mientras proporciona una barrera visual. Perfectas para espacios donde no se tiene lugar para taparrollos o se tienen mochetas amplias. se busca un toque de privacidad  y seguridad con un toque de ventilación e iluminación.",
@@ -1337,7 +1337,7 @@ export const controlSolar: CatalogData[] = [
     },
   },
   {
-    name: "Celosias Con Tablilla Regulable",
+    name: "Celosias con Tablilla Regulable",
     filters: [ProductFathersTypes.SOLAR_CONTROL, "celosiastablillaregulable"],
     description:
       "Las celosías con tablilla regulable ofrecen un mayor control sobre la entrada de luz y ventilación aún con las hojas en modo cerrado. Puedes ajustar las tablillas para modular la cantidad de luz y aire según tus preferencias. Esta tipología es especialmente adecuada para áreas donde se requiere flexibilidad en la regulación del ambiente interior sin perder seguridad.",
@@ -1558,8 +1558,8 @@ export const windowsFatherData:CatalogData[] = [
       
   },
   {
-    name: 'Temporales DVH (Doble Vidriado Hermético)',
-    filters: [ProductFathersTypes.WINDOWS, 'temporalesdvh'],
+    name: 'Termopaneles DVH (Doble Vidriado Hermético)',
+    filters: [ProductFathersTypes.WINDOWS, 'termopanelesdvh'],
     description: 'Los termopaneles, también conocidos como vidrios dobles herméticos (DVH), están diseñados para mejorar el aislamiento térmico y acústico de los espacios. Están compuestos por dos o más vidrios separados por una cámara de aire deshidratado. Esto ayuda a mantener una temperatura interior confortable y reduce la transmisión de sonido, lo que los convierte en una elección ideal para aplicaciones residenciales y comerciales.',
     specs: {
       description: [
@@ -1730,7 +1730,7 @@ export const garageDoorsData: CatalogData[] = [
     }
   },
   {
-    name: 'Porton Elevadizo',
+    name: 'Porton levadizo',
     filters: [ProductFathersTypes.GARAGE_DOORS, 'portonelevadizo'],
     description: '-',
     specs: {
