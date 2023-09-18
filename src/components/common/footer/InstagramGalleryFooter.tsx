@@ -18,13 +18,13 @@ export const InstagramGalleryFooter = ({ instagramToken }: any) => {
   
   return (
     <div className="col-lg-4 col-md-6">
-      <h5 className="title-footer m-b-30">Nuestros últimos posts</h5>
+      <h5 className="title-footer m-b-30">Instagram</h5>
       <div className="gallery clearfix">
         {
           imagesData 
           ? (
             imagesData.map((img, i) => {
-              if (i < 6) {
+              if (i < 9) {
                 return (
                   <div className="gallery__item" key={`${img.id}${i}`}>
                     <img alt={`Gallery ${i+1}`} src={img.media_url} style={{ maxHeight: '82.5px', minWidth: '82.5px', minHeight: '82.5px' }}/>

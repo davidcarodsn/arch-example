@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { projects } from 'src/utils/data/projectsData'
-import type { ProjectDetail } from 'src/utils/types/types'
+import { ProjectTypes, type ProjectDetail } from 'src/utils/types/types'
 
 interface SliceIndexType {
   initial: number;
@@ -9,13 +9,17 @@ interface SliceIndexType {
 
 export const ProjectBlog = ({ setProjectDetail }: { setProjectDetail: Dispatch<SetStateAction<ProjectDetail | undefined>>; }) => {
   const [ projectBlog, setProjectBlog ] = useState<ProjectDetail[] | undefined>();
+  const [ projectBlogFilter, setProjectBlogFilter ] = useState<ProjectDetail[]>(projects);
   const [ sliceIndex, setSliceIndex ] = useState<SliceIndexType>({ initial: 0, final: 2 });
+  const [ projectFilter, setProjectFilter ] = useState<ProjectTypes | undefined>(undefined);
 
   useEffect(() => {
-    if (sliceIndex.final <= projects.length) {
-      setProjectBlog(projects.slice(sliceIndex.initial, sliceIndex.final))
+    if (sliceIndex.final <= projectBlogFilter.length) {
+      setProjectBlog(projectBlogFilter.slice(sliceIndex.initial, sliceIndex.final))
+    } else {
+      setProjectBlog(projectBlogFilter.slice(sliceIndex.initial, projectBlogFilter.length))
     }
-  }, [projects, sliceIndex]);
+  }, [projectBlogFilter, sliceIndex]);
 
   const handlePagination = () => {
     setSliceIndex({
@@ -23,6 +27,15 @@ export const ProjectBlog = ({ setProjectDetail }: { setProjectDetail: Dispatch<S
       final: sliceIndex.final + 2,
     })
   }
+
+  useEffect(() => {
+    if (projectFilter) {
+      setProjectBlogFilter(projects.filter(project => project.type === projectFilter));
+    } else {
+      setProjectBlogFilter(projects);
+    }
+    setSliceIndex({ initial: 0, final: 2 })
+  }, [projectFilter])
 
   return (
     <>
@@ -32,17 +45,23 @@ export const ProjectBlog = ({ setProjectDetail }: { setProjectDetail: Dispatch<S
             <div className="col-md-12">
               <div id="filter-wrap">
                 <ul id="filter" className="ul--no-style ul--inline">
-                  <li className="active">
-                    <span data-filter="*">All</span>
+                  <li 
+                    onClick={() => setProjectFilter(undefined)} 
+                    className="active"
+                  >
+                    <span>Mostrar todos</span>
                   </li>
-                  <li>
-                    <span data-filter=".agency">Agency Interior</span>
+                  <li onClick={() => setProjectFilter(ProjectTypes.RESIDENCIAL)}>
+                    <span>Residencial</span>
                   </li>
-                  <li>
-                    <span data-filter=".ecomer">Ecommerce Interior</span>
+                  <li onClick={() => setProjectFilter(ProjectTypes.INSTITUCIONAL)}>
+                    <span>Institucional</span>
                   </li>
-                  <li>
-                    <span data-filter=".resident">Residential Interior</span>
+                  <li onClick={() => setProjectFilter(ProjectTypes.EDIFICIOS)}>
+                    <span>Edificios</span>
+                  </li>
+                  <li onClick={() => setProjectFilter(ProjectTypes.INTERIORISMO)}>
+                    <span>Interiorismo</span>
                   </li>
                 </ul>
               </div>
@@ -53,7 +72,7 @@ export const ProjectBlog = ({ setProjectDetail }: { setProjectDetail: Dispatch<S
               return (
                 <div 
                   onClick={() => setProjectDetail(project)}
-                  className="col-md-6 col-sm-12 item agency animate__animated animate__fadeIn" 
+                  className={`col-md-6 col-sm-12 item ${project.type} animate__animated animate__fadeIn`}
                   key={project.title}
                 >
                   <div className="project__item">
@@ -78,7 +97,7 @@ export const ProjectBlog = ({ setProjectDetail }: { setProjectDetail: Dispatch<S
             }) }
           </div>
           {
-            !(sliceIndex.final >= projects.length) && (
+            !(sliceIndex.final >= projectBlogFilter.length) && (
               <div className="see-more">
                 <a 
                   onClick={handlePagination}

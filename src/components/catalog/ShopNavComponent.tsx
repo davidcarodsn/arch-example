@@ -18,6 +18,34 @@ const dataNav = [
               title: window.name,
               filter: window.filters[2]
             }
+          }).sort(function (a, b) {
+            if (a.title < b.title) {
+              return -1;
+            }
+            if (a.title > b.title) {
+              return 1;
+            }
+            return 0;
+          })
+        ]
+      },
+      {
+        title: "Control solar",
+        filter: ProductFathersTypes.SOLAR_CONTROL,
+        types: [
+          ...controlSolar.map(solar_control => {
+            return {
+              title: solar_control.name,
+              filter: solar_control.filters[1]
+            }
+          }).sort(function (a, b) {
+            if (a.title < b.title) {
+              return -1;
+            }
+            if (a.title > b.title) {
+              return 1;
+            }
+            return 0;
           })
         ]
       },
@@ -30,57 +58,17 @@ const dataNav = [
               title: door.name,
               filter: door.filters[2]
             }
+          }).sort(function (a, b) {
+            if (a.title < b.title) {
+              return -1;
+            }
+            if (a.title > b.title) {
+              return 1;
+            }
+            return 0;
           })
         ]
       }
-    ]
-  },
-  {
-    title: "Sistemas Complementarios",
-    filter: ProductFathersTypes.CS_TYPES,
-    types: [
-     ...complementarySystemData.map(wall => {
-      return {
-        title: wall.name,
-        filter: wall.filters[1]
-      }
-     }) 
-    ]
-  },
-  {
-    title: "Fachadas",
-    filter: ProductFathersTypes.CLOSERS_TYPES,
-    types: [
-      ...closersData.map(wall => {
-        return {
-          title: wall.name,
-          filter: wall.filters[1]
-        }
-      })      
-    ]
-  },
-  {
-    title: "Control solar",
-    filter: ProductFathersTypes.SOLAR_CONTROL,
-    types: [
-      ...controlSolar.map(solar_control => {
-        return {
-          title: solar_control.name,
-          filter: solar_control.filters[1]
-        }
-      })      
-    ]
-  },
-  {
-    title: "Vidrios",
-    filter: ProductFathersTypes.SOLAR_CONTROL,
-    types: [
-      ...windowsFatherData.map(window => {
-        return {
-          title: window.name,
-          filter: window.filters[1]
-        }
-      })      
     ]
   },
   {
@@ -92,7 +80,55 @@ const dataNav = [
           title: window.name,
           filter: window.filters[1]
         }
-      })      
+      }).sort(function (a, b) {
+        if (a.title < b.title) {
+          return -1;
+        }
+        if (a.title > b.title) {
+          return 1;
+        }
+        return 0;
+      })
+    ]
+  },
+  {
+    title: "Sistemas Complementarios",
+    filter: ProductFathersTypes.CS_TYPES,
+    types: [
+     ...complementarySystemData.map(wall => {
+      return {
+        title: wall.name,
+        filter: wall.filters[1]
+      }
+     }).sort(function (a, b) {
+      if (a.title < b.title) {
+        return -1;
+      }
+      if (a.title > b.title) {
+        return 1;
+      }
+      return 0;
+    })
+    ]
+  },
+  {
+    title: "Fachadas",
+    filter: ProductFathersTypes.CLOSERS_TYPES,
+    types: [
+      ...closersData.map(wall => {
+        return {
+          title: wall.name,
+          filter: wall.filters[1]
+        }
+      }).sort(function (a, b) {
+        if (a.title < b.title) {
+          return -1;
+        }
+        if (a.title > b.title) {
+          return 1;
+        }
+        return 0;
+      })
     ]
   },
   {
@@ -104,7 +140,35 @@ const dataNav = [
           title: resales.name,
           filter: resales.filters[1]
         }
-      })      
+      }).sort(function (a, b) {
+        if (a.title < b.title) {
+          return -1;
+        }
+        if (a.title > b.title) {
+          return 1;
+        }
+        return 0;
+      })
+    ]
+  },
+  {
+    title: "Vidrios",
+    filter: ProductFathersTypes.SOLAR_CONTROL,
+    types: [
+      ...windowsFatherData.map(window => {
+        return {
+          title: window.name,
+          filter: window.filters[1]
+        }
+      }).sort(function (a, b) {
+        if (a.title < b.title) {
+          return -1;
+        }
+        if (a.title > b.title) {
+          return 1;
+        }
+        return 0;
+      })
     ]
   },
   // {

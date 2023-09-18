@@ -90,6 +90,15 @@ export interface ProjectDetail {
   img: string[];
   title: string;
   description: string;
+  type: ProjectTypes;
   client: string;
   project_date: string;
+}
+
+
+export enum ProjectTypes {
+  RESIDENCIAL = 'residencial',
+  INSTITUCIONAL = 'institucional',
+  EDIFICIOS = 'edificios',
+  INTERIORISMO = 'interiorismo'
 }

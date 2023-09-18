@@ -7,7 +7,7 @@ import {
 
 export const windowsData: CatalogData[] = [
   {
-    name: "Banderola",
+    name: "Ventana banderola",
     // img: 'banderola',
     filters: [
       ProductFathersTypes.OPENERS_TYPES,
@@ -66,7 +66,7 @@ export const windowsData: CatalogData[] = [
     },
   },
   {
-    name: "Corrediza",
+    name: "Ventana corrediza",
     // img: 'corrediza',
     filters: [
       ProductFathersTypes.OPENERS_TYPES,
@@ -117,7 +117,7 @@ export const windowsData: CatalogData[] = [
     },
   },
   {
-    name: "Rebatir",
+    name: "Ventana de rebatir",
     // img: 'deabrirpracticable',
     filters: [
       ProductFathersTypes.OPENERS_TYPES,
@@ -176,7 +176,7 @@ export const windowsData: CatalogData[] = [
     },
   },
   {
-    name: "Oscilobatiente",
+    name: "Ventana oscilobatiente",
     // img: 'oscilobatiente',
     filters: [
       ProductFathersTypes.OPENERS_TYPES,
@@ -235,7 +235,7 @@ export const windowsData: CatalogData[] = [
     },
   },
   {
-    name: "Proyectante",
+    name: "Ventana proyectante",
     // img: 'desplazableproyectante',
     filters: [
       ProductFathersTypes.OPENERS_TYPES,
@@ -294,7 +294,7 @@ export const windowsData: CatalogData[] = [
     },
   },
   {
-    name: "Desplazable",
+    name: "Ventana desplazable",
     // img: 'paralela',
     filters: [
       ProductFathersTypes.OPENERS_TYPES,
@@ -353,7 +353,7 @@ export const windowsData: CatalogData[] = [
     },
   },
   {
-    name: "Paño Fijo",
+    name: "Ventana tipo paño fijo",
     // img: 'plegadiza',
     filters: [
       ProductFathersTypes.OPENERS_TYPES,
@@ -472,7 +472,7 @@ export const doorsData: CatalogData[] = [
     },
   },
   {
-    name: "Puerta Pivotante",
+    name: "Puerta pivotante",
     // img: 'puertamachimbre',
     filters: [
       ProductFathersTypes.OPENERS_TYPES,
@@ -529,7 +529,7 @@ export const doorsData: CatalogData[] = [
     },
   },
   {
-    name: "Puerta Corrediza Colgante",
+    name: "Puerta corrediza colgante",
     // img: 'puertamachimbre',
     filters: [
       ProductFathersTypes.OPENERS_TYPES,
@@ -578,7 +578,7 @@ export const doorsData: CatalogData[] = [
     },
   },
   {
-    name: "Puerta Plegadiza",
+    name: "Puerta plegadiza",
     // img: 'puertamachimbre',
     filters: [
       ProductFathersTypes.OPENERS_TYPES,
@@ -673,7 +673,7 @@ export const complementarySystemData: CatalogData[] = [
   //   },
   // },
   {
-    name: 'Cerramiento de Oficinas',
+    name: 'Cerramiento de oficinas',
     filters: [ProductFathersTypes.CS_TYPES, "cerramientooficinas"],
     description: 'Usos:',
     specs: {
@@ -724,7 +724,7 @@ export const complementarySystemData: CatalogData[] = [
     }
   },
   {
-    name: 'Divisorio Sanitarios',
+    name: 'Divisorio sanitarios',
     filters: [ProductFathersTypes.CS_TYPES, "divisoriosanitario"],
     description: 'Usos:',
     specs: {
@@ -775,7 +775,7 @@ export const complementarySystemData: CatalogData[] = [
     }
   },
   {
-    name: 'Baranda Balcón',
+    name: 'Baranda balcón',
     filters: [ProductFathersTypes.CS_TYPES, "barandabalcon"],
     description: 'Usos:',
     specs: {
@@ -823,7 +823,7 @@ export const complementarySystemData: CatalogData[] = [
     }
   },
   {
-    name: 'Mampara de Baño',
+    name: 'Mampara de baño',
     filters: [ProductFathersTypes.CS_TYPES, "mamparadebaño"],
     description: 'Usos:',
     specs: {
@@ -871,7 +871,7 @@ export const complementarySystemData: CatalogData[] = [
     }
   },
   {
-    name: 'Techo Vidriado',
+    name: 'Techo vidriado',
     filters: [ProductFathersTypes.CS_TYPES, "techovidriado"],
     description: 'Usos:',
     specs: {
@@ -1018,7 +1018,7 @@ export const closersData: CatalogData[] = [
     },
   },
   {
-    name: "Frente Integral",
+    name: "Frente integral",
     // img: 'frenteintegral',
     filters: [ProductFathersTypes.CLOSERS_TYPES, "frenteintegral"],
     description:
@@ -1083,7 +1083,7 @@ export const closersData: CatalogData[] = [
     },
   },
   {
-    name: "Sistema Frame",
+    name: "Sistema frame",
     // img: 'courtainwall',
     description: `
       En la clasificación de muros cortina, presentamos nuestro sistema frame, que consiste en la fabricación previa de módulos en nuestra fábrica y su posterior instalación directa en el sitio de construcción, entre las losas.
@@ -1139,7 +1139,7 @@ export const closersData: CatalogData[] = [
     },
   },
   {
-    name: "Frente Vidriado",
+    name: "Frente vidriado",
     // img: 'courtainwall',
     filters: [ProductFathersTypes.CLOSERS_TYPES, "courtainwall"],
     description:
@@ -1187,7 +1187,7 @@ export const closersData: CatalogData[] = [
 
 export const controlSolar: CatalogData[] = [
   {
-    name: "Cortina de Enrollar",
+    name: "Cortina de enrollar",
     filters: [ProductFathersTypes.SOLAR_CONTROL, "cortinadeenrollar"],
     description:
       "Las cortinas de enrollar son una elección popular para quienes buscan un diseño clásico y funcionalidad práctica. Fabricadas con lama de aluminio tubular, con pequeños calados que permiten regular ventilación y claridad. Estas cortinas se enrollan suavemente mediante sistema de reductor a manivela o bien se automatizan a tecla y/o control remoto.",
@@ -1285,7 +1285,7 @@ export const controlSolar: CatalogData[] = [
     },
   },
   {
-    name: "Celosias con Tablilla fija",
+    name: "Celosias con tablilla fija",
     filters: [ProductFathersTypes.SOLAR_CONTROL, "celosiastablillafija"],
     description:
       "Estas celosías con tablilla fija son ideales para aquellos que buscan un equilibrio entre privacidad y entrada de luz. Su diseño de tablillas fijas puede ser ciega o caladas lo cual permite un flujo controlado de aire y claridad natural mientras proporciona una barrera visual. Perfectas para espacios donde no se tiene lugar para taparrollos o se tienen mochetas amplias. se busca un toque de privacidad  y seguridad con un toque de ventilación e iluminación.",
@@ -1337,7 +1337,7 @@ export const controlSolar: CatalogData[] = [
     },
   },
   {
-    name: "Celosias con Tablilla Regulable",
+    name: "Celosias con tablilla regulable",
     filters: [ProductFathersTypes.SOLAR_CONTROL, "celosiastablillaregulable"],
     description:
       "Las celosías con tablilla regulable ofrecen un mayor control sobre la entrada de luz y ventilación aún con las hojas en modo cerrado. Puedes ajustar las tablillas para modular la cantidad de luz y aire según tus preferencias. Esta tipología es especialmente adecuada para áreas donde se requiere flexibilidad en la regulación del ambiente interior sin perder seguridad.",
@@ -1495,7 +1495,7 @@ export const controlSolar: CatalogData[] = [
 
 export const windowsFatherData:CatalogData[] = [
   {
-    name: 'Vidrio Templado',
+    name: 'Vidrio templado',
     filters: [ProductFathersTypes.WINDOWS, 'vidriotemplado'],
     description: 'Los vidrios templados son una elección ideal para la seguridad y la resistencia en aplicaciones arquitectónicas. Producidos mediante un proceso de calentamiento y enfriamiento controlado, estos vidrios ofrecen una mayor resistencia a los impactos en comparación con los vidrios estándar. Son altamente versátiles y se utilizan en puertas, ventanas, barandas y divisorios, proporcionando una mayor seguridad y durabilidad.',
     specs: {
@@ -1526,7 +1526,7 @@ export const windowsFatherData:CatalogData[] = [
     }
   },
   {
-    name: 'Vidrio Laminado',
+    name: 'Vidrio laminado',
     filters: [ProductFathersTypes.WINDOWS, 'vidriolaminado'],
     description: 'Los vidrios laminados están compuestos por dos o más capas de vidrio unidas por una capa de película de polivinilo (PVB) que actúa como una barrera protectora. Este diseño mejora la seguridad al mantener el vidrio unido en caso de rotura, lo que reduce el riesgo de lesiones. Los vidrios laminados son ideales para aplicaciones que requieren tanto seguridad como estética, como ventanas y fachadas de edificios.',
     specs: {
@@ -1589,7 +1589,7 @@ export const windowsFatherData:CatalogData[] = [
     }
   },
   {
-    name: 'Vidrios Especiales',
+    name: 'Vidrios especiales',
     filters: [ProductFathersTypes.WINDOWS, 'vidriosespeciales'],
     description: 'Los vidrios especiales son productos únicos diseñados para aplicaciones específicas. Estos vidrios pueden incluir propiedades como la resistencia a impactos, la protección UV, la autolimpieza o la opacidad controlable. Se utilizan en proyectos donde se requieren características personalizadas para satisfacer necesidades específicas.',
     specs: {
@@ -1620,7 +1620,7 @@ export const windowsFatherData:CatalogData[] = [
     }
   },
   {
-    name: 'Vidrios Decorativos "VIIO"',
+    name: 'Vidrios decorativos "VIIO"',
     filters: [ProductFathersTypes.WINDOWS, 'vidriosdecorativos'],
     description: 'Los vidrios decorativos "VIIO" son una elección innovadora para proyectos de diseño interior y arquitectura. Estos vidrios personalizables ofrecen una amplia gama de opciones de diseño, desde patrones geométricos hasta impresiones personalizadas. Combinan la estética con la funcionalidad, permitiendo la creación de espacios únicos y elegantes.',
     specs: {
@@ -1654,7 +1654,7 @@ export const windowsFatherData:CatalogData[] = [
 
 export const garageDoorsData: CatalogData[] = [
   {
-    name: 'Porton Corredizo Riel Curvo',
+    name: 'Porton corredizo riel curvo',
     filters: [ProductFathersTypes.GARAGE_DOORS, 'corredizorielcurvo'],
     description: '-',
     specs: {
@@ -1668,7 +1668,7 @@ export const garageDoorsData: CatalogData[] = [
     }
   },
   {
-    name: 'Porton Corredizo Riel Lineal',
+    name: 'Porton corredizo riel lineal',
     filters: [ProductFathersTypes.GARAGE_DOORS, 'corredizorielineal'],
     description: '-',
     specs: {
@@ -1699,7 +1699,7 @@ export const garageDoorsData: CatalogData[] = [
     }
   },
   {
-    name: 'Porton Enrollable',
+    name: 'Porton enrollable',
     filters: [ProductFathersTypes.GARAGE_DOORS, 'portonenrollable'],
     description: '-',
     specs: {
@@ -1764,7 +1764,7 @@ export const garageDoorsData: CatalogData[] = [
 
 export const resalesData: CatalogData[] = [
   {
-    name: 'Puertas Placas Interiores',
+    name: 'Puertas placas interiores',
     filters: [ProductFathersTypes.RESALES, 'puertasplacasinteriores'],
     description: '-',
     specs: {
@@ -1814,7 +1814,7 @@ export const resalesData: CatalogData[] = [
     }
   },
   {
-    name: 'Cortinas Interiores',
+    name: 'Cortinas interiores',
     filters: [ProductFathersTypes.RESALES, 'cortinasinteriores'],
     description: '-',
     specs: {
@@ -1951,5 +1951,6 @@ export const allCatalogData: CatalogData[] = [
   ...closersData,
   ...controlSolar,
   ...windowsFatherData,
-  ...garageDoorsData
+  ...garageDoorsData,
+  ...resalesData
 ];

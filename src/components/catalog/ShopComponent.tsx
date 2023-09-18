@@ -3,14 +3,17 @@ import ShopCardComponent from "./ShopCardComponent";
 import { ShopNavComponent } from "./ShopNavComponent";
 import { allCatalogData } from "src/utils/data/catalogData";
 import { CatalogData, CatalogFiltersTypes } from "src/utils/types/types";
+import { pagination } from "src/utils/helpers/pagination";
 
 const initialState = [
   ...allCatalogData
 ].sort(function() { return Math.random() - 0.5 });
 
 export const ShopComponent = ({ query }:any) => {
-  const [catalogData,  setCatalogData] = useState<CatalogData[] | undefined>(initialState);
-    
+  const [ catalogData,  setCatalogData ] = useState<CatalogData[]>(initialState);
+  const [ indexPagination, setIndexPagination ] = useState({ startIndex: 0, lastIndex: 6 });
+  const [ dataPaginated, setDataPaginated ] = useState<CatalogData[]>(catalogData || []);
+
   const handleFilterNav = (productType: string, filterType: CatalogFiltersTypes) => {
     let newData: CatalogData[];
     if (filterType === CatalogFiltersTypes.SEARCH) {
@@ -25,14 +28,26 @@ export const ShopComponent = ({ query }:any) => {
     
     //@ts-ignore
     setCatalogData(newData);
+    setIndexPagination({ startIndex: 0, lastIndex: 6 })
     return undefined;
+  }
+
+  const handlePagination = () => {
+    setIndexPagination({
+      startIndex: 0,
+      lastIndex: indexPagination.lastIndex + 3
+    })
   }
 
   useEffect(() => {
     if (query) {
       handleFilterNav(query, CatalogFiltersTypes.PRODUCT_FILTER);
     }    
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    pagination(catalogData, indexPagination, setDataPaginated);
+  }, [indexPagination, catalogData])
 
   return (
     <section className="pro-list-wrap">
@@ -46,11 +61,25 @@ export const ShopComponent = ({ query }:any) => {
               <div className="col-lg-9 col-md-12">
                 <div className="row">
                   {
-                    catalogData?.map(product => {
+                    dataPaginated?.map(product => {
                       return (
                         <ShopCardComponent product={product} key={product.name} />
                       )
                     })
+                  }
+                  {
+                    (catalogData && indexPagination.lastIndex <= catalogData.length) && (
+                      <div className="col-12 see-more">
+                        <a 
+                          onClick={handlePagination}
+                          type='button' 
+                          style={{ color: 'white', cursor: 'pointer' }} 
+                          className="au-btn au-btn--pill au-btn--yellow au-btn--big au-btn--white"
+                        >
+                          Cargar Más
+                        </a>
+                      </div>
+                    )
                   }
                 </div>
               </div>
