@@ -46,7 +46,7 @@ export const ShopComponent = ({ query }:any) => {
   }, []);
 
   useEffect(() => {
-    pagination(catalogData, indexPagination, setDataPaginated);
+    setDataPaginated(pagination(catalogData, indexPagination));
   }, [indexPagination, catalogData])
 
   return (

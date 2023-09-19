@@ -1,7 +1,7 @@
 ---
 import { BlogComponent } from "@components/blog/BlogComponent";
 import Layout from "@layouts/Layout.astro";
-import { PAGES } from "src/utils/types/pagesTypes";
+import { PAGES, PAGES_PATH } from "src/utils/types/pagesTypes";
 
 const { FACEBOOK_TOKEN, FACEBOOK_PAGE_ID } = await import.meta.env;
 ---
@@ -17,7 +17,7 @@ const { FACEBOOK_TOKEN, FACEBOOK_PAGE_ID } = await import.meta.env;
             </li>
             <span class="span-active">/</span>
             <li>
-              <a href="/blog">Noticias</a>
+              <a href={`/${PAGES_PATH.NEWS_PATH}`}>Noticias</a>
             </li>
           </ul>
         </div>

@@ -4,7 +4,7 @@ interface paginationIndex {
   startIndex: number;
   lastIndex: number; 
 }
-export function pagination(arr: any[], index: paginationIndex, setData: Dispatch<SetStateAction<any>>) {
+export function pagination(arr: any[], index: paginationIndex) {
   let paginated;
   if (index.lastIndex <= arr.length) {
     paginated = arr.slice(index.startIndex, index.lastIndex); 
@@ -12,5 +12,5 @@ export function pagination(arr: any[], index: paginationIndex, setData: Dispatch
     paginated = arr.slice(index.startIndex, arr.length);
   }
   
-  setData(paginated)
+  return paginated;
 } 

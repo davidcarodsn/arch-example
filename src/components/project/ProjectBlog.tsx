@@ -1,30 +1,27 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { projects } from 'src/utils/data/projectsData'
+import { pagination } from 'src/utils/helpers/pagination';
 import { ProjectTypes, type ProjectDetail } from 'src/utils/types/types'
 
-interface SliceIndexType {
-  initial: number;
-  final: number;
+interface paginationIndex {
+  startIndex: number;
+  lastIndex: number; 
 }
 
 export const ProjectBlog = ({ setProjectDetail }: { setProjectDetail: Dispatch<SetStateAction<ProjectDetail | undefined>>; }) => {
-  const [ projectBlog, setProjectBlog ] = useState<ProjectDetail[] | undefined>();
+  const [ projectBlog, setProjectBlog ] = useState<ProjectDetail[]>();
   const [ projectBlogFilter, setProjectBlogFilter ] = useState<ProjectDetail[]>(projects);
-  const [ sliceIndex, setSliceIndex ] = useState<SliceIndexType>({ initial: 0, final: 2 });
+  const [ sliceIndex, setSliceIndex ] = useState<paginationIndex>({ startIndex: 0, lastIndex: 2 });
   const [ projectFilter, setProjectFilter ] = useState<ProjectTypes | undefined>(undefined);
 
   useEffect(() => {
-    if (sliceIndex.final <= projectBlogFilter.length) {
-      setProjectBlog(projectBlogFilter.slice(sliceIndex.initial, sliceIndex.final))
-    } else {
-      setProjectBlog(projectBlogFilter.slice(sliceIndex.initial, projectBlogFilter.length))
-    }
+    setProjectBlog(pagination(projectBlogFilter, sliceIndex))
   }, [projectBlogFilter, sliceIndex]);
 
   const handlePagination = () => {
     setSliceIndex({
-      initial: sliceIndex.initial,
-      final: sliceIndex.final + 2,
+      startIndex: sliceIndex.startIndex,
+      lastIndex: sliceIndex.lastIndex + 2,
     })
   }
 
@@ -34,8 +31,8 @@ export const ProjectBlog = ({ setProjectDetail }: { setProjectDetail: Dispatch<S
     } else {
       setProjectBlogFilter(projects);
     }
-    setSliceIndex({ initial: 0, final: 2 })
-  }, [projectFilter])
+    setSliceIndex({ startIndex: 0, lastIndex: 2 })
+  }, [projectFilter]);
 
   return (
     <>
@@ -97,7 +94,7 @@ export const ProjectBlog = ({ setProjectDetail }: { setProjectDetail: Dispatch<S
             }) }
           </div>
           {
-            !(sliceIndex.final >= projectBlogFilter.length) && (
+            !(sliceIndex.lastIndex >= projectBlogFilter.length) && (
               <div className="see-more">
                 <a 
                   onClick={handlePagination}

@@ -5,6 +5,7 @@ import { getFormatDate } from 'src/utils/helpers/getFormatDate';
 import type { FacebookPost } from 'src/utils/types/types';
 import { BlogDetailRelatedPost } from './blog-detail/BlogDetailRelatedPost';
 import { BlogDetailComments } from './blog-detail/BlogDetailComments';
+import { PAGES_PATH } from 'src/utils/types/pagesTypes';
 
 export const BlogDetail = () => {
   const { state, dispatch }: any = useBlogContext();
@@ -105,7 +106,7 @@ export const BlogDetail = () => {
             <div className="col-lg-4 col-md-5">
               <BlogDetailRelatedPost relatedPosts={relatedPosts} />
               <div className='col-12 mt-5'>
-                <a href="/blog" className="au-btn au-btn--pill au-btn--yellow au-btn--medium" style={{ color: 'white' }}>Volver a todas las noticias</a>
+                <a href={`/${PAGES_PATH.NEWS_PATH}`} className="au-btn au-btn--pill au-btn--yellow au-btn--medium" style={{ color: 'white' }}>Volver a todas las noticias</a>
               </div>
             </div>
           </div>

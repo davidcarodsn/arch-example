@@ -1,24 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useBlogContext } from 'src/context/blogContext';
 import { BlogTypes } from 'src/context/types/blog';
 import type { FacebookPost } from 'src/utils/types/types';
 import { getFormatDate } from 'src/utils/helpers/getFormatDate';
+import { pagination } from 'src/utils/helpers/pagination';
 export const BlogPosts = () => {
   const { state, dispatch }: any = useBlogContext();
+  const [ posts, setPosts ] = useState<FacebookPost[]>();
+  const [ postsPaginated, setPostsPaginated ] = useState<FacebookPost[]>();
+  const [ indexPagination, setIndexPagination ] = useState({ startIndex: 0, lastIndex: 3 });
 
-  const handleSetFacebookPostDetail = (post: FacebookPost) => {
-    dispatch({ type: BlogTypes.SET_FACEBOOK_POST_DETAIL, payload: post })
+  const handleSetFacebookPostDetail = (post: FacebookPost) => {dispatch({ type: BlogTypes.SET_FACEBOOK_POST_DETAIL, payload: post })}
+  
+  const handlePagination = () => {
+    setIndexPagination({
+      startIndex: 0,
+      lastIndex: indexPagination.lastIndex + 3
+    })
   }
 
+  useEffect(() => {
+    if (state.facebookPostData) {
+      setPosts(state.facebookPostData)
+    } 
+  }, [state?.facebookPostData])
+
+  useEffect(() => {
+    if (posts) {
+      setPostsPaginated(pagination(posts, indexPagination))
+    }
+  }, [posts, indexPagination])
   return (
     <>
       <div className="blog1 animate__animated animate__fadeIn">
         <div className="container">
           <div className="clearfix row justify-content-center">
             {
-              state?.facebookPostData?.map((post: any) => {
+              postsPaginated?.map((post: any) => {
                 return (
-                  <div key={post.target.id} className="col-lg-4 item design mt-5">
+                  <div key={post.target.id} className="col-lg-4 item design mt-5 animate__animated animate__fadeIn">
                     <div className="blog-item">
                       <div className="img-blog">
                         <a href='' onClick={(e) => (e.preventDefault(),  handleSetFacebookPostDetail(post))} style={{ overflow: 'hidden', maxHeight: '150px', minHeight: '150px' }}>
@@ -52,6 +72,20 @@ export const BlogPosts = () => {
                 )
               })
             }
+            {
+            !(posts && indexPagination.lastIndex >= posts.length) && (
+              <div className="see-more">
+                <a 
+                  onClick={handlePagination}
+                  type='button' 
+                  style={{ color: 'white', cursor: 'pointer' }} 
+                  className="au-btn au-btn--pill au-btn--yellow au-btn--big au-btn--white"
+                >
+                  Cargar Más
+                </a>
+              </div>
+            )
+          }
           </div>
         </div>
       </div>
