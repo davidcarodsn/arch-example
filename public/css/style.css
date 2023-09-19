@@ -33,7 +33,7 @@ body {
 }
 
 .youtube-inframe-video {
-    display: flex; align-items: center;justify-content: center; padding: 40px;
+    display: flex; align-items: center; justify-content: center; padding: 40px;
 }
 
 section {
@@ -6870,19 +6870,8 @@ input[type=number] {
     .dot-wrap .slick-dots {
         height: 15%;
     }
-    .youtube-inframe-video {
-        margin-top: 150px;
-    }
 }
 
-@media(max-width: 767px) {
-    .slide-content-2 span.color {
-        font-size: 38px;
-    }
-    .youtube-inframe-video {
-        display: none;
-    }
-}
 
 @media (max-width: 576px) {
     .testi__item blockquote>i {
