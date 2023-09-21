@@ -11,8 +11,7 @@ import { getFormatData } from 'src/utils/helpers/getFormatData';
 const { pageTitle } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="homepage-box">
+<!DOCTYPE html lang="en" class="homepage-box">
 <head>
   <title>{pageTitle}</title>
   <meta charset="UTF-8">
@@ -28,6 +27,7 @@ const { pageTitle } = Astro.props;
   <link rel="stylesheet" type="text/css" href="/vendor/revolution/navigation.css">
   <link rel="stylesheet" type="text/css" href="/vendor/revolution/layers.css">
   <link rel="stylesheet" type="text/css" href="/vendor/colorbox/colorbox.css">
+  <link rel="stylesheet" type="text/css" href="/vendor/lightbox2/src/css/lightbox.css">
   <link rel="stylesheet" type="text/css" href="/vendor/smk-accordion/accordion.css">
   {
     pageTitle === PAGES.ABOUT_US && (
@@ -64,7 +64,6 @@ const { pageTitle } = Astro.props;
   <script is:inline src="/vendor/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
   <script is:inline src="/vendor/revolution/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
   <script is:inline src="/vendor/revolution/jquery.themepunch.tools.min.js" type="text/javascript"></script>
-  <script is:inline src="/vendor/colorbox/jquery.colorbox.js" type="text/javascript"></script>
   <script is:inline src="/vendor/isotope/isotope.pkgd.min.js" type="text/javascript"></script>
   <!-- Local Revolution -->
   <!-- <script type="text/javascript" src="/vendor/revolution/local/revolution.extension.migration.min.js"></script> -->

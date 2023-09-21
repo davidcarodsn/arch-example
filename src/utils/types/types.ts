@@ -44,7 +44,7 @@ export interface TexturesTypes {
 }
 
 export interface FacebookPost {
-  descritpion: string;
+  description: string;
   icon: string;
   comments: FacebookPostComments[];
   created_time: string;

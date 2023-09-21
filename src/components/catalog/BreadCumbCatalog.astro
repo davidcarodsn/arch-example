@@ -1,4 +1,6 @@
 ---
+import { PAGES_PATH } from "src/utils/types/pagesTypes";
+import { ProductFathersTypes } from "src/utils/types/types";
 const { product } = Astro.props;
 ---
 <!-- Breadcrumb -->
@@ -14,7 +16,7 @@ const { product } = Astro.props;
           <li>
             {
               product 
-                ? (<a href="/catalog">Catálogo</a>)
+                ? (<a href={`/${PAGES_PATH.CATALOG_PATH}`}>Catálogo</a>)
                 : ('Catálogo')
             }
           </li>

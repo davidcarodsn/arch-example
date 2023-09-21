@@ -4,6 +4,7 @@ import { BlogTypes } from 'src/context/types/blog';
 import type { FacebookPost } from 'src/utils/types/types';
 import { getFormatDate } from 'src/utils/helpers/getFormatDate';
 import { pagination } from 'src/utils/helpers/pagination';
+
 export const BlogPosts = () => {
   const { state, dispatch }: any = useBlogContext();
   const [ posts, setPosts ] = useState<FacebookPost[]>();
@@ -47,7 +48,7 @@ export const BlogPosts = () => {
                       </div>
                       <div className="blog-content">
                         <h4 className="blog-title">
-                          <a href='' onClick={(e) => (e.preventDefault(),  handleSetFacebookPostDetail(post))}>
+                          <a type='button' onClick={(e) => (e.preventDefault(),  handleSetFacebookPostDetail(post))}>
                             <p>
                               {getFormatDate(post.created_time)}
                             </p>
@@ -58,12 +59,12 @@ export const BlogPosts = () => {
                           <em className="cate">Facebook</em> 
                           <em className="time">{post?.comments?.length ?? '0'} Comentarios</em>
                         </p>
-                        <p style={{  overflow: 'hidden', textOverflow: 'ellipsis', minHeight: '100px', maxHeight: '100px'}}>
+                        <p style={{  overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxHeight: '100px'}}>
                           {post.description}
                         </p>
                         <div className='mt-3'>
                           <span className="col-12 d-flex justify-content-center">
-                            <a style={{ color: '#e91d25' }} target='_blank' href={post.target.url}>Ver en <i className="ml-1 zmdi zmdi-facebook"></i></a>
+                            <a type='button' onClick={() => handleSetFacebookPostDetail(post)} style={{ color: '#e91d25', cursor: 'pointer' }} >Ver publicación</a>
                           </span>
                         </div>
                       </div>

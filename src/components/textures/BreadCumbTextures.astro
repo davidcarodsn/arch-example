@@ -1,3 +1,8 @@
+---
+import { PAGES_PATH } from "src/utils/types/pagesTypes";
+
+---
+
 <!-- Breadcrumb -->
 <section class="breadcrumbs-wrap" style="margin-top: 13vh;">
   <div class="section-content section-content--w1140">
@@ -9,7 +14,7 @@
           </li>
           <span class="span-active">/</span>
           <li>
-            <a href="/catalog">Catálogo</a>
+            <a href={`/${PAGES_PATH.CATALOG_PATH}`}>Catálogo</a>
           </li>
           <span class="span-active">/</span>
           <li class="active">Texturas</li>

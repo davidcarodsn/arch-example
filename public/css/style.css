@@ -2511,7 +2511,7 @@ a.pro-link:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-color: var(--main-color);
+    background-color: var(--main-blue);
     /* padding: 35px 60px; */
     padding: 60px 0;
     /* display: -webkit-box;

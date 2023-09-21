@@ -230,7 +230,6 @@
     loop: true,
     responsiveClass: true,
     autoplay: true,
-    autoplayTimeout: 9000,
     autoplayHoverPause: false,
     smartSpeed: 1000,
     responsive: {
@@ -391,7 +390,7 @@
     }
   });
   /* Our Team 2 */
-  $('#owl-our-team-2').owlCarousel({
+  $('#-our-team-2').owlCarousel({
     loop: true,
     margin: 30,
     responsiveClass: true,
