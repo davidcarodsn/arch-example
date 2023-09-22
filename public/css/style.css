@@ -1623,9 +1623,10 @@ nav.menu-mobile>ul>li>ul {
 }
 
 .service__item h4 {
-    color: var(--main-color);
+    color: var(--main-blue);
     margin-top: 38px;
     font-weight: 600;
+    text-shadow: -1px 1px 0 #bcbcbc, 1px 1px 0 #bcbcbc, 1px -1px 0 #bcbcbc, -1px -1px 0 #bcbcbc;
 }
 
 

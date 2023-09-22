@@ -1,47 +1,29 @@
-   <!-- Partner -->
+---
+const partners: string[] = [
+  'placeholder',
+  'placeholder',
+  'placeholder',
+  'placeholder',
+  'placeholder',
+  'placeholder',
+  'placeholder',
+  'placeholder',
+  'placeholder',
+]
+---
+<!-- Partner -->
    <section class="partner">
     <div class="section-content section-content--w1792" >
       <div class="partner-wrap owl-carousel owl-theme" id="owl-partner">
-        <div class="partner__item item">
-          <a type="button">
-            <img alt="Partner 1" src="/img/partners/partner-01.png">
-          </a>
-        </div>
-        <div class="partner__item item">
-          <a type="button">
-            <img alt="Partner 2" src="/img/partners/partner-01.png">
-          </a>
-        </div>
-        <div class="partner__item item">
-          <a type="button">
-            <img alt="Partner 3" src="/img/partners/partner-01.png">
-          </a>
-        </div>
-        <div class="partner__item item">
-          <a type="button">
-            <img alt="Partner 4" src="/img/partners/partner-01.png">
-          </a>
-        </div>
-        <div class="partner__item item">
-          <a type="button">
-            <img alt="Partner 5" src="/img/partners/partner-01.png">
-          </a>
-        </div>
-        <div class="partner__item item">
-          <a type="button">
-            <img alt="Partner 6" src="/img/partners/partner-01.png">
-          </a>
-        </div>
-        <div class="partner__item item">
-          <a type="button">
-            <img alt="Partner 7" src="/img/partners/partner-01.png">
-          </a>
-        </div>
-        <div class="partner__item item">
-          <a type="button">
-            <img alt="Partner 8" src="/img/partners/partner-01.png">
-          </a>
-        </div>
+        {
+          partners.map(img => (
+            <div class="partner__item item">
+              <a type="button">
+                <img alt="partner" src={`/img/partners/${img}.png`}>
+              </a>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
