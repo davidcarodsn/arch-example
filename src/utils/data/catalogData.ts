@@ -1620,7 +1620,7 @@ export const windowsFatherData:CatalogData[] = [
     }
   },
   {
-    name: 'Vidrios decorativos "VIIO"',
+    name: 'Vidrios decorativos VIIO',
     filters: [ProductFathersTypes.WINDOWS, 'vidriosdecorativos'],
     description: 'Los vidrios decorativos "VIIO" son una elección innovadora para proyectos de diseño interior y arquitectura. Estos vidrios personalizables ofrecen una amplia gama de opciones de diseño, desde patrones geométricos hasta impresiones personalizadas. Combinan la estética con la funcionalidad, permitiendo la creación de espacios únicos y elegantes.',
     specs: {
